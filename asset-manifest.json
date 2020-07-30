@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/%7Bsolamedia%7D/static/css/main.33bdc947.chunk.css",
-    "main.js": "/%7Bsolamedia%7D/static/js/main.d668f0d0.chunk.js",
-    "main.js.map": "/%7Bsolamedia%7D/static/js/main.d668f0d0.chunk.js.map",
-    "runtime-main.js": "/%7Bsolamedia%7D/static/js/runtime-main.24192163.js",
-    "runtime-main.js.map": "/%7Bsolamedia%7D/static/js/runtime-main.24192163.js.map",
-    "static/css/2.2c32fbbd.chunk.css": "/%7Bsolamedia%7D/static/css/2.2c32fbbd.chunk.css",
-    "static/js/2.dfd4ac43.chunk.js": "/%7Bsolamedia%7D/static/js/2.dfd4ac43.chunk.js",
-    "static/js/2.dfd4ac43.chunk.js.map": "/%7Bsolamedia%7D/static/js/2.dfd4ac43.chunk.js.map",
-    "index.html": "/%7Bsolamedia%7D/index.html",
-    "precache-manifest.0175c25d4fd52a49304f225d1966d687.js": "/%7Bsolamedia%7D/precache-manifest.0175c25d4fd52a49304f225d1966d687.js",
-    "service-worker.js": "/%7Bsolamedia%7D/service-worker.js",
-    "static/css/2.2c32fbbd.chunk.css.map": "/%7Bsolamedia%7D/static/css/2.2c32fbbd.chunk.css.map",
-    "static/css/main.33bdc947.chunk.css.map": "/%7Bsolamedia%7D/static/css/main.33bdc947.chunk.css.map",
-    "static/js/2.dfd4ac43.chunk.js.LICENSE.txt": "/%7Bsolamedia%7D/static/js/2.dfd4ac43.chunk.js.LICENSE.txt",
-    "static/media/style.css": "/%7Bsolamedia%7D/static/media/speaker-bg.3c85a08e.png",
-    "static/media/festive-img2.png": "/%7Bsolamedia%7D/static/media/festive-img2.7c745f0b.png",
-    "static/media/font-awesome.min.css": "/%7Bsolamedia%7D/static/media/fontawesome-webfont.fee66e71.woff",
-    "static/media/speaker-img1.png": "/%7Bsolamedia%7D/static/media/speaker-img1.5af553da.png",
-    "static/media/testimonial-img1.png": "/%7Bsolamedia%7D/static/media/testimonial-img1.6111af0b.png"
+    "main.css": "/solamedia/static/css/main.ca5b5f2c.chunk.css",
+    "main.js": "/solamedia/static/js/main.f05d8352.chunk.js",
+    "main.js.map": "/solamedia/static/js/main.f05d8352.chunk.js.map",
+    "runtime-main.js": "/solamedia/static/js/runtime-main.a5181bd7.js",
+    "runtime-main.js.map": "/solamedia/static/js/runtime-main.a5181bd7.js.map",
+    "static/css/2.4893cd76.chunk.css": "/solamedia/static/css/2.4893cd76.chunk.css",
+    "static/js/2.dfd4ac43.chunk.js": "/solamedia/static/js/2.dfd4ac43.chunk.js",
+    "static/js/2.dfd4ac43.chunk.js.map": "/solamedia/static/js/2.dfd4ac43.chunk.js.map",
+    "index.html": "/solamedia/index.html",
+    "precache-manifest.ff659da13d7a35e893216302df983223.js": "/solamedia/precache-manifest.ff659da13d7a35e893216302df983223.js",
+    "service-worker.js": "/solamedia/service-worker.js",
+    "static/css/2.4893cd76.chunk.css.map": "/solamedia/static/css/2.4893cd76.chunk.css.map",
+    "static/css/main.ca5b5f2c.chunk.css.map": "/solamedia/static/css/main.ca5b5f2c.chunk.css.map",
+    "static/js/2.dfd4ac43.chunk.js.LICENSE.txt": "/solamedia/static/js/2.dfd4ac43.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/solamedia/static/media/speaker-bg.3c85a08e.png",
+    "static/media/festive-img2.png": "/solamedia/static/media/festive-img2.7c745f0b.png",
+    "static/media/font-awesome.min.css": "/solamedia/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/speaker-img1.png": "/solamedia/static/media/speaker-img1.5af553da.png",
+    "static/media/testimonial-img1.png": "/solamedia/static/media/testimonial-img1.6111af0b.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.24192163.js",
-    "static/css/2.2c32fbbd.chunk.css",
+    "static/js/runtime-main.a5181bd7.js",
+    "static/css/2.4893cd76.chunk.css",
     "static/js/2.dfd4ac43.chunk.js",
-    "static/css/main.33bdc947.chunk.css",
-    "static/js/main.d668f0d0.chunk.js"
+    "static/css/main.ca5b5f2c.chunk.css",
+    "static/js/main.f05d8352.chunk.js"
   ]
 }
