@@ -1,0 +1,1204 @@
+@media (min-width: 320px) and (max-width: 575.98px) {
+  /*==================
+        navbar-part css start
+    ==================*/
+  #header-part {
+    background: #1f1f1f;
+  }
+  nav.navbar {
+    padding: 20px 0;
+  }
+  nav .navbar-brand {
+    margin-left: 10px;
+  }
+  .navbar-toggler i {
+    color: #fff;
+    font-size: 25px;
+  }
+  .navbar-toggler:not(:disabled):not(.disabled) {
+    outline: none;
+  }
+  #navbarSupportedContent {
+    background: #6e06ae;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: 25px;
+  }
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+  .navbar.navbar-expand-lg .nav-item {
+    margin-right: 0;
+  }
+  .navbar.navbar-expand-lg li a {
+    padding: 15px 0 !important;
+    display: block;
+  }
+  .header-btn {
+    margin-top: 20px;
+  }
+  .header-btn a {
+    font-size: 20px;
+    padding: 13px 30px;
+  }
+  /*==================
+        navbar-part css end
+    ==================*/
+  /*==================
+        slider-part css start
+    ==================*/
+  .overlay {
+    padding: 175px 0 50px;
+  }
+  .slider-text {
+    margin-bottom: 25px;
+  }
+  .slider-text p {
+    font-size: 20px;
+    letter-spacing: 5px;
+    margin: 0;
+  }
+  .slider-text h2 {
+    font-size: 40px;
+    width: 294px;
+    line-height: 50px;
+  }
+  .counter-item {
+    width: 50px;
+    margin-left: 20px;
+  }
+  .counter-item.item-m {
+    margin-left: 25px;
+  }
+  .counter-item.item-ml {
+    margin-left: 20px;
+  }
+  .counter-item.item-w {
+    width: 60px;
+    margin-left: 0;
+  }
+  .myCountdown h2 {
+    font-size: 40px;
+  }
+  .counter-item span {
+    font-size: 20px;
+    bottom: 22px;
+    right: -20px;
+  }
+  .counter-item span.da {
+    right: -20px !important;
+    bottom: 10px !important;
+  }
+  .counter-item span.ho {
+    right: -12px !important;
+    bottom: 13px !important;
+  }
+  .video-part {
+    justify-content: center !important;
+    margin-top: 20px;
+  }
+  .video-part p {
+    font-size: 20px;
+  }
+  .video-part a i {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+  }
+  /*==================
+        slider-part css end
+    ==================*/
+  /*==================
+        festive-part css start
+    ==================*/
+  #festive-part {
+    padding: 100px 0 70px;
+  }
+  .festive-img .img {
+    display: none;
+  }
+  .festive-img .festive {
+    position: static;
+    top: 0;
+    left: 0;
+  }
+  #festive-part .slick-slide img {
+    width: 100%;
+  }
+  .festive-left .slick-initialized .slick-slide {
+    padding: 0 15px;
+  }
+  #festive-part .festive-right {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+  .festive-right .text-img h2 {
+    display: inline-block;
+  }
+  .festive-right .text-img {
+    margin-top: 66px;
+    margin-right: 0;
+  }
+  .festive-text {
+    margin-top: 30px;
+  }
+  .festive-text h2 {
+    font-size: 28px;
+    width: auto;
+  }
+  .festive-text .location {
+    flex-direction: column;
+  }
+  .festive-text .address.add-ml {
+    margin-left: 0;
+  }
+  .section-title h2 {
+    font-size: 34px;
+  }
+  /*==================
+        festive-part css end
+    ==================*/
+  /*==================
+        schedule-part start
+    ==================*/
+  #schedule-part .speakers-item .speakers-img {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+  }
+  #schedule-part .section-title {
+    margin-bottom: 30px;
+  }
+  #schedule-part .speakers-item {
+    flex-direction: column;
+  }
+  #schedule-part .speakers-item .speakers-text {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+  .speakers-item .speakers-text .date {
+    margin: 0 auto;
+  }
+  .speakers-item .speakers-text .speaker-icon {
+    padding: 10px 10px;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 290px;
+  }
+  /*==================
+        schedule-part css end
+    ==================*/
+  /*==================
+        upcoming-part css start
+    ==================*/
+  #upcoming-part .event-item {
+    flex-direction: column;
+  }
+
+  #upcoming-part .event-img {
+    width: 54%;
+    margin-top: 0px;
+  }
+  #upcoming-part .event-text {
+    width: 100%;
+    margin-left: 0;
+  }
+  #upcoming-part .event-btn {
+    width: 100%;
+    text-align: right;
+  }
+  #upcoming-part .event-location {
+    flex-direction: column;
+  }
+  #upcoming-part .event-add {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #upcoming-part .loc-img {
+    width: 54%;
+  }
+  .loc-img img {
+    width: 25%;
+  }
+  #upcoming-part .loc-text {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #upcoming-part .loc-text p {
+    width: 200px;
+    margin-left: -45px;
+  }
+  #upcoming-part .event-btn a {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  #boxscroll {
+    width: auto;
+  }
+  #ascrail2000 {
+    right: 0 !important;
+  }
+  /*==================
+        upcoming-part css end
+    ==================*/
+  /*==================
+        testimonial-part css start
+    ==================*/
+  .single-testimonial {
+    padding: 25px 5px;
+  }
+  .testi-img {
+    margin-top: 80px;
+  }
+  .icon {
+    top: -54px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .icon i {
+    font-size: 16px;
+  }
+  .slick-arrow {
+    display: none !important;
+  }
+  /*==================
+        testimonial-part css end
+    ==================*/
+  /*==================
+        pricing-part css start
+    ==================*/
+  #pricing-part .form-part {
+    margin-left: 0;
+  }
+  #pricing-part .form-part .heading {
+    width: 100%;
+    font-size: 28px;
+  }
+  #pricing-part .form-part input.fname,
+  #pricing-part .form-part input.lname {
+    width: 100%;
+  }
+  #pricing-part .form-part input.lname {
+    margin-left: 0;
+  }
+  .payment {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  #pricing-part .form-part .payment-img {
+    text-align: center;
+  }
+  #pricing-part .form-part .check {
+    margin-top: 30px;
+  }
+  /*==================
+        pricing-part css end
+    ==================*/
+  /*==================
+        sponsors-part css start
+    ==================*/
+  #sponsors-part .brand img {
+    width: 33.33%;
+    margin: 0;
+  }
+  /*==================
+        sponsors-part css end
+    ==================*/
+  /*==================
+        footer-part css start
+    ==================*/
+  #footer-part .section-title h2 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .footer-widget .footer-icon {
+    margin: 30px 0 30px;
+  }
+  .footer-icon a i {
+    margin: 0 1px;
+  }
+  .footer-widget form button {
+    font-size: 17px;
+    width: 100px;
+  }
+  .footer-menu {
+    margin-bottom: 20px;
+  }
+  .footer-menu ul li a {
+    margin: 0 5px;
+    line-height: 1.5;
+  }
+  /*==================
+        footer-part css end
+    ==================*/
+  /*==================
+        error-page css start
+    ==================*/
+  #error-page .overlay {
+    padding: 175px 0 50px;
+  }
+  #error-page .slider-content .error-text {
+    width: auto;
+    padding: 3px;
+  }
+  .banner-icon a i {
+    width: 58px;
+    height: 58px;
+    line-height: 58px;
+  }
+  #error-page .slider-content .error {
+    letter-spacing: 5px;
+  }
+  .banner-icon {
+    margin-top: 30px;
+  }
+  .subscribe form input {
+    width: 250px;
+    height: 80px;
+    margin-left: -30px;
+  }
+  .subscribe form button {
+    width: 107px;
+    right: 20px;
+  }
+  .sub {
+    width: auto;
+    margin-bottom: 25px !important;
+    display: block;
+    text-align: center;
+    padding: 10px;
+  }
+  /*==================
+        error-page css end
+    ==================*/
+  /*==================
+        coming-soon page css start
+    ==================*/
+  #coming-part .overlay {
+    padding: 175px 0 50px;
+  }
+  /*==================
+        coming-soon page css end
+    ==================*/
+  /*==================
+        pricing page css start
+    ==================*/
+  #pricing-part .booking-part .form-part input.fname,
+  #pricing-part .booking-part .form-part input.lname {
+    width: 100%;
+  }
+  #pricing-part .booking-part .form-part input.lname {
+    margin-left: 0;
+  }
+  #pricing-part .booking-part .form-part .heading {
+    width: 100%;
+  }
+  /*==================
+        pricing page css end
+    ==================*/
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  /*==================
+        navbar-part css start
+    ==================*/
+  #header-part {
+    background: #1f1f1f;
+  }
+  nav.navbar {
+    padding: 20px 0;
+  }
+  nav.navbar .logo {
+    margin-left: 10px;
+  }
+  .navbar-toggler i {
+    color: #fff;
+    font-size: 25px;
+  }
+  .navbar-toggler:not(:disabled):not(.disabled) {
+    outline: none;
+  }
+  #navbarSupportedContent {
+    background: #6e06ae;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: 25px;
+  }
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+  .navbar.navbar-expand-lg .nav-item {
+    margin-right: 0;
+  }
+  .navbar.navbar-expand-lg li a {
+    padding: 15px 0 !important;
+    display: block;
+  }
+  .header-btn {
+    margin-top: 20px;
+  }
+  .header-btn a {
+    font-size: 20px;
+    padding: 13px 30px;
+  }
+  /*==================
+        navbar-part css end
+    ==================*/
+  /*==================
+        slider-part css start
+    ==================*/
+  .overlay {
+    padding: 175px 0 50px;
+  }
+  .slider-text {
+    margin-bottom: 25px;
+  }
+  .slider-text h2 {
+    font-size: 60px;
+    width: auto;
+    line-height: 1.2;
+  }
+  .counter-item {
+    position: relative;
+    width: 70px;
+    margin-left: 40px;
+  }
+  .counter-item.item-m {
+    margin-left: 30px;
+  }
+  .counter-item.item-ml {
+    margin-left: 40px;
+  }
+  .counter-item.item-w {
+    width: 120px;
+    margin-left: 0;
+  }
+  .video-part {
+    justify-content: center !important;
+    margin-top: 20px;
+  }
+  /*==================
+        slider-part css end
+    ==================*/
+  /*==================
+        festive-part css start
+    ==================*/
+  #festive-part {
+    padding: 100px 0 70px;
+  }
+  #festive-part .festive-right {
+    margin-top: 40px;
+  }
+  .festive-text .address.add-ml {
+    margin-left: 0;
+  }
+  .festive-text .address p {
+    width: 173px;
+    float: left;
+  }
+  .festive-text .address p.num {
+    width: 142px !important;
+  }
+  /*==================
+        festive-part css end
+    ==================*/
+  /*==================
+        upcoming-part css start
+    ==================*/
+  #upcoming-part .event-item {
+    flex-wrap: wrap;
+  }
+  #upcoming-part .event-img {
+    width: 30%;
+  }
+  #upcoming-part .event-text {
+    width: 66%;
+    margin-left: 16px;
+  }
+  #upcoming-part .event-text h3 {
+    font-size: 28px;
+  }
+  #upcoming-part .loc-img {
+    width: 30%;
+  }
+  #upcoming-part .loc-text {
+    width: 70%;
+    margin-left: 0;
+  }
+  #upcoming-part .loc-text p {
+    width: auto;
+    font-size: 17px;
+    margin-left: -10px;
+  }
+  #upcoming-part .event-add.shape {
+    padding-left: 20px;
+  }
+  #upcoming-part .event-add.shape::before {
+    left: 8px;
+  }
+  #upcoming-part .event-text h3 {
+    margin-top: 5px;
+  }
+  #upcoming-part .event-btn a {
+    display: block;
+    text-align: center;
+  }
+  #upcoming-part .event-btn {
+    width: 100%;
+    text-align: left;
+  }
+  #boxscroll {
+    width: auto;
+  }
+  #ascrail2000 {
+    right: 0 !important;
+  }
+  /*==================
+        upcoming-part css end
+    ==================*/
+  /*==================
+        testimonial-part css start
+    ==================*/
+  .testi-img {
+    margin-top: 80px;
+  }
+
+  .icon {
+    top: -54px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .next.slick-arrow {
+    left: auto;
+    right: 0;
+  }
+  /*==================
+        testimonial-part css end
+    ==================*/
+  /*==================
+        pricing-part css start
+    ==================*/
+  #pricing-part .up.slick-arrow {
+    top: 46%;
+    z-index: 9;
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translatey(-50%);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(to bottom, #ffe169, #ffa913);
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #0f2f44;
+    z-index: 9;
+  }
+  #pricing-part .form-part .heading {
+    width: 100%;
+    font-size: 28px;
+  }
+  #pricing-part .form-part {
+    margin-left: 0;
+  }
+  #pricing-part .form-part input.fname,
+  #pricing-part .form-part input.lname {
+    width: 100%;
+  }
+  #pricing-part .form-part input.lname {
+    margin-left: 0;
+  }
+  #pricing-part .form-part .payment {
+    text-align: center;
+  }
+  #pricing-part .form-part .payment-img {
+    text-align: center;
+    margin-top: 30px;
+  }
+  #pricing-part .form-part .check {
+    margin-top: 30px;
+  }
+  /*==================
+        pricing-part css end
+    ==================*/
+  /*==================
+        sponsors-part css start
+    ==================*/
+  #sponsors-part .brand img {
+    width: 33.33%;
+    margin: 0;
+  }
+  /*==================
+        sponsors-part css end
+    ==================*/
+  /*==================
+        footer-part css start
+    ==================*/
+  .footer-menu ul li a {
+    margin: 0 5px;
+  }
+  /*==================
+        footer-part css end
+    ==================*/
+  /*==================
+        error-page css end
+    ==================*/
+  #error-page .overlay {
+    padding: 175px 0 50px;
+  }
+  #error-page .slider-content .error-text {
+    width: auto;
+  }
+  .subscribe form input {
+    width: 510px;
+  }
+  .subscribe form button {
+    width: 140px;
+    right: 80px;
+  }
+  .sub {
+    width: auto;
+  }
+  #error-page .sub {
+    width: auto;
+    margin-bottom: 0;
+  }
+  .video-part {
+    justify-content: end !important;
+    margin-top: 10px;
+  }
+  /*==================
+        error-page css end
+    ==================*/
+  /*==================
+        coming-page css start
+    ==================*/
+  #coming-part .overlay {
+    padding: 175px 0 50px;
+  }
+  #coming-part .video-part {
+    justify-content: center !important;
+    margin-top: 30px;
+  }
+  #coming-part .sub {
+    margin-bottom: 20px;
+  }
+  /*==================
+        coming-page css end
+    ==================*/
+  /*==================
+        pricing page css start
+    ==================*/
+  #pricing-part .booking-part .form-part input.fname,
+  #pricing-part .booking-part .form-part input.lname {
+    width: 100%;
+  }
+
+  #pricing-part .booking-part .form-part input.lname {
+    margin-left: 0;
+  }
+
+  #pricing-part .booking-part .form-part .heading {
+    width: 320px;
+  }
+  /*==================
+        pricing page css end
+    ==================*/
+}
+@media (min-width: 768px) and (max-width: 991.99px) {
+  /*==================
+        navbar-part css start
+    ==================*/
+  #header-part {
+    background: #1f1f1f;
+  }
+  nav.navbar {
+    padding: 20px 0;
+  }
+  nav.navbar .logo {
+    margin-left: 10px;
+  }
+  .navbar-toggler i {
+    color: #fff;
+    font-size: 25px;
+  }
+  .navbar-toggler:not(:disabled):not(.disabled) {
+    outline: none;
+  }
+  #navbarSupportedContent {
+    background: #6e06ae;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: 25px;
+  }
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+  .navbar.navbar-expand-lg .nav-item {
+    margin-right: 0;
+  }
+  .navbar.navbar-expand-lg li a {
+    padding: 15px 0 !important;
+    display: block;
+  }
+  .header-btn {
+    margin-top: 20px;
+  }
+  .header-btn a {
+    font-size: 20px;
+    padding: 13px 30px;
+  }
+  /*==================
+        navbar-part css end
+    ==================*/
+  /*==================
+        slider-part css start
+    ==================*/
+  .overlay {
+    padding: 175px 0 50px;
+  }
+  .slider-text {
+    margin-bottom: 25px;
+  }
+  .slider-text h2 {
+    font-size: 80px;
+    width: auto;
+    line-height: 1.2;
+  }
+  .video-part {
+    justify-content: center !important;
+    margin-top: 20px;
+  }
+  /*==================
+        slider-part css end
+    ==================*/
+
+  /*==================
+        festive-part css start
+    ==================*/
+  #festive-part {
+    padding: 100px 0 70px;
+  }
+  #festive-part .festive-right {
+    margin-top: 40px;
+  }
+  .festive-text .address p {
+    width: 149px;
+    float: left;
+  }
+  .festive-text .address p.num {
+    width: 140px !important;
+  }
+  /*==================
+        festive-part css end
+    ==================*/
+  /*==================
+        schedule-part  css start
+    ==================*/
+  #schedule-part .speakers-item .speakers-img {
+    width: 50%;
+  }
+  #schedule-part .speakers-item .speakers-text {
+    width: 50%;
+    padding-left: 10px;
+  }
+  .speakers-item .speakers-text .date {
+    width: 134px;
+  }
+  .speakers-item .speakers-text .date p {
+    font-size: 17px;
+  }
+  .speakers-item .speakers-text h3 {
+    font-size: 21px;
+  }
+  .speakers-item .speakers-text p {
+    font-size: 18px;
+  }
+  .speakers-item .speakers-text .speaker-icon {
+    padding: 10px 20px;
+  }
+  .speakers-item .speakers-text .speaker-icon {
+    bottom: 4px;
+    left: -88px;
+  }
+  .speakers-item .speakers-text .speaker-icon span {
+    margin-right: 50px;
+  }
+  .speakers-text .speaker-icon a i {
+    margin-left: 10px;
+  }
+  .speakers-item .speakers-text .speaker-icon span::after {
+    left: 47px;
+  }
+  .speakers-item .speakers-text .speaker-icon {
+    bottom: -24px;
+    left: -88px;
+  }
+  /*==================
+        schedule-part  css end
+    ==================*/
+  /*==================
+        upcoming-part  css start
+    ==================*/
+  #upcoming-part .event-item {
+    flex-wrap: wrap;
+  }
+  #upcoming-part .event-img {
+    width: 24%;
+  }
+  #upcoming-part .event-text {
+    width: 67%;
+    margin-left: 10px;
+  }
+  #upcoming-part .event-text h3 {
+    font-size: 30px;
+  }
+  #upcoming-part .event-btn {
+    width: 100%;
+    text-align: center;
+  }
+  #upcoming-part .event-btn a {
+    display: block;
+    text-align: center;
+  }
+  #upcoming-part .loc-img {
+    width: 24%;
+  }
+  #upcoming-part .loc-text {
+    width: 67%;
+    margin-left: 10px;
+  }
+  #upcoming-part .loc-text p {
+    width: auto;
+    font-size: 17px;
+    margin-left: -25px;
+  }
+  #upcoming-part .event-add.shape::before {
+    left: -10px;
+  }
+  #boxscroll {
+    width: auto;
+  }
+  #ascrail2000 {
+    right: 0 !important;
+  }
+  /*==================
+        upcoming-part  css end
+    ==================*/
+  /*==================
+        testimonial-part css start
+    ==================*/
+  .testi-img {
+    margin-top: 80px;
+  }
+  .icon {
+    top: -54px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .next.slick-arrow {
+    left: auto;
+    right: 0;
+  }
+  /*==================
+        testimonial-part css end
+    ==================*/
+  /*==================
+        pricing-part  css start
+    ==================*/
+  #pricing-part .up.slick-arrow {
+    top: 46%;
+    z-index: 9;
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translatey(-50%);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(to bottom, #ffe169, #ffa913);
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #0f2f44;
+    z-index: 9;
+  }
+  #pricing-part .form-part {
+    margin-left: 0;
+  }
+  #pricing-part .form-part .heading {
+    width: 100%;
+    font-size: 30px;
+  }
+  #pricing-part .form-part input.fname,
+  #pricing-part .form-part input.lname {
+    width: 100%;
+  }
+  #pricing-part .form-part input.lname {
+    margin-left: 0;
+  }
+  .payment {
+    text-align: center;
+  }
+  #pricing-part .form-part .payment-img {
+    text-align: center;
+    margin-top: 15px;
+  }
+  #pricing-part .form-part .check {
+    margin-top: 15px;
+  }
+  #pricing-part .form-part select {
+    margin-bottom: 20px;
+  }
+  /*==================
+        pricing-part  css end
+    ==================*/
+  /*==================
+        sponsors-part css start
+    ==================*/
+  #sponsors-part .brand img {
+    width: 33.33%;
+    margin: 0;
+  }
+  /*==================
+        sponsors-part css end
+    ==================*/
+  /*==================
+        footer-part css start
+    ==================*/
+  .footer-widget form {
+    display: inline-block;
+  }
+  #footer-part .footer-widget input {
+    width: 570px;
+  }
+  .footer-widget form button {
+    width: 120px;
+    font-size: 18px;
+  }
+  .footer-widget .footer-icon {
+    margin: 30px 0 30px;
+  }
+  .footer-icon a i {
+    margin: 0 15px;
+  }
+  .footer-menu ul li a {
+    margin: 0 10px;
+  }
+  /*==================
+        footer-part css end
+    ==================*/
+  /*==================
+        error-page css start
+    ==================*/
+  #error-page .overlay {
+    padding: 175px 0 50px;
+  }
+  #error-page .slider-content .error-text {
+    width: auto;
+  }
+  .subscribe form input {
+    width: 510px;
+  }
+  .subscribe form button {
+    width: 140px;
+    right: 80px;
+  }
+  #error-page .sub {
+    width: 510px;
+    margin-bottom: 0;
+  }
+  .video-part {
+    justify-content: end !important;
+    margin-top: 10px;
+    margin-right: 95px;
+  }
+  /*==================
+        error-page css end
+    ==================*/
+  /*==================
+        coming-page css start
+    ==================*/
+  #coming-part .overlay {
+    padding: 175px 0 50px;
+  }
+  #coming-part .video-part {
+    justify-content: center !important;
+    margin-top: 30px;
+    margin-right: 0;
+  }
+  #coming-part .sub {
+    width: 510px;
+    margin-bottom: 100px;
+  }
+  #coming-part .sub {
+    margin-bottom: 30px;
+  }
+  /*==================
+        coming-page css end
+    ==================*/
+  /*==================
+        pricing page css start
+    ==================*/
+  #pricing-part .booking-part .form-part input.fname,
+  #pricing-part .booking-part .form-part input.lname {
+    width: 100%;
+  }
+  #pricing-part .booking-part .form-part input.lname {
+    margin-left: 0;
+  }
+  #pricing-part .booking-part .form-part .heading {
+    width: 320px;
+  }
+  /*==================
+        pricing page css end
+    ==================*/
+}
+@media (min-width: 992px) and (max-width: 1199.99px) {
+  /*==================
+        navbar css start
+    ==================*/
+  .navbar.navbar-expand-lg .nav-item {
+    margin-right: 27px;
+  }
+  .video-part p {
+    font-size: 21px;
+  }
+  .festive-text .address p {
+    width: 217px;
+    float: left;
+  }
+  .festive-text .address p.num {
+    width: 147px !important;
+  }
+  /*==================
+        navbar css start
+    ==================*/
+  /*==================
+        schedule-part css start
+    ==================*/
+  #schedule-part .speakers-item .speakers-img {
+    width: 45%;
+  }
+  #schedule-part .speakers-item .speakers-text {
+    width: 55%;
+    padding-left: 15px;
+  }
+  .speakers-item .speakers-text h3 {
+    font-size: 25px;
+  }
+  .speakers-item .speakers-text p {
+    font-size: 18px;
+  }
+  .speakers-item .speakers-text .speaker-icon {
+    padding: 10px 20px;
+    bottom: -21px;
+  }
+  .speakers-text .speaker-icon a i {
+    margin-left: 13px;
+  }
+  /*==================
+        schedule-part css end
+    ==================*/
+
+  /*==================
+        upcoming-part css start
+    ==================*/
+  #upcoming-part .event-img {
+    width: 16%;
+  }
+  #upcoming-part .event-add.shape::before {
+    left: -20px;
+  }
+  #boxscroll {
+    width: auto;
+  }
+  #ascrail2000 {
+    right: 0 !important;
+  }
+  /*==================
+        upcoming-part css end
+    ==================*/
+  /*==================
+        upcoming-part css end
+    ==================*/
+  .icon {
+    right: 27px;
+  }
+  .icon i {
+    font-size: 18px;
+  }
+  .slick-arrow {
+    top: auto;
+    bottom: -49px;
+    left: 41.5%;
+    z-index: 1;
+  }
+  .next.slick-arrow {
+    left: 51%;
+  }
+  /*==================
+        upcoming-part css end
+    ==================*/
+  /*==================
+        pricing-part css start
+    ==================*/
+  #pricing-part .form-part input.lname {
+    margin-left: 19px;
+  }
+  .active-pricing .slick-arrow {
+    left: 0;
+  }
+  /*==================
+        pricing-part css end
+    ==================*/
+  /*==================
+        footer-part css start
+    ==================*/
+  .footer-menu ul li a {
+    margin: 0 8px;
+  }
+  .footer-widget form button {
+    width: 110px;
+    font-size: 18px;
+  }
+  /*==================
+        footer-part css end
+    ==================*/
+  /*==================
+        error-page css start
+    ==================*/
+  #error-page .video-part {
+    margin-right: 50px;
+  }
+  /*==================
+        error-page css end
+    ==================*/
+  /*==================
+        coming-page css start
+    ==================*/
+  #coming-part .video-part {
+    margin-right: 15px;
+  }
+  /*==================
+        coming-page css end
+    ==================*/
+  /*==================
+        pricing-page css start
+    ==================*/
+  #pricing-part .booking-part .form-part input.lname {
+    margin-left: 24px;
+  }
+  /*==================
+        pricing-page css end
+    ==================*/
+}
