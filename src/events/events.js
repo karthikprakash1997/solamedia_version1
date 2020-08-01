@@ -20,7 +20,7 @@ const data = [
     name: "Ajay",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg",
+    image: "https://os.alipayobjects.com/rmsportal/uaQVvDrCwryVlbb.jpg",
   },
   {
     name: "Ajay",
