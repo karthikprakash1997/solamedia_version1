@@ -9,8 +9,6 @@ import Footer from "./footer/footer";
 import Introduction from "./introduction/introduction";
 import Videos from "./videos/videos";
 
-import CardAnimation from "./cardAnimation/cardAnimation";
-
 import "./assets/css/slick.css";
 import "./assets/css/style.css";
 import "./assets/css/responsive.css";
@@ -35,7 +33,6 @@ function App() {
       <Videos />
       <Gallery />
       <Feedback />
-      <CardAnimation />
       <Footer />
     </>
   );
