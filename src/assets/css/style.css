@@ -729,31 +729,6 @@ p.testi-text {
 .name {
   color: #ff69b4;
 }
-.slick-slide img {
-  display: inline-block;
-}
-.slick-arrow {
-  position: absolute;
-  top: 50%;
-  left: -100px;
-  width: 70px;
-  height: 70px;
-  background: linear-gradient(to bottom, #ffe169, #ffa913);
-  line-height: 70px;
-  text-align: center;
-  border-radius: 50%;
-  font-size: 24px;
-  color: #0f2f44;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-}
-.next.slick-arrow {
-  left: auto;
-  right: -100px;
-}
 .test-shape {
   position: absolute;
   top: -116px;

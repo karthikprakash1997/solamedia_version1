@@ -1,78 +1,46 @@
-import React, { useCallback } from "react";
-import BannerAnim from "rc-banner-anim";
-import QueueAnim from "rc-queue-anim";
-import TweenOne from "rc-tween-one";
-import "../assets/css/demo.css";
+import React from "react";
+import {
+  Card,
+  CardMedia,
+  CardActionArea,
+  Typography,
+  makeStyles,
+  CardContent,
+} from "@material-ui/core";
+import Carousel from "react-material-ui-carousel";
 
-const { Element } = BannerAnim;
-const BgElement = Element.BgElement;
 const data = [
   {
     name: "Ajay",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "images/testimonial/testimonial-img1.png",
+    image: "https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg",
   },
   {
     name: "Ajay",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "images/testimonial/testimonial-img1.png",
+    image: "https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg",
   },
   {
     name: "Ajay",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "images/testimonial/testimonial-img1.png",
+    image: "https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg",
   },
 ];
 
+const useStyles = makeStyles({
+  root: {
+    height: 300,
+  },
+  media: {
+    height: 200,
+  },
+});
+
 function UpcomingEvents() {
-  const animatedImages = useCallback(
-    () => (
-      <BannerAnim autoPlay autoPlaySpeed={3000} autoPlayEffect={false}>
-        <Element key="aaa" prefixCls="banner-user-elem">
-          <BgElement key="bg" class="test" />
-          {/* <img
-            src={"https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg"}
-            alt={"hello"}
-          /> */}
-          <QueueAnim name="QueueAnim">
-            <h1 key="h1">Ant Motion Demo</h1>
-          </QueueAnim>
-          <TweenOne
-            animation={{ y: 50, opacity: 0, type: "from", delay: 200 }}
-            name="TweenOne"
-          >
-            Ant Motion Demo.Ant Motion Demo
-          </TweenOne>
-        </Element>
-        <Element key="bbb" prefixCls="banner-user-elem">
-          <BgElement
-            key="bg"
-            style={{
-              backgroundImage:
-                "url(" +
-                require("../assets/images/testImages/speaker-img1.png") +
-                ")",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
-          <QueueAnim name="QueueAnim">
-            <h1 key="h1">Ant Motion Demo</h1>
-          </QueueAnim>
-          <TweenOne
-            animation={{ y: 50, opacity: 0, type: "from", delay: 200 }}
-            name="TweenOne"
-          >
-            Ant Motion Demo.Ant Motion Demo
-          </TweenOne>
-        </Element>
-      </BannerAnim>
-    ),
-    []
-  );
+  const classes = useStyles();
   return (
     <section id="testimonial-part">
       <div class="container">
@@ -82,12 +50,47 @@ function UpcomingEvents() {
         <div class="row testimonial-active">
           {data.map(() => (
             <div class="col-lg-4">
-              <div class="single-testimonial">
-                <div class="testi-text">{animatedImages()}</div>
-              </div>
+              <Card className={classes.root}>
+                <CardActionArea>
+                  <Carousel
+                    indicators={false}
+                    navButtonsAlwaysVisible={false}
+                    animation={"fade"}
+                    timeout={1000}
+                  >
+                    {data.map((value) => (
+                      <CardMedia
+                        className={classes.media}
+                        component="img"
+                        alt="Contemplative Reptile"
+                        height="140"
+                        image={value.image}
+                        title="Contemplative Reptile"
+                      />
+                    ))}
+                  </Carousel>
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Lizard
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      Lizards are a widespread group of squamate reptiles, with
+                      over 6,000 species, ranging across all continents except
+                      Antarctica
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
             </div>
           ))}
         </div>
+        {/* <div class="section-title">
+          <h4>More </h4>
+        </div> */}
       </div>
     </section>
   );

@@ -43,14 +43,20 @@ function Header() {
                   Videos
                 </a>
               </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  Feedback
+                  Gallery
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   PR News
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Feedback
                 </a>
               </li>
               <li class="nav-item">
