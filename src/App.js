@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { Element } from "react-scroll";
 import Header from "./header/header";
 import MainContent from "./mainContent/mainContent";
 import Scheduler from "./scheduler/scheduler";
@@ -17,23 +18,31 @@ import "./assets/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 
 function App() {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "../src/assets/js/script.js";
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
   return (
     <>
       <Header />
       <MainContent />
-      <Introduction />
-      <Scheduler />
-      <Events />
-      <Videos />
-      <Gallery />
-      <Feedback />
-      <Footer />
+      <Element id="About" name="About">
+        <Introduction />
+      </Element>
+      <Element id="Celeberities" name="Celeberities">
+        <Scheduler />
+      </Element>
+      <Element id="Events" name="Events">
+        <Events />
+      </Element>
+      <Element id="Videos" name="Videos">
+        <Videos />
+      </Element>
+      <Element id="Gallery" name="Gallery">
+        <Gallery />
+      </Element>
+      <Element id="Feedback" name="Feedback">
+        <Feedback />
+      </Element>
+      <Element id="Contact" name="Contact">
+        <Footer />
+      </Element>
     </>
   );
 }

@@ -36,16 +36,16 @@ function Videos() {
   const classes = useStyles();
   return (
     <section id="testimonial-part">
-      <div class="container">
-        <div class="section-title">
+      <div className="container">
+        <div className="section-title">
           <h2>Videos </h2>
         </div>
-        <div class="section-title">
+        <div className="section-title" style={{ marginTop: 10 }}>
           <h4>Event Bites </h4>
         </div>
-        <div class="row testimonial-active">
-          {data.map(() => (
-            <div class="col-lg-4">
+        <div className="row testimonial-active">
+          {data.map((_1, index) => (
+            <div className="col-lg-4" key={index} style={{ marginBottom: 20 }}>
               <Card className={classes.root}>
                 <CardActionArea>
                   <ReactPlayer
@@ -58,12 +58,12 @@ function Videos() {
             </div>
           ))}
         </div>
-        <div class="section-title">
+        <div className="section-title">
           <h4>Trailers</h4>
         </div>
-        <div class="row testimonial-active">
-          {data.map(() => (
-            <div class="col-lg-4">
+        <div className="row testimonial-active">
+          {data.map((_1, index) => (
+            <div className="col-lg-4" key={index} style={{ marginBottom: 20 }}>
               <Card className={classes.root}>
                 <CardActionArea>
                   <ReactPlayer

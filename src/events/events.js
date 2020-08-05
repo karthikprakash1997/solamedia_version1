@@ -28,6 +28,24 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
     image: "https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg",
   },
+  {
+    name: "Ajay",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
+    image: "https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg",
+  },
+  {
+    name: "Ajay",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
+    image: "https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg",
+  },
+  {
+    name: "Ajay",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
+    image: "https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg",
+  },
 ];
 
 const useStyles = makeStyles({
@@ -35,21 +53,21 @@ const useStyles = makeStyles({
     height: 300,
   },
   media: {
-    height: 200,
+    height: 250,
   },
 });
 
-function UpcomingEvents() {
+function Events() {
   const classes = useStyles();
   return (
     <section id="testimonial-part">
-      <div class="container">
-        <div class="section-title">
+      <div className="container">
+        <div className="section-title">
           <h2>Events </h2>
         </div>
-        <div class="row testimonial-active">
-          {data.map(() => (
-            <div class="col-lg-4">
+        <div className="row testimonial-active">
+          {data.map((_1, index) => (
+            <div className="col-lg-4" key={index} style={{ marginBottom: 20 }}>
               <Card className={classes.root}>
                 <CardActionArea>
                   <Carousel
@@ -58,12 +76,13 @@ function UpcomingEvents() {
                     animation={"fade"}
                     timeout={1000}
                   >
-                    {data.map((value) => (
+                    {data.map((value, index) => (
                       <CardMedia
+                        key={index}
                         className={classes.media}
                         component="img"
                         alt="Contemplative Reptile"
-                        height="140"
+                        height="200"
                         image={value.image}
                         title="Contemplative Reptile"
                       />
@@ -73,27 +92,15 @@ function UpcomingEvents() {
                     <Typography gutterBottom variant="h5" component="h2">
                       Lizard
                     </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
-                    </Typography>
                   </CardContent>
                 </CardActionArea>
               </Card>
             </div>
           ))}
         </div>
-        {/* <div class="section-title">
-          <h4>More </h4>
-        </div> */}
       </div>
     </section>
   );
 }
 
-export default UpcomingEvents;
+export default Events;

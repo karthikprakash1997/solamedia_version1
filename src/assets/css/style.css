@@ -101,6 +101,7 @@ p {
 }
 .navbar.navbar-expand-lg li:hover > a {
   color: #ff1493;
+  cursor: pointer;
 }
 .navbar-expand-lg .navbar-nav .dropdown-menu {
   background: #ff1493;

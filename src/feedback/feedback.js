@@ -24,31 +24,31 @@ const data = [
 function Feedback() {
   return (
     <section id="testimonial-part">
-      <div class="container">
-        <div class="section-title">
+      <div className="container">
+        <div className="section-title">
           <h2>Feedback</h2>
         </div>
-        <div class="row testimonial-active">
-          {data.map(() => (
-            <div class="col-lg-4">
-              <div class="single-testimonial">
-                <p class="testi-text">
+        <div className="row testimonial-active">
+          {data.map((_1, index) => (
+            <div className="col-lg-4" key={index}>
+              <div className="single-testimonial">
+                <p className="testi-text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                   dosmod tempor incididunt ut labore etdolore magna aliqua. Ut
                   enim ad minim veniam, quis nostrud exercitation ullamco.
                 </p>
-                <div class="testi-img">
+                <div className="testi-img">
                   <img src={speaker1} alt="testimonial-img1" />
-                  <div class="icon">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
+                  <div className="icon">
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
                   </div>
                 </div>
-                <h4 class="name">Jonathon Reverse</h4>
-                <p class="designation">Event Sponsor</p>
+                <h4 className="name">Jonathon Reverse</h4>
+                <p className="designation">Event Sponsor</p>
               </div>
             </div>
           ))}

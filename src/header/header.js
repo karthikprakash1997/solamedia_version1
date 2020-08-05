@@ -1,12 +1,14 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { Link } from "react-scroll";
 
 function Header() {
   return (
-    <header class="header-part sticky">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
+    <header className="header-part sticky">
+      <nav className="navbar navbar-expand-lg">
+        <div className="container">
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -14,55 +16,119 @@ function Header() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <i class="fa fa-bars" aria-hidden="true"></i>
+            <i className="fa fa-bars" aria-hidden="true"></i>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="index-2.html">
-                  Home
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <Link
+                  to="About"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  className="nav-link"
+                  activeClass="nav-link"
+                >
                   About
-                </a>
+                </Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Celebrities
-                </a>
+              <li className="nav-item">
+                <Link
+                  to="Celeberities"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  className="nav-link"
+                  activeClass="nav-link"
+                >
+                  Celeberities
+                </Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+              <li className="nav-item">
+                <Link
+                  to="Events"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  className="nav-link"
+                  activeClass="nav-link"
+                >
                   Events
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Videos
-                </a>
+                </Link>
               </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+              <li className="nav-item">
+                <Link
+                  to="Videos"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  className="nav-link"
+                  activeClass="nav-link"
+                >
+                  Videos
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link
+                  to="Gallery"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  className="nav-link"
+                  activeClass="nav-link"
+                >
                   Gallery
-                </a>
+                </Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+              <li className="nav-item">
+                <Link
+                  to="Gallery"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  className="nav-link"
+                  activeClass="nav-link"
+                >
                   PR News
-                </a>
+                </Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+              <li className="nav-item active">
+                <Link
+                  to="example-destination"
+                  spy={true}
+                  smooth={true}
+                  duration={900}
+                  className="nav-link"
+                  activeClass="nav-link"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to="Feedback"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  className="nav-link"
+                  activeClass="nav-link"
+                >
                   Feedback
-                </a>
+                </Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+              <li className="nav-item">
+                <Link
+                  to="Contact"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  className="nav-link"
+                  activeClass="nav-link"
+                >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
