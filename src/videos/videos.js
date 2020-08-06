@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardActionArea, makeStyles } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import ReactPlayer from "react-player/lazy";
 
 const data = [
@@ -40,7 +41,7 @@ function Videos() {
         <div className="section-title">
           <h2>Videos </h2>
         </div>
-        <div className="section-title" style={{ marginTop: 10 }}>
+        <div className="section-title" style={{ marginTop: -20 }}>
           <h4>Event Bites </h4>
         </div>
         <div className="row testimonial-active">
@@ -58,7 +59,10 @@ function Videos() {
             </div>
           ))}
         </div>
-        <div className="section-title">
+        <div class="gallery-btn">
+          <Link to="/videos/event-bites">See More</Link>
+        </div>
+        <div className="section-title" style={{ marginTop: 30 }}>
           <h4>Trailers</h4>
         </div>
         <div className="row testimonial-active">
@@ -76,6 +80,9 @@ function Videos() {
             </div>
           ))}
         </div>
+      </div>
+      <div class="gallery-btn">
+        <Link to="/videos/traiers">See More</Link>
       </div>
     </section>
   );

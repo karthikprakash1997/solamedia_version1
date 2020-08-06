@@ -647,14 +647,13 @@ p {
   text-align: center;
 }
 .gallery-btn a {
-  padding: 15px 20px;
+  padding: 10px 15px;
   display: inline-block;
   text-transform: uppercase;
   font-weight: 700;
-  color: #0f2f44;
-  background: linear-gradient(#ffe169, #ffa913);
-  font-size: 24px;
-  margin-top: 40px;
+  color: white;
+  background-image: linear-gradient(315deg, #ee5166 0%, #f08efc 74%);
+  font-size: 12px;
   border-radius: 5px;
 }
 section#gallery-part {
@@ -1043,7 +1042,7 @@ p.testi-text {
     banner-part css start
 ==================*/
 #banner-part {
-  background: url(../images/backgrounds/gallery/gallery-bg.png) no-repeat center;
+  background: url(../images/backgrounds/slider/concert.jpg) no-repeat center;
   background-size: cover;
 }
 #banner-part .overlay {
@@ -1065,8 +1064,8 @@ p.testi-text {
   justify-content: center;
 }
 #banner-part .banner-text .breadcrumb-item.active {
-  color: #ffe169;
-  border-bottom: 1px solid #ffe169;
+  color: #ff69b4;
+  border-bottom: 1px solid #ff69b4;
 }
 #banner-part .banner-text .breadcrumb-item + .breadcrumb-item::before {
   display: none;

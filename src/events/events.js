@@ -8,6 +8,7 @@ import {
   CardContent,
 } from "@material-ui/core";
 import Carousel from "react-material-ui-carousel";
+import { Link } from "react-router-dom";
 
 const data = [
   {
@@ -21,24 +22,6 @@ const data = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
     image: "https://os.alipayobjects.com/rmsportal/uaQVvDrCwryVlbb.jpg",
-  },
-  {
-    name: "Ajay",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg",
-  },
-  {
-    name: "Ajay",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg",
-  },
-  {
-    name: "Ajay",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg",
   },
   {
     name: "Ajay",
@@ -98,6 +81,9 @@ function Events() {
             </div>
           ))}
         </div>
+      </div>
+      <div class="gallery-btn">
+        <Link to="/events">See More</Link>
       </div>
     </section>
   );
