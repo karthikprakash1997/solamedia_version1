@@ -16,7 +16,7 @@ import "font-awesome/css/font-awesome.min.css";
 function App() {
   return (
     <Switch>
-      <Route exact path="/" component={LandingPage} />
+      <Route exact path="/solamedia" component={LandingPage} />
       <Route exact path="/videos/traiers" component={FullVideosTrailer} />
       <Route
         exact
