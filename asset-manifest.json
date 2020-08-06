@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/solamedia/static/css/main.a7677668.chunk.css",
-    "main.js": "/solamedia/static/js/main.b995c360.chunk.js",
-    "main.js.map": "/solamedia/static/js/main.b995c360.chunk.js.map",
+    "main.js": "/solamedia/static/js/main.4478f271.chunk.js",
+    "main.js.map": "/solamedia/static/js/main.4478f271.chunk.js.map",
     "reactPlayerDailyMotion.js": "/solamedia/static/js/reactPlayerDailyMotion.c898da1c.chunk.js",
     "reactPlayerDailyMotion.js.map": "/solamedia/static/js/reactPlayerDailyMotion.c898da1c.chunk.js.map",
     "reactPlayerFacebook.js": "/solamedia/static/js/reactPlayerFacebook.75925843.chunk.js",
@@ -33,7 +33,7 @@
     "static/js/14.90e0a06e.chunk.js": "/solamedia/static/js/14.90e0a06e.chunk.js",
     "static/js/14.90e0a06e.chunk.js.map": "/solamedia/static/js/14.90e0a06e.chunk.js.map",
     "index.html": "/solamedia/index.html",
-    "precache-manifest.5ba9da82bbb106697077c194f372adae.js": "/solamedia/precache-manifest.5ba9da82bbb106697077c194f372adae.js",
+    "precache-manifest.576e551c94ccf6147eb8260067a842f2.js": "/solamedia/precache-manifest.576e551c94ccf6147eb8260067a842f2.js",
     "service-worker.js": "/solamedia/service-worker.js",
     "static/css/14.4893cd76.chunk.css.map": "/solamedia/static/css/14.4893cd76.chunk.css.map",
     "static/css/main.a7677668.chunk.css.map": "/solamedia/static/css/main.a7677668.chunk.css.map",
@@ -49,6 +49,6 @@
     "static/css/14.4893cd76.chunk.css",
     "static/js/14.90e0a06e.chunk.js",
     "static/css/main.a7677668.chunk.css",
-    "static/js/main.b995c360.chunk.js"
+    "static/js/main.4478f271.chunk.js"
   ]
 }
