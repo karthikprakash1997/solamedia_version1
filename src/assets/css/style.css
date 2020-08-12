@@ -656,6 +656,11 @@ p {
   font-size: 12px;
   border-radius: 5px;
 }
+
+.gallery-btn a:hover {
+  color: white;
+  text-decoration: none;
+}
 section#gallery-part {
   position: relative;
 }

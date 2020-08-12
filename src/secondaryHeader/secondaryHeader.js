@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 function SecondaryHeader(params) {
   return (
     <>
-      <header class="header-part sticky">
-        <nav class="navbar navbar-expand-lg">
+      <header className="header-part sticky">
+        <nav className="navbar navbar-expand-lg">
           <Grid container direction="row" justify="center" alignItems="center">
-            <a class="logo" href="index-2.html">
+            <a className="logo" href="index-2.html">
               <img src="images/logo/logo.png" alt="logo" />
             </a>
             <h2
@@ -24,18 +24,21 @@ function SecondaryHeader(params) {
       </header>
 
       <section id="banner-part">
-        <div class="overlay">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="banner-text">
+        <div className="overlay">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="banner-text">
                   <h2>Gallery</h2>
                   <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                      <li class="breadcrumb-item dot">
+                    <ol className="breadcrumb">
+                      <li className="breadcrumb-item dot">
                         <Link to="/solamedia">Home</Link>
                       </li>
-                      <li class="breadcrumb-item active" aria-current="page">
+                      <li
+                        className="breadcrumb-item active"
+                        aria-current="page"
+                      >
                         {params}
                       </li>
                     </ol>
