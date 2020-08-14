@@ -5,6 +5,7 @@ import FullGallery from "./gallery/fullGallery";
 import FullVideosTrailer from "./videos/fullVideosT";
 import FullVideosEventBites from "./videos/fullVideosE";
 import FullEvents from "./events/fullEvents";
+import BookNow from "./bookNow/bookNow";
 
 import "./assets/css/slick.css";
 import "./assets/css/style.css";
@@ -25,6 +26,7 @@ function App() {
       />
       <Route exact path="/gallery" component={FullGallery} />
       <Route exact path="/events" component={FullEvents} />
+      <Route exact path="/book-now" component={BookNow} />
     </Switch>
   );
 }

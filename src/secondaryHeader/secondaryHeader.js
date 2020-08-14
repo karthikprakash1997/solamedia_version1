@@ -23,13 +23,13 @@ function SecondaryHeader(params) {
         </nav>
       </header>
 
-      <section id="banner-part">
-        <div className="overlay">
+      <section id="banner-part" style={{ height: 260 }}>
+        <div className="overlay" style={{ height: 260 }}>
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
                 <div className="banner-text">
-                  <h2>Gallery</h2>
+                  <h2> {params}</h2>
                   <nav aria-label="breadcrumb">
                     <ol className="breadcrumb">
                       <li className="breadcrumb-item dot">

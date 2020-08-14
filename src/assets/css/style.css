@@ -84,7 +84,7 @@ p {
   opacity: 0.15;
 }
 .navbar.navbar-expand-lg .nav-item {
-  margin-right: 46px;
+  margin-right: 25px;
 }
 .navbar.navbar-expand-lg li a {
   color: #fff;
@@ -129,12 +129,12 @@ p {
 }
 .header-btn a {
   color: #0f2f44;
-  font-size: 24px;
+  font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
   padding: 15px 30px;
   display: inline-block;
-  background: linear-gradient(#ffe169, #ffa913);
+  background: linear-gradient(315deg, #ee5166 0%, #f08efc 74%);
   border-radius: 4px;
 }
 /*==================

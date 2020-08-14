@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
+import { Link as RoterLink } from "react-router-dom";
 
 function Header() {
   const [drawer, toggleDrawer] = useState(false);
@@ -129,6 +130,9 @@ function Header() {
           </Link>
         </li>
       </ul>
+      <div class="header-btn">
+        <RoterLink to="/book-now">Book Now</RoterLink>
+      </div>
     </div>
   );
   return (
@@ -269,6 +273,9 @@ function Header() {
                 </Link>
               </li>
             </ul>
+            <div class="header-btn">
+              <RoterLink to="/book-now">Book Now</RoterLink>
+            </div>
           </div>
         </div>
       </nav>
