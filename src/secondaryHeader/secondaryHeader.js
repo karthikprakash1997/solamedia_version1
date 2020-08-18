@@ -2,7 +2,7 @@ import React from "react";
 import { Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
-function SecondaryHeader(params) {
+const SecondaryHeader = (params) => {
   return (
     <>
       <header className="header-part sticky">
@@ -51,6 +51,6 @@ function SecondaryHeader(params) {
       </section>
     </>
   );
-}
+};
 
 export default SecondaryHeader;
