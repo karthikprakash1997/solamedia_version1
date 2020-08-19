@@ -137,6 +137,16 @@ p {
   background: linear-gradient(315deg, #ee5166 0%, #f08efc 74%);
   border-radius: 4px;
 }
+.header-btn1 a {
+  color: #0f2f44;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  display: inline-block;
+  background: linear-gradient(315deg, #ee5166 0%, #f08efc 74%);
+  border-radius: 4px;
+}
 /*==================
     navbar css end
 ==================*/

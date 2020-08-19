@@ -20,6 +20,11 @@ function Header() {
             activeClass="nav-link"
             onClick={() => toggleDrawer(false)}
           >
+            <i
+              class="fa fa-info-circle"
+              aria-hidden="true"
+              style={{ marginRight: 10 }}
+            ></i>
             About
           </Link>
         </li>
@@ -33,6 +38,11 @@ function Header() {
             activeClass="nav-link"
             onClick={() => toggleDrawer(false)}
           >
+            <i
+              class="fa fa-users"
+              aria-hidden="true"
+              style={{ marginRight: 10 }}
+            ></i>
             Celeberities
           </Link>
         </li>
@@ -46,6 +56,11 @@ function Header() {
             activeClass="nav-link"
             onClick={() => toggleDrawer(false)}
           >
+            <i
+              class="fa fa-calendar"
+              aria-hidden="true"
+              style={{ marginRight: 10 }}
+            ></i>
             Events
           </Link>
         </li>
@@ -60,6 +75,11 @@ function Header() {
             activeClass="nav-link"
             onClick={() => toggleDrawer(false)}
           >
+            <i
+              class="fa fa-file-video-o"
+              aria-hidden="true"
+              style={{ marginRight: 10 }}
+            ></i>
             Videos
           </Link>
         </li>
@@ -74,10 +94,17 @@ function Header() {
             activeClass="nav-link"
             onClick={() => toggleDrawer(false)}
           >
+            <i
+              class="fa fa-picture-o"
+              aria-hidden="true"
+              style={{ marginRight: 10 }}
+            >
+              {" "}
+            </i>
             Gallery
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             to="Gallery"
             spy={true}
@@ -102,7 +129,7 @@ function Header() {
           >
             Blog
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link
             to="Feedback"
@@ -113,6 +140,13 @@ function Header() {
             activeClass="nav-link"
             onClick={() => toggleDrawer(false)}
           >
+            <i
+              class="fa fa-comments"
+              aria-hidden="true"
+              style={{ marginRight: 10 }}
+            >
+              {" "}
+            </i>
             Feedback
           </Link>
         </li>
@@ -126,12 +160,19 @@ function Header() {
             activeClass="nav-link"
             onClick={() => toggleDrawer(false)}
           >
+            <i
+              class="fa fa-map-marker"
+              aria-hidden="true"
+              style={{ marginRight: 10 }}
+            ></i>
             Contact
           </Link>
         </li>
       </ul>
-      <div class="header-btn">
-        <RoterLink to="/book-now">Book Now</RoterLink>
+      <div style={{ margin: 15 }}>
+        <div class="header-btn1">
+          <RoterLink to="/book-now">Book Now</RoterLink>
+        </div>
       </div>
     </div>
   );
