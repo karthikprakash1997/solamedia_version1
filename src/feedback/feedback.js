@@ -1,5 +1,6 @@
 import React from "react";
 import speaker1 from "../assets/images/testImages/testimonial-img1.png";
+import LazyLoad from "react-lazyload";
 
 const data = [
   {
@@ -28,31 +29,34 @@ function Feedback() {
         <div className="section-title">
           <h2>Feedback</h2>
         </div>
-        <div className="row testimonial-active">
-          {data.map((_1, index) => (
-            <div className="col-lg-4" key={index}>
-              <div className="single-testimonial">
-                <p className="testi-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  dosmod tempor incididunt ut labore etdolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco.
-                </p>
-                <div className="testi-img">
-                  <img src={speaker1} alt="testimonial-img1" />
-                  <div className="icon">
-                    <i className="fa fa-star" aria-hidden="true"></i>
-                    <i className="fa fa-star" aria-hidden="true"></i>
-                    <i className="fa fa-star" aria-hidden="true"></i>
-                    <i className="fa fa-star" aria-hidden="true"></i>
-                    <i className="fa fa-star" aria-hidden="true"></i>
+        <LazyLoad>
+          <div className="row testimonial-active">
+            {data.map((_1, index) => (
+              <div className="col-lg-4" key={index}>
+                <div className="single-testimonial">
+                  <p className="testi-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed dosmod tempor incididunt ut labore etdolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco.
+                  </p>
+                  <div className="testi-img">
+                    <img src={speaker1} alt="testimonial-img1" />
+                    <div className="icon">
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                    </div>
                   </div>
+                  <h4 className="name">Jonathon Reverse</h4>
+                  <p className="designation">Event Sponsor</p>
                 </div>
-                <h4 className="name">Jonathon Reverse</h4>
-                <p className="designation">Event Sponsor</p>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </LazyLoad>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import Gallery from "react-photo-gallery";
 import { Link } from "react-router-dom";
+import LazyLoad from "react-lazyload";
 
 export const photos = [
   {
@@ -53,7 +54,12 @@ export const photos = [
 function GalleryView() {
   return (
     <>
-      <Gallery photos={photos} />
+      <div className="section-title">
+        <h2>Gallery</h2>
+      </div>
+      <LazyLoad>
+        <Gallery photos={photos} />
+      </LazyLoad>
       <div class="gallery-btn" style={{ marginTop: 18 }}>
         <Link to="/gallery">See More</Link>
       </div>

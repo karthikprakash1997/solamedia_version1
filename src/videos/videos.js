@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardActionArea, makeStyles } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import ReactPlayer from "react-player/lazy";
+import LazyLoad from "react-lazyload";
 
 const data = [
   {
@@ -41,45 +42,57 @@ function Videos() {
         <div className="section-title">
           <h2>Videos </h2>
         </div>
-        <div className="section-title" style={{ marginTop: -20 }}>
-          <h4>Event Bites </h4>
-        </div>
-        <div className="row testimonial-active">
-          {data.map((_1, index) => (
-            <div className="col-lg-4" key={index} style={{ marginBottom: 20 }}>
-              <Card className={classes.root}>
-                <CardActionArea>
-                  <ReactPlayer
-                    url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-                    width={"100%"}
-                    height={300}
-                  />
-                </CardActionArea>
-              </Card>
-            </div>
-          ))}
-        </div>
+        <LazyLoad>
+          <div className="section-title" style={{ marginTop: -20 }}>
+            <h4>Event Bites </h4>
+          </div>
+          <div className="row testimonial-active">
+            {data.map((_1, index) => (
+              <div
+                className="col-lg-4"
+                key={index}
+                style={{ marginBottom: 20 }}
+              >
+                <Card className={classes.root}>
+                  <CardActionArea>
+                    <ReactPlayer
+                      url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+                      width={"100%"}
+                      height={300}
+                    />
+                  </CardActionArea>
+                </Card>
+              </div>
+            ))}
+          </div>
+        </LazyLoad>
         <div class="gallery-btn">
           <Link to="/videos/event-bites">See More</Link>
         </div>
         <div className="section-title" style={{ marginTop: 30 }}>
           <h4>Trailers</h4>
         </div>
-        <div className="row testimonial-active">
-          {data.map((_1, index) => (
-            <div className="col-lg-4" key={index} style={{ marginBottom: 20 }}>
-              <Card className={classes.root}>
-                <CardActionArea>
-                  <ReactPlayer
-                    url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-                    width={"100%"}
-                    height={300}
-                  />
-                </CardActionArea>
-              </Card>
-            </div>
-          ))}
-        </div>
+        <LazyLoad>
+          <div className="row testimonial-active">
+            {data.map((_1, index) => (
+              <div
+                className="col-lg-4"
+                key={index}
+                style={{ marginBottom: 20 }}
+              >
+                <Card className={classes.root}>
+                  <CardActionArea>
+                    <ReactPlayer
+                      url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+                      width={"100%"}
+                      height={300}
+                    />
+                  </CardActionArea>
+                </Card>
+              </div>
+            ))}
+          </div>
+        </LazyLoad>
       </div>
       <div class="gallery-btn">
         <Link to="/videos/traiers">See More</Link>

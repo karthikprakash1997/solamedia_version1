@@ -2,6 +2,8 @@ import React, { useState, useCallback } from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import emailjs from "emailjs-com";
+import { DateTimePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
+import DateFnsUtils from "@date-io/date-fns";
 import { Link } from "react-router-dom";
 import {
   Card,
@@ -19,6 +21,8 @@ import {
   DialogTitle,
   DialogContentText,
 } from "@material-ui/core";
+import Snackbar from "@material-ui/core/Snackbar";
+import MuiAlert from "@material-ui/lab/Alert";
 import Carousel from "react-material-ui-carousel";
 
 const data = [
@@ -44,11 +48,15 @@ const data = [
     name: "Ajay",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg",
+    image: "https://i.ibb.co/JxhCcxx/nadine-burzler-Fs-Xq3xu72bs-unsplash.jpg",
   },
 ];
 
-const useStyles = makeStyles((theme) => ({
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
+const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
     margin: 20,
@@ -57,7 +65,10 @@ const useStyles = makeStyles((theme) => ({
     height: 500,
   },
   media: {
-    height: 250,
+    maxHeight: 250,
+    minHeight: 250,
+    width: "100%",
+    objectFit: "inherit",
   },
   root2: {
     "& .MuiGrid-spacing-xs-3": {
@@ -67,13 +78,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const BookNow = "Book Bow";
-
 const FullGallery = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
+  const [snackBarOpen, setSnackBarOpen] = useState(false);
+
   const handleClose = () => setOpen(false);
   const handleClickOpen = () => setOpen(true);
+  const handlesncakBarClose = () => setSnackBarOpen(false);
 
   const form = useCallback(
     (handleClose, open) => (
@@ -87,35 +99,42 @@ const FullGallery = () => {
             name: "",
             email: "",
             phoneNumber: "",
-            date: "",
-            time: "",
+            date: new Date(),
           }}
           validationSchema={Yup.object().shape({
             name: Yup.string().max(20).required("A valid Name is required"),
-            email: Yup.string().required(" A valid email is required"),
-            phoneNumber: Yup.number()
+            email: Yup.string().email().required(" A valid email is required"),
+            phoneNumber: Yup.string()
               .max(10)
               .required(" A valid phone number  is required"),
-            date: Yup.date().required(" A valid date is required"),
-            time: Yup.date().required(" A valid time is required"),
+            date: Yup.string().required(" A valid date is required"),
           })}
-          onSubmit={() => {
-            console.log("submitted");
-            var templateParams = {
-              name: "James",
-              notes: "Check this out!",
+          onSubmit={(values) => {
+            console.log("submitted", values);
+            var template_params = {
+              email: values.email,
+              to_name: values.name,
+              program: "program_value",
+              from_name: "from_name_value",
             };
-
-            // emailjs
-            //   .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
-            //   .then(
-            //     function (response) {
-            //       console.log("SUCCESS!", response.status, response.text);
-            //     },
-            //     function (error) {
-            //       console.log("FAILED...", error);
-            //     }
-            //   );
+            setSnackBarOpen(true);
+            var service_id = "default_service";
+            var template_id = "template_vdwla8YV";
+            emailjs
+              .send(
+                service_id,
+                template_id,
+                template_params,
+                "user_ygDRAFvC7wEVoQkB9fiFS"
+              )
+              .then(
+                function (response) {
+                  console.log("SUCCESS!", response.status, response.text);
+                },
+                function (error) {
+                  console.log("FAILED...", error);
+                }
+              );
           }}
         >
           {({
@@ -183,38 +202,26 @@ const FullGallery = () => {
                   error={Boolean(touched.phoneNumber && errors.phoneNumber)}
                   helperText={touched.phoneNumber && errors.phoneNumber}
                 />
-                <TextField
-                  autoFocus
-                  margin="dense"
-                  id="date"
-                  label="Date"
-                  color="secondary"
-                  type="date"
-                  onChange={handleChange}
-                  fullWidth
-                  InputLabelProps={{
-                    shrink: true,
-                  }}
-                  value={values.date}
-                  error={Boolean(touched.date && errors.date)}
-                  helperText={touched.date && errors.date}
-                />
-                <TextField
-                  autoFocus
-                  margin="dense"
-                  color="secondary"
-                  id="time"
-                  label="Time"
-                  onChange={handleChange}
-                  type="time"
-                  fullWidth
-                  InputLabelProps={{
-                    shrink: true,
-                  }}
-                  value={values.time}
-                  error={Boolean(touched.time && errors.time)}
-                  helperText={touched.time && errors.time}
-                />
+                <MuiPickersUtilsProvider
+                  utils={DateFnsUtils}
+                  color={"secondary"}
+                >
+                  <Grid container>
+                    <DateTimePicker
+                      style={{ width: "100%" }}
+                      variant="inline"
+                      label="Date"
+                      name="date"
+                      disablePast
+                      value={values.date}
+                      showTodayButton
+                      onChange={(event) => {
+                        setFieldValue("date", event);
+                      }}
+                      color={"secondary"}
+                    />
+                  </Grid>
+                </MuiPickersUtilsProvider>
               </DialogContent>
               <DialogActions>
                 <Button onClick={handleClose} color="secondary">
@@ -319,6 +326,16 @@ const FullGallery = () => {
           ))}
         </Grid>
       </div>
+      <Snackbar
+        open={snackBarOpen}
+        autoHideDuration={6000}
+        onClose={handlesncakBarClose}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      >
+        <Alert onClose={handlesncakBarClose} severity="success">
+          This is a success message!
+        </Alert>
+      </Snackbar>
       {open && form(handleClose, open)}
     </>
   );
