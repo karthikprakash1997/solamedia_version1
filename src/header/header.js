@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-scroll";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import { Link as RoterLink } from "react-router-dom";
+import Solamedia from "../assets/images/logo/LOGO.svg";
 
 function Header() {
   const [drawer, toggleDrawer] = useState(false);
@@ -10,6 +11,10 @@ function Header() {
   const anchor = () => (
     <div>
       <ul>
+        <li>
+          <img src={Solamedia} alt="Solamedia" />
+          <hr />
+        </li>
         <li>
           <Link
             to="About"
@@ -265,7 +270,7 @@ function Header() {
                   Gallery
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link
                   to="Gallery"
                   spy={true}
@@ -288,7 +293,7 @@ function Header() {
                 >
                   Blog
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link
                   to="Feedback"

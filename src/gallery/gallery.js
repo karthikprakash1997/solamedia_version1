@@ -2,6 +2,7 @@ import React from "react";
 import Gallery from "react-photo-gallery";
 import { Link } from "react-router-dom";
 import LazyLoad from "react-lazyload";
+import { CircularProgress } from "@material-ui/core";
 
 export const photos = [
   {
@@ -57,7 +58,7 @@ function GalleryView() {
       <div className="section-title">
         <h2>Gallery</h2>
       </div>
-      <LazyLoad>
+      <LazyLoad placeholder={<CircularProgress color="secondary" />}>
         <Gallery photos={photos} />
       </LazyLoad>
       <div class="gallery-btn" style={{ marginTop: 18 }}>
