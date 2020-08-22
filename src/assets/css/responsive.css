@@ -113,7 +113,7 @@
         festive-part css start
     ==================*/
   #festive-part {
-    padding: 100px 0 70px;
+    padding-top: 100px;
   }
   .festive-img .img {
     display: none;
@@ -252,12 +252,8 @@
   .single-testimonial {
     padding: 25px 5px;
   }
-  .testi-img {
-    margin-top: 80px;
-  }
   .icon {
-    top: -54px;
-    right: 50%;
+    right: 25%;
     transform: translateX(50%);
   }
   .icon i {

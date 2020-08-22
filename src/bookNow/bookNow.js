@@ -53,7 +53,7 @@ const data = [
 ];
 
 function Alert(props) {
-  return <MuiAlert elevation={6} variant="filled" {...props} />;
+  return <MuiAlert elevation={6} constiant="filled" {...props} />;
 }
 
 const useStyles = makeStyles(() => ({
@@ -82,6 +82,7 @@ const FullGallery = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [snackBarOpen, setSnackBarOpen] = useState(false);
+  const [snackBarError, setSnackBarError] = useState(false);
 
   const handleClose = () => setOpen(false);
   const handleClickOpen = () => setOpen(true);
@@ -110,29 +111,27 @@ const FullGallery = () => {
             date: Yup.string().required(" A valid date is required"),
           })}
           onSubmit={(values) => {
-            console.log("submitted", values);
-            var template_params = {
-              email: values.email,
-              to_name: values.name,
+            const template_params = {
               program: "program_value",
-              from_name: "from_name_value",
+              name: values.name,
+              email: values.email,
             };
-            setSnackBarOpen(true);
-            var service_id = "default_service";
-            var template_id = "template_vdwla8YV";
+            const service_id = "default_service";
+            const template_id = "demo_test";
             emailjs
               .send(
                 service_id,
                 template_id,
                 template_params,
-                "user_ygDRAFvC7wEVoQkB9fiFS"
+                "user_oKDoXjmx3RXtDVT5Vz53l"
               )
               .then(
                 function (response) {
-                  console.log("SUCCESS!", response.status, response.text);
+                  setSnackBarOpen(true);
                 },
                 function (error) {
-                  console.log("FAILED...", error);
+                  setSnackBarError(true);
+                  setSnackBarOpen(true);
                 }
               );
           }}
@@ -209,7 +208,7 @@ const FullGallery = () => {
                   <Grid container>
                     <DateTimePicker
                       style={{ width: "100%" }}
-                      variant="inline"
+                      constiant="inline"
                       label="Date"
                       name="date"
                       disablePast
@@ -307,7 +306,7 @@ const FullGallery = () => {
                     />
                   </Carousel>
                   <CardContent style={{ justifyContent: "center" }}>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography gutterBottom constiant="h5" component="h2">
                       Lizard
                     </Typography>
                     <Typography component="div">
@@ -332,8 +331,13 @@ const FullGallery = () => {
         onClose={handlesncakBarClose}
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
       >
-        <Alert onClose={handlesncakBarClose} severity="success">
-          This is a success message!
+        <Alert
+          onClose={handlesncakBarClose}
+          severity={snackBarError ? "success" : "error"}
+        >
+          {snackBarError
+            ? "Your booking has been done an executive will contact you shortly"
+            : "Oops! somthing went wrong please try again."}
         </Alert>
       </Snackbar>
       {open && form(handleClose, open)}

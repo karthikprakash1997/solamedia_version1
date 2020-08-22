@@ -69,10 +69,10 @@ function GalleryView() {
         debounce={500}
       >
         <Gallery photos={photos} />
+        <div class="gallery-btn" style={{ marginTop: 18 }}>
+          <Link to="/gallery">See More</Link>
+        </div>
       </LazyLoad>
-      <div class="gallery-btn" style={{ marginTop: 18 }}>
-        <Link to="/gallery">See More</Link>
-      </div>
     </>
   );
 }
