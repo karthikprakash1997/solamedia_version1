@@ -20,32 +20,34 @@ import {
   TextField,
   DialogTitle,
   DialogContentText,
+  CircularProgress,
 } from "@material-ui/core";
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
 import Carousel from "react-material-ui-carousel";
+import Solamedia from "../assets/images/logo/output-onlinepngtools-ConvertImage.png";
 
 const data = [
   {
-    name: "Ajay",
+    program: "Ajay1",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
     image: "https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg",
   },
   {
-    name: "Ajay",
+    program: "Ajay2",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
     image: "https://os.alipayobjects.com/rmsportal/uaQVvDrCwryVlbb.jpg",
   },
   {
-    name: "Ajay",
+    program: "Ajay4",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
     image: "https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg",
   },
   {
-    name: "Ajay",
+    program: "Ajay",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
     image: "https://i.ibb.co/JxhCcxx/nadine-burzler-Fs-Xq3xu72bs-unsplash.jpg",
@@ -63,6 +65,12 @@ const useStyles = makeStyles(() => ({
   },
   root1: {
     height: 500,
+  },
+  card: {
+    margin: "auto",
+    borderRadius: 12,
+    padding: 12,
+    boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
   },
   media: {
     maxHeight: 250,
@@ -83,9 +91,15 @@ const FullGallery = () => {
   const [open, setOpen] = useState(false);
   const [snackBarOpen, setSnackBarOpen] = useState(false);
   const [snackBarError, setSnackBarError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const [programBooked, setProgram] = useState("");
 
   const handleClose = () => setOpen(false);
-  const handleClickOpen = () => setOpen(true);
+  const handleClickOpen = (name) => {
+    setOpen(true);
+    setProgram(name);
+  };
   const handlesncakBarClose = () => setSnackBarOpen(false);
 
   const form = useCallback(
@@ -95,6 +109,7 @@ const FullGallery = () => {
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
       >
+        (
         <Formik
           initialValues={{
             name: "",
@@ -111,10 +126,12 @@ const FullGallery = () => {
             date: Yup.string().required(" A valid date is required"),
           })}
           onSubmit={(values) => {
+            setIsLoading(true);
             const template_params = {
-              program: "program_value",
-              name: values.name,
-              email: values.email,
+              to_program: programBooked,
+              to_name: values.name,
+              to_email: values.email,
+              to_phone_number: values.phoneNumber,
             };
             const service_id = "default_service";
             const template_id = "demo_test";
@@ -125,20 +142,21 @@ const FullGallery = () => {
                 template_params,
                 "user_oKDoXjmx3RXtDVT5Vz53l"
               )
-              .then(
-                function (response) {
-                  setSnackBarOpen(true);
-                },
-                function (error) {
-                  setSnackBarError(true);
-                  setSnackBarOpen(true);
-                }
-              );
+              .then(function () {
+                setSnackBarOpen(true);
+                setSnackBarError(false);
+                setOpen(false);
+                setIsLoading(false);
+              })
+              .catch(function () {
+                setSnackBarError(true);
+                setSnackBarOpen(true);
+                setIsLoading(false);
+              });
           }}
         >
           {({
             errors,
-            handleBlur,
             handleChange,
             handleSubmit,
             setFieldValue,
@@ -152,7 +170,6 @@ const FullGallery = () => {
                   To subscribe to this website, please enter your email address
                   here. We will send updates occasionally.
                 </DialogContentText>
-                {console.log("render")}
                 <TextField
                   autoFocus
                   color="secondary"
@@ -223,19 +240,37 @@ const FullGallery = () => {
                 </MuiPickersUtilsProvider>
               </DialogContent>
               <DialogActions>
-                <Button onClick={handleClose} color="secondary">
-                  Cancel
-                </Button>
-                <Button color="secondary" type="submit">
-                  Submit
-                </Button>
+                {isLoading && (
+                  <>
+                    <CircularProgress color="secondary" size={15} />
+                    <span>Please Wait...</span>
+                  </>
+                )}
+                {!isLoading && (
+                  <>
+                    <Button
+                      onClick={handleClose}
+                      color="secondary"
+                      disabled={isLoading}
+                    >
+                      Cancel
+                    </Button>
+                    <Button
+                      color="secondary"
+                      type="submit"
+                      disabled={isLoading}
+                    >
+                      Submit
+                    </Button>
+                  </>
+                )}
               </DialogActions>
             </form>
           )}
         </Formik>
       </Dialog>
     ),
-    []
+    [programBooked, isLoading]
   );
 
   return (
@@ -244,7 +279,11 @@ const FullGallery = () => {
         <nav className="navbar navbar-expand-lg">
           <Grid container direction="row" justify="center" alignItems="center">
             <a className="logo" href="index-2.html">
-              <img src="images/logo/logo.png" alt="logo" />
+              <img
+                src={Solamedia}
+                alt="Solamedia"
+                style={{ height: 50, with: 50, margin: 20 }}
+              />
             </a>
             <h2
               style={{
@@ -288,7 +327,7 @@ const FullGallery = () => {
         <Grid container spacing={3} className={classes.root2}>
           {data.map((value, index) => (
             <Grid item xs={12} sm={3}>
-              <Card>
+              <Card className={classes.card}>
                 <CardActionArea>
                   <Carousel
                     indicators={false}
@@ -313,7 +352,7 @@ const FullGallery = () => {
                       <Button
                         variant="contained"
                         color="secondary"
-                        onClick={handleClickOpen}
+                        onClick={() => handleClickOpen(value.program)}
                       >
                         Book Now
                       </Button>
@@ -333,9 +372,9 @@ const FullGallery = () => {
       >
         <Alert
           onClose={handlesncakBarClose}
-          severity={snackBarError ? "success" : "error"}
+          severity={!snackBarError ? "success" : "error"}
         >
-          {snackBarError
+          {!snackBarError
             ? "Your booking has been done an executive will contact you shortly"
             : "Oops! somthing went wrong please try again."}
         </Alert>

@@ -18,14 +18,14 @@ function LandingPage() {
       <Element id="About" name="About">
         <Introduction />
       </Element>
-      <Element id="Celeberities" name="Celeberities">
-        <Scheduler />
-      </Element>
       <Element id="Events" name="Events">
         <Events />
       </Element>
       <Element id="Videos" name="Videos">
         <Videos />
+      </Element>
+      <Element id="Celeberities" name="Celeberities">
+        <Scheduler />
       </Element>
       <Element id="Gallery" name="Gallery">
         <Gallery />

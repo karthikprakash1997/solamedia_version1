@@ -93,7 +93,7 @@ function Feedback() {
     ],
   };
   return (
-    <section id="testimonial-part">
+    <section id="testimonial-part" style={{ marginTop: -100 }}>
       <div className="container">
         <div className="section-title">
           <h2>Feedback</h2>

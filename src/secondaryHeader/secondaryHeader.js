@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import Solamedia from "../assets/images/logo/output-onlinepngtools-ConvertImage.png";
 
 const SecondaryHeader = (params) => {
   return (
@@ -9,7 +10,11 @@ const SecondaryHeader = (params) => {
         <nav className="navbar navbar-expand-lg">
           <Grid container direction="row" justify="center" alignItems="center">
             <a className="logo" href="index-2.html">
-              <img src="images/logo/logo.png" alt="logo" />
+              <img
+                src={Solamedia}
+                alt="Solamedia"
+                style={{ height: 50, with: 50, margin: 20 }}
+              />
             </a>
             <h2
               style={{
