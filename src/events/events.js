@@ -33,10 +33,15 @@ const data = [
 
 const useStyles = makeStyles({
   root: {
-    height: 300,
+    height: 320,
+    margin: "auto",
+    borderRadius: 12,
+    padding: 12,
+    boxShadow: "0px 0px 12px 0px rgba(0, 0, 0, 0.1)",
   },
   media: {
     height: 250,
+    borderRadius: 6,
   },
 });
 

@@ -58,7 +58,16 @@ function GalleryView() {
       <div className="section-title">
         <h2>Gallery</h2>
       </div>
-      <LazyLoad placeholder={<CircularProgress color="secondary" />}>
+
+      <LazyLoad
+        placeholder={
+          <div className="section-title">
+            <CircularProgress color="secondary" size={100} />
+          </div>
+        }
+        once={true}
+        debounce={500}
+      >
         <Gallery photos={photos} />
       </LazyLoad>
       <div class="gallery-btn" style={{ marginTop: 18 }}>
