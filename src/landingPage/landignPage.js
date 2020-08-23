@@ -9,6 +9,7 @@ import Feedback from "../feedback/feedback";
 import Footer from "../footer/footer";
 import Introduction from "../introduction/introduction";
 import Videos from "../videos/videos";
+import Contact from "../contact/contact";
 
 function LandingPage() {
   return (
@@ -34,8 +35,9 @@ function LandingPage() {
         <Feedback />
       </Element>
       <Element id="Contact" name="Contact">
-        <Footer />
+        <Contact />
       </Element>
+      <Footer />
     </>
   );
 }
