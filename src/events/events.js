@@ -48,7 +48,7 @@ const useStyles = makeStyles({
 function Events() {
   const classes = useStyles();
   return (
-    <section id="testimonial-part">
+    <section id="testimonial-part" style={{ marginTop: -40 }}>
       <div className="container">
         <div className="section-title">
           <h2>Events </h2>

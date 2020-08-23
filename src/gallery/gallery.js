@@ -6,7 +6,7 @@ import Actress from "./actress/actress";
 function GalleryView() {
   return (
     <>
-      <div className="section-title">
+      <div className="section-title" style={{ marginTop: 50 }}>
         <h2>Gallery </h2>
       </div>
       <Actor />

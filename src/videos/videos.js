@@ -26,7 +26,7 @@ const data = [
 
 const useStyles = makeStyles({
   root: {
-    height: 300,
+    height: 320,
     maxWidth: 343,
     margin: "auto",
     borderRadius: 12,

@@ -1,14 +1,5 @@
 import React, { useState } from "react";
-import Image from "../assets/images/backgrounds/festive/festive-img2.png";
-import {
-  Card,
-  CardMedia,
-  CardActionArea,
-  Typography,
-  makeStyles,
-  CardContent,
-  Grid,
-} from "@material-ui/core";
+import { Card, makeStyles, Grid } from "@material-ui/core";
 import ReactMapGL, { Marker } from "react-map-gl";
 
 const useStyles = makeStyles(() => ({
@@ -49,7 +40,7 @@ const useStyles = makeStyles(() => ({
 function Contact() {
   const classes = useStyles();
   const staticviewport = {
-    width: 400,
+    width: "100%",
     height: 400,
     latitude: 37.7577,
     longitude: -122.4376,
@@ -58,7 +49,7 @@ function Contact() {
   const [viewport, setViewPort] = useState(staticviewport);
 
   return (
-    <section id="testimonial-part">
+    <section id="testimonial-part" style={{ marginTop: -40 }}>
       <div className="container">
         <div className="section-title">
           <h2>Contact </h2>
@@ -66,25 +57,27 @@ function Contact() {
         <div className={classes.root}>
           <Grid container spacing={3} className={classes.root2}>
             <Grid item xs={12} sm={6}>
-              <ReactMapGL
-                {...viewport}
-                mapboxApiAccessToken={
-                  "pk.eyJ1Ijoia2FydGhpa3Rlc3QiLCJhIjoiY2tlNm11dm83MWU4ZjJzbGZneGJjejFsbCJ9.SqRGVy4tEtcEWH_4ths3Mw"
-                }
-                mapStyle="mapbox://styles/mapbox/streets-v9"
-                onViewportChange={(nextViewport) => setViewPort(nextViewport)}
-              >
-                {" "}
-                <Marker
-                  latitude={37.7577}
-                  longitude={-122.4376}
-                  offsetLeft={-20}
-                  offsetTop={-10}
+              <Card className={classes.cardroot}>
+                <ReactMapGL
+                  {...viewport}
+                  mapboxApiAccessToken={
+                    "pk.eyJ1Ijoia2FydGhpa3Rlc3QiLCJhIjoiY2tlNm11dm83MWU4ZjJzbGZneGJjejFsbCJ9.SqRGVy4tEtcEWH_4ths3Mw"
+                  }
+                  mapStyle="mapbox://styles/mapbox/streets-v9"
+                  onViewportChange={(nextViewport) => setViewPort(nextViewport)}
                 >
-                  <p>SOLAMEDIA</p>
-                  <div className="mapMarkerStyle" />
-                </Marker>
-              </ReactMapGL>
+                  {" "}
+                  <Marker
+                    latitude={37.7577}
+                    longitude={-122.4376}
+                    offsetLeft={-20}
+                    offsetTop={-10}
+                  >
+                    <p>SOLAMEDIA</p>
+                    <div className="mapMarkerStyle" />
+                  </Marker>
+                </ReactMapGL>
+              </Card>
             </Grid>
             <Grid item xs={12} sm={6}>
               <Card className={classes.cardroot}>
