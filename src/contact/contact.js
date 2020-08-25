@@ -42,8 +42,8 @@ function Contact() {
   const staticviewport = {
     width: "100%",
     height: 400,
-    latitude: 37.7577,
-    longitude: -122.4376,
+    latitude: 11.006464,
+    longitude: 76.945765,
     zoom: 8,
   };
   const [viewport, setViewPort] = useState(staticviewport);
@@ -68,8 +68,8 @@ function Contact() {
                 >
                   {" "}
                   <Marker
-                    latitude={37.7577}
-                    longitude={-122.4376}
+                    latitude={11.006464}
+                    longitude={76.945765}
                     offsetLeft={-20}
                     offsetTop={-10}
                   >
@@ -87,15 +87,40 @@ function Contact() {
                     aria-hidden="true"
                     style={{ color: "#ff69b4" }}
                   ></i>
-                  <p style={{ marginLeft: 10, marginTop: -3 }}>Location</p>
+                  <p style={{ marginLeft: 10, marginTop: -3 }}>Location: </p>
                 </div>
+
+                <div style={{ display: "flex" }}>
+                  <p
+                    style={{
+                      marginLeft: 70,
+                      marginTop: -10,
+                      fontWeight: "bold",
+                    }}
+                  >
+                    471, Thadagam Main Rd, R S Puram West, Coimbatore, Tamil
+                    Nadu 641002
+                  </p>
+                </div>
+
                 <div style={{ display: "flex" }}>
                   <i
                     class="fa fa-phone"
                     aria-hidden="true"
                     style={{ color: "#ff69b4" }}
                   ></i>
-                  <p style={{ marginLeft: 10, marginTop: -3 }}>Phone Numer</p>
+                  <p style={{ marginLeft: 10, marginTop: -3 }}>
+                    Phone Number:{" "}
+                  </p>
+                  <p
+                    style={{
+                      marginLeft: 10,
+                      marginTop: -3,
+                      fontWeight: "bold",
+                    }}
+                  >
+                    9843469089
+                  </p>
                 </div>
                 <div style={{ display: "flex" }}>
                   <i
@@ -103,29 +128,64 @@ function Contact() {
                     aria-hidden="true"
                     style={{ color: "#ff69b4" }}
                   ></i>
-                  <p style={{ marginLeft: 10, marginTop: -3 }}>Email</p>
+                  <p style={{ marginLeft: 10, marginTop: -3 }}>Email: </p>
+                  <p
+                    style={{
+                      marginLeft: 10,
+                      marginTop: -3,
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Solamediaworks@gmail.com
+                  </p>
                 </div>
                 <div style={{ display: "flex", justifyContent: "center" }}>
-                  <i
-                    class="fa fa-facebook-official fa-2x"
-                    aria-hidden="true"
-                    style={{ margin: 10, color: "#ff69b4" }}
-                  ></i>
-                  <i
-                    class="fa fa-twitter fa-2x"
-                    aria-hidden="true"
-                    style={{ margin: 10, color: "#ff69b4" }}
-                  ></i>
-                  <i
-                    class="fa fa-instagram fa-2x"
-                    aria-hidden="true"
-                    style={{ margin: 10, color: "#ff69b4" }}
-                  ></i>
-                  <i
-                    class="fa fa-youtube-play fa-2x"
-                    aria-hidden="true"
-                    style={{ margin: 10, color: "#ff69b4" }}
-                  ></i>
+                  <a
+                    href="https://www.facebook.com/solamediastarz/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i
+                      class="fa fa-facebook-official fa-2x"
+                      aria-hidden="true"
+                      style={{ margin: 10, color: "#ff69b4" }}
+                    ></i>
+                  </a>
+                  <a
+                    href="https://twitter.com/Dineshsolamedia?s=09"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {" "}
+                    <i
+                      class="fa fa-twitter fa-2x"
+                      aria-hidden="true"
+                      style={{ margin: 10, color: "#ff69b4" }}
+                    ></i>
+                  </a>
+                  <a
+                    href="https://instagram.com/solamedia_casting?igshid=10d8cg1evc8my"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i
+                      class="fa fa-instagram fa-2x"
+                      aria-hidden="true"
+                      style={{ margin: 10, color: "#ff69b4" }}
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/channel/UCREBK0BcanX3nm7-8CZtxjA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {" "}
+                    <i
+                      class="fa fa-youtube-play fa-2x"
+                      aria-hidden="true"
+                      style={{ margin: 10, color: "#ff69b4" }}
+                    ></i>
+                  </a>
                 </div>
               </Card>
             </Grid>

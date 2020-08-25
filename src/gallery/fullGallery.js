@@ -4,86 +4,58 @@ import Gallery from "react-photo-gallery";
 import LazyLoad from "react-lazyload";
 import { CircularProgress } from "@material-ui/core";
 import { useParams } from "react-router-dom";
-
-export const photos = [
-  {
-    src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
-    width: 4,
-    height: 3,
-  },
-  {
-    src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",
-    width: 1,
-    height: 1,
-  },
-  {
-    src: "https://source.unsplash.com/qDkso9nvCg0/600x799",
-    width: 3,
-    height: 4,
-  },
-  {
-    src: "https://source.unsplash.com/iecJiKe_RNg/600x799",
-    width: 3,
-    height: 4,
-  },
-  {
-    src: "https://source.unsplash.com/epcsn8Ed8kY/600x799",
-    width: 3,
-    height: 4,
-  },
-  {
-    src: "https://source.unsplash.com/NQSWvyVRIJk/800x599",
-    width: 4,
-    height: 3,
-  },
-  {
-    src: "https://source.unsplash.com/zh7GEuORbUw/600x799",
-    width: 3,
-    height: 4,
-  },
-  {
-    src: "https://source.unsplash.com/PpOHJezOalU/800x599",
-    width: 4,
-    height: 3,
-  },
-  {
-    src: "https://source.unsplash.com/I1ASdgphUH4/800x599",
-    width: 4,
-    height: 3,
-  },
-];
+import actor from "../data/actors.json";
+import actress from "../data/actress.json";
+import movies from "../data/movies.json";
 
 function FullGallery() {
   const { type, name } = useParams();
+  const [data, setData] = React.useState([]);
 
   useEffect(() => {
-    console.log(type, name);
-  }, [type, name]);
+    if (name === "all") {
+      setData(type === "Actor" ? actor : type === "Actress" ? actress : movies);
+    } else {
+      const setdata =
+        type === "Actor" ? actor : type === "Actress" ? actress : movies;
+      actor && setData(setdata.filter((value) => value.title === name));
+    }
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <>
       {SecondaryHeader(type)}
-      <div>
-        {name !== "all" && (
-          <div
-            className="section-title"
-            style={{ marginTop: 20, marginBottom: 20 }}
-          >
-            <h4>{name} </h4>
-          </div>
-        )}
-        <LazyLoad
-          placeholder={
-            <div className="section-title">
-              <CircularProgress color="secondary" size={100} />
+      {data.map((value, index) => {
+        const photos1 = value.images.map((image) => ({
+          src: image,
+          width: 4,
+          height: 4,
+        }));
+        return (
+          <div>
+            <div
+              className="section-title"
+              style={{ marginTop: 20, marginBottom: 20 }}
+              key={index}
+            >
+              <h4>{value.title} </h4>
             </div>
-          }
-          once={true}
-          debounce={500}
-        >
-          <Gallery photos={photos} />
-        </LazyLoad>
-      </div>
+            <LazyLoad
+              placeholder={
+                <div className="section-title">
+                  <CircularProgress color="secondary" size={100} />
+                </div>
+              }
+              once={true}
+              debounce={500}
+            >
+              <Gallery photos={photos1} />
+            </LazyLoad>
+          </div>
+        );
+      })}
+      }
     </>
   );
 }

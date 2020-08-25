@@ -9,27 +9,9 @@ import {
 } from "@material-ui/core";
 import Carousel from "react-material-ui-carousel";
 import { Link } from "react-router-dom";
-
-const data = [
-  {
-    name: "Ajay",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg",
-  },
-  {
-    name: "Ajay",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "https://os.alipayobjects.com/rmsportal/uaQVvDrCwryVlbb.jpg",
-  },
-  {
-    name: "Ajay",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg",
-  },
-];
+import events from "../data/events.json";
+import LazyLoad from "react-lazyload";
+import { CircularProgress } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
@@ -42,6 +24,7 @@ const useStyles = makeStyles({
   media: {
     height: 250,
     borderRadius: 6,
+    objectFit: "inherit",
   },
 });
 
@@ -54,7 +37,7 @@ function Events() {
           <h2>Events </h2>
         </div>
         <div className="row testimonial-active">
-          {data.map((_1, index) => (
+          {events.slice(0, 3).map((data, index) => (
             <div className="col-lg-4" key={index} style={{ marginBottom: 20 }}>
               <Card className={classes.root}>
                 <CardActionArea>
@@ -64,21 +47,30 @@ function Events() {
                     animation={"fade"}
                     timeout={1000}
                   >
-                    {data.map((value, index) => (
-                      <CardMedia
-                        key={index}
-                        className={classes.media}
-                        component="img"
-                        alt="Contemplative Reptile"
-                        height="200"
-                        image={value.image}
-                        title="Contemplative Reptile"
-                      />
+                    {data.images.map((value, index) => (
+                      <LazyLoad
+                        placeholder={
+                          <div className="section-title">
+                            <CircularProgress color="secondary" size={100} />
+                          </div>
+                        }
+                        once={true}
+                        debounce={500}
+                      >
+                        <CardMedia
+                          key={index}
+                          className={classes.media}
+                          component="img"
+                          alt={data.title}
+                          height="200"
+                          image={value.toString()}
+                        />{" "}
+                      </LazyLoad>
                     ))}
                   </Carousel>
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Lizard
+                      {data.title}
                     </Typography>
                   </CardContent>
                 </CardActionArea>

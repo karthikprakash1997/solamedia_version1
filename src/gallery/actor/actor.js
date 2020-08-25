@@ -3,6 +3,9 @@ import React from "react";
 import Slider from "react-slick";
 import cx from "clsx";
 import { Link, useHistory } from "react-router-dom";
+import actor from "../../data/actors.json";
+import LazyLoad from "react-lazyload";
+import { CircularProgress } from "@material-ui/core";
 
 import {
   Card,
@@ -12,97 +15,19 @@ import {
   CardContent,
 } from "@material-ui/core";
 
-export const photos = [
-  {
-    src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
-    width: 4,
-    height: 3,
-  },
-  {
-    src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",
-    width: 1,
-    height: 1,
-  },
-  {
-    src: "https://source.unsplash.com/qDkso9nvCg0/600x799",
-    width: 3,
-    height: 4,
-  },
-  {
-    src: "https://source.unsplash.com/iecJiKe_RNg/600x799",
-    width: 3,
-    height: 4,
-  },
-  {
-    src: "https://source.unsplash.com/epcsn8Ed8kY/600x799",
-    width: 3,
-    height: 4,
-  },
-  {
-    src: "https://source.unsplash.com/NQSWvyVRIJk/800x599",
-    width: 4,
-    height: 3,
-  },
-  {
-    src: "https://source.unsplash.com/zh7GEuORbUw/600x799",
-    width: 3,
-    height: 4,
-  },
-  {
-    src: "https://source.unsplash.com/PpOHJezOalU/800x599",
-    width: 4,
-    height: 3,
-  },
-  {
-    src: "https://source.unsplash.com/I1ASdgphUH4/800x599",
-    width: 4,
-    height: 3,
-  },
-];
-
-const data = [
-  {
-    name: "kp",
-    designation: "Actor",
-  },
-  {
-    name: "kp",
-    designation: "Actor",
-  },
-  {
-    name: "kp",
-    designation: "Actor",
-  },
-  {
-    name: "kp",
-    designation: "Actor",
-  },
-  {
-    name: "kp",
-    designation: "Actor",
-  },
-  {
-    name: "kp",
-    designation: "Actor",
-  },
-  {
-    name: "kp",
-    designation: "Actor",
-  },
-];
-
 const useStyles = makeStyles({
   root: {
     maxWidth: 343,
     margin: "auto",
     borderRadius: 12,
     padding: 12,
-    height: 280,
+    height: 290,
     boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
   },
   media: {
     borderRadius: 6,
     height: 220,
+    objectFit: "inherit",
   },
   slides: {
     "& .slick-prev": {
@@ -171,24 +96,36 @@ function Actor() {
         <div className="row testimonial-active">
           <div className="col-lg-12  col-md-12">
             <Slider {...settings}>
-              {data.map((value, index) => (
+              {actor.map((value, index) => (
                 <Card
                   className={cx(styles.root)}
                   onClick={() => {
                     history.replace({
-                      pathname: `/gallery/Actor/${value.name}`,
+                      pathname: `/gallery/Actor/${value.title}`,
                     });
                   }}
                 >
-                  <CardMedia
-                    className={cx(styles.media)}
-                    image={
-                      "https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+                  {" "}
+                  <LazyLoad
+                    placeholder={
+                      <div className="section-title">
+                        <CircularProgress color="secondary" size={100} />
+                      </div>
                     }
-                  />
-                  <CardContent>
+                    once={true}
+                    debounce={500}
+                  >
+                    <CardMedia
+                      className={cx(styles.media)}
+                      image={value.images[0]}
+                      component="img"
+                    />
+                  </LazyLoad>
+                  <CardContent
+                    style={{ display: "flex", justifyContent: "center" }}
+                  >
                     <Typography component="h5" variant="h5">
-                      Arya
+                      {value.title}
                     </Typography>
                   </CardContent>
                 </Card>
