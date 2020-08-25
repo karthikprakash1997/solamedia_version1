@@ -101,7 +101,7 @@ function Movies() {
                   className={cx(styles.root)}
                   onClick={() => {
                     history.replace({
-                      pathname: `/gallery/Actor/${value.title}`,
+                      pathname: `/gallery/Movies/${value.title}`,
                     });
                   }}
                 >

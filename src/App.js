@@ -25,7 +25,7 @@ function App() {
         component={FullVideosEventBites}
       />
       <Route exact path="/gallery/:type/:name" component={FullGallery} />
-      <Route exact path="/events" component={FullEvents} />
+      <Route exact path="/events/:name" component={FullEvents} />
       <Route exact path="/book-now" component={BookNow} />
     </Switch>
   );

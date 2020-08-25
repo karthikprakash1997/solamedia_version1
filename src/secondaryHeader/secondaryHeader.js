@@ -2,8 +2,10 @@ import React from "react";
 import { Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import Solamedia from "../assets/images/logo/output-onlinepngtools-ConvertImage.png";
+import { useHistory } from "react-router-dom";
 
 const SecondaryHeader = (params) => {
+  const history = useHistory();
   return (
     <>
       <header className="header-part sticky">
@@ -39,6 +41,15 @@ const SecondaryHeader = (params) => {
                     <ol className="breadcrumb">
                       <li className="breadcrumb-item dot">
                         <Link to="/solamedia">Home</Link>
+                      </li>
+                      <li className="breadcrumb-item dot">
+                        <Link
+                          onClick={() => {
+                            history.goBack();
+                          }}
+                        >
+                          {params}
+                        </Link>
                       </li>
                       <li
                         className="breadcrumb-item active"

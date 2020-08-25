@@ -18,7 +18,7 @@ function FullGallery() {
     } else {
       const setdata =
         type === "Actor" ? actor : type === "Actress" ? actress : movies;
-      actor && setData(setdata.filter((value) => value.title === name));
+      setData(setdata.filter((value) => value.title === name));
     }
     // eslint-disable-next-line
   }, []);
@@ -29,8 +29,6 @@ function FullGallery() {
       {data.map((value, index) => {
         const photos1 = value.images.map((image) => ({
           src: image,
-          width: 4,
-          height: 4,
         }));
         return (
           <div>
