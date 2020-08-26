@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b8e276768dce8f832f87419277450f6e",
+    "revision": "84c3cde5943fa7dbdc43f52bf267f0af",
     "url": "/solamedia/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/solamedia/static/css/14.4893cd76.chunk.css"
   },
   {
-    "revision": "5ce9f438ea35a788e3ef",
+    "revision": "d915923bb36879765114",
     "url": "/solamedia/static/css/main.9aaa6ee4.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/solamedia/static/js/14.d1e9f4b6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5ce9f438ea35a788e3ef",
-    "url": "/solamedia/static/js/main.58a12b4e.chunk.js"
+    "revision": "d915923bb36879765114",
+    "url": "/solamedia/static/js/main.f8767b20.chunk.js"
   },
   {
     "revision": "2cf9d252ecc9929b829b",
