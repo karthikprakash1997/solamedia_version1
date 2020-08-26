@@ -33,24 +33,7 @@ function Header() {
             About
           </Link>
         </li>
-        <li>
-          <Link
-            to="Celeberities"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="nav-link"
-            activeClass="nav-link"
-            onClick={() => toggleDrawer(false)}
-          >
-            <i
-              class="fa fa-users"
-              aria-hidden="true"
-              style={{ marginRight: 10 }}
-            ></i>
-            Celeberities
-          </Link>
-        </li>
+
         <li>
           <Link
             to="Events"
@@ -88,7 +71,24 @@ function Header() {
             Videos
           </Link>
         </li>
-
+        <li>
+          <Link
+            to="Celeberities"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className="nav-link"
+            activeClass="nav-link"
+            onClick={() => toggleDrawer(false)}
+          >
+            <i
+              class="fa fa-users"
+              aria-hidden="true"
+              style={{ marginRight: 10 }}
+            ></i>
+            Celeberities
+          </Link>
+        </li>
         <li>
           <Link
             to="Gallery"
@@ -220,18 +220,7 @@ function Header() {
                   About
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link
-                  to="Celeberities"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  className="nav-link"
-                  activeClass="nav-link"
-                >
-                  Celeberities
-                </Link>
-              </li>
+
               <li className="nav-item">
                 <Link
                   to="Events"
@@ -257,7 +246,18 @@ function Header() {
                   Videos
                 </Link>
               </li>
-
+              <li className="nav-item">
+                <Link
+                  to="Celeberities"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  className="nav-link"
+                  activeClass="nav-link"
+                >
+                  Celeberities
+                </Link>
+              </li>
               <li className="nav-item">
                 <Link
                   to="Gallery"

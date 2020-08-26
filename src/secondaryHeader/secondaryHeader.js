@@ -40,15 +40,13 @@ const SecondaryHeader = (params) => {
                   <nav aria-label="breadcrumb">
                     <ol className="breadcrumb">
                       <li className="breadcrumb-item dot">
-                        <Link to="/solamedia">Home</Link>
-                      </li>
-                      <li className="breadcrumb-item dot">
                         <Link
                           onClick={() => {
                             history.goBack();
+                            console.log("bacl");
                           }}
                         >
-                          {params}
+                          Back
                         </Link>
                       </li>
                       <li

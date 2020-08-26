@@ -52,7 +52,7 @@ function Actor() {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,
@@ -100,7 +100,7 @@ function Actor() {
                 <Card
                   className={cx(styles.root)}
                   onClick={() => {
-                    history.replace({
+                    history.push({
                       pathname: `/gallery/Actor/${value.title}`,
                     });
                   }}

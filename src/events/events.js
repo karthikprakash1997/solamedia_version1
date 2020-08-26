@@ -1,30 +1,32 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import {
-  Card,
-  CardMedia,
-  CardActionArea,
-  Typography,
-  makeStyles,
-  CardContent,
-} from "@material-ui/core";
-import Carousel from "react-material-ui-carousel";
+import Slider from "react-slick";
+import cx from "clsx";
 import { Link, useHistory } from "react-router-dom";
 import events from "../data/events.json";
 import LazyLoad from "react-lazyload";
 import { CircularProgress } from "@material-ui/core";
-import Slider from "react-slick";
+
+import {
+  Card,
+  CardMedia,
+  Typography,
+  makeStyles,
+  CardContent,
+} from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
-    height: 320,
+    maxWidth: 343,
     margin: "auto",
     borderRadius: 12,
     padding: 12,
+    height: 290,
     boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
   },
   media: {
-    height: 250,
     borderRadius: 6,
+    height: 220,
     objectFit: "inherit",
   },
   slides: {
@@ -42,22 +44,21 @@ const useStyles = makeStyles({
   },
 });
 
-function Events() {
-  const classes = useStyles();
+function Actor() {
   const history = useHistory();
-
+  const styles = useStyles();
   var settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: false,
+    slidesToScroll: 3,
+    autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,
     initialSlide: 0,
     arrows: true,
-    className: classes.slides,
+    className: styles.slides,
     responsive: [
       {
         breakpoint: 1024,
@@ -85,69 +86,59 @@ function Events() {
       },
     ],
   };
+
   return (
-    <section id="testimonial-part" style={{ marginTop: -40 }}>
+    <section id="testimonial-part" style={{ marginTop: -100 }}>
       <div className="container">
-        <div className="section-title">
-          <h2>Events </h2>
+        <div className="section-title" style={{ marginTop: -20 }}>
+          <h4>Events </h4>
         </div>
         <div className="row testimonial-active">
           <div className="col-lg-12  col-md-12">
             <Slider {...settings}>
-              {events.map((data, index) => (
+              {events.map((value, index) => (
                 <Card
-                  className={classes.root}
+                  className={cx(styles.root)}
                   onClick={() => {
-                    history.replace({
-                      pathname: `/events/${data.title}`,
+                    history.push({
+                      pathname: `/events/${value.title}`,
                     });
                   }}
                 >
-                  <CardActionArea>
-                    <Carousel
-                      indicators={false}
-                      navButtonsAlwaysVisible={false}
-                      animation={"fade"}
-                      timeout={1000}
-                    >
-                      {data.images.map((value, index) => (
-                        <LazyLoad
-                          placeholder={
-                            <div className="section-title">
-                              <CircularProgress color="secondary" size={100} />
-                            </div>
-                          }
-                          once={true}
-                          debounce={500}
-                        >
-                          <CardMedia
-                            key={index}
-                            className={classes.media}
-                            component="img"
-                            alt={data.title}
-                            height="200"
-                            image={value.toString()}
-                          />{" "}
-                        </LazyLoad>
-                      ))}
-                    </Carousel>
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        {data.title}
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
+                  {" "}
+                  <LazyLoad
+                    placeholder={
+                      <div className="section-title">
+                        <CircularProgress color="secondary" size={100} />
+                      </div>
+                    }
+                    once={true}
+                    debounce={500}
+                  >
+                    <CardMedia
+                      className={cx(styles.media)}
+                      image={value.images[0]}
+                      component="img"
+                    />
+                  </LazyLoad>
+                  <CardContent
+                    style={{ display: "flex", justifyContent: "center" }}
+                  >
+                    <Typography component="h5" variant="h5">
+                      {value.title}
+                    </Typography>
+                  </CardContent>
                 </Card>
               ))}
             </Slider>
           </div>
         </div>
-      </div>
-      <div class="gallery-btn" style={{ marginTop: 20 }}>
-        <Link to="/events/all">See More</Link>
+        <div class="gallery-btn" style={{ marginTop: 30 }}>
+          <Link to="/events/all">See All</Link>
+        </div>
       </div>
     </section>
   );
 }
 
-export default Events;
+export default Actor;
