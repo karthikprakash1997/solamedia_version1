@@ -114,7 +114,7 @@ function Contact() {
                   </p>
                   <p
                     style={{
-                      marginLeft: 10,
+                      marginLeft: 8,
                       marginTop: -3,
                       fontWeight: "bold",
                     }}
@@ -131,7 +131,7 @@ function Contact() {
                   <p style={{ marginLeft: 10, marginTop: -3 }}>Email: </p>
                   <p
                     style={{
-                      marginLeft: 10,
+                      marginLeft: 8,
                       marginTop: -3,
                       fontWeight: "bold",
                     }}

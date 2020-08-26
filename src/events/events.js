@@ -44,13 +44,12 @@ const useStyles = makeStyles({
   },
 });
 
-function Actor() {
+function Events() {
   const history = useHistory();
   const styles = useStyles();
   var settings = {
     dots: true,
     infinite: true,
-    speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
     autoplay: true,
@@ -141,4 +140,4 @@ function Actor() {
   );
 }
 
-export default Actor;
+export default Events;

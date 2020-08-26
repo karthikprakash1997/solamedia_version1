@@ -33,7 +33,6 @@ function Header() {
             About
           </Link>
         </li>
-
         <li>
           <Link
             to="Events"
