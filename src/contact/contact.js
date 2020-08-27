@@ -93,8 +93,8 @@ function Contact() {
                 <div style={{ display: "flex" }}>
                   <p
                     style={{
-                      marginLeft: 70,
-                      marginTop: -10,
+                      marginLeft: 60,
+                      marginTop: -15,
                       fontWeight: "bold",
                     }}
                   >
@@ -112,10 +112,12 @@ function Contact() {
                   <p style={{ marginLeft: 10, marginTop: -3 }}>
                     Phone Number:{" "}
                   </p>
+                </div>
+                <div style={{ display: "flex" }}>
                   <p
                     style={{
-                      marginLeft: 8,
-                      marginTop: -3,
+                      marginLeft: 60,
+                      marginTop: -15,
                       fontWeight: "bold",
                     }}
                   >
@@ -129,10 +131,12 @@ function Contact() {
                     style={{ color: "#ff69b4" }}
                   ></i>
                   <p style={{ marginLeft: 10, marginTop: -3 }}>Email: </p>
+                </div>
+                <div style={{ display: "flex" }}>
                   <p
                     style={{
-                      marginLeft: 8,
-                      marginTop: -3,
+                      marginLeft: 60,
+                      marginTop: -15,
                       fontWeight: "bold",
                     }}
                   >

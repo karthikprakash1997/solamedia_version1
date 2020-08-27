@@ -108,7 +108,8 @@ function Movies() {
                   <LazyLoad
                     placeholder={
                       <div className="section-title">
-                        <CircularProgress color="secondary" size={100} />
+                        <CircularProgress color="secondary" size={100} 
+                          style={{ marginTop: 74 }}/>
                       </div>
                     }
                     once={true}

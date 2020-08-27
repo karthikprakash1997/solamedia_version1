@@ -2,6 +2,8 @@ import React from "react";
 import { Card, CardActionArea, makeStyles } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import ReactPlayer from "react-player/lazy";
+import eventBites from "../data/eventBites.json";
+import trailer from "../data/trailers.json";
 
 const data = [
   {
@@ -50,12 +52,12 @@ function Videos() {
           <h4>Event Bites </h4>
         </div>
         <div className="row testimonial-active">
-          {data.map((_1, index) => (
+          {eventBites.slice(0, 3).map((values, index) => (
             <div className="col-lg-4" key={index} style={{ marginBottom: 20 }}>
               <Card className={classes.root}>
                 <CardActionArea>
                   <ReactPlayer
-                    url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+                    url={values}
                     width={"100%"}
                     height={300}
                     controls={true}
@@ -72,15 +74,11 @@ function Videos() {
           <h4>Trailers</h4>
         </div>
         <div className="row testimonial-active">
-          {data.map((_1, index) => (
+          {trailer.slice(0, 3).map((value, index) => (
             <div className="col-lg-4" key={index} style={{ marginBottom: 20 }}>
               <Card className={classes.root}>
                 <CardActionArea>
-                  <ReactPlayer
-                    url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-                    width={"100%"}
-                    height={300}
-                  />
+                  <ReactPlayer url={value.url} width={"100%"} height={300} />
                 </CardActionArea>
               </Card>
             </div>
