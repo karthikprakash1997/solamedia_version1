@@ -5,27 +5,6 @@ import ReactPlayer from "react-player/lazy";
 import eventBites from "../data/eventBites.json";
 import trailer from "../data/trailers.json";
 
-const data = [
-  {
-    name: "Ajay",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "https://www.youtube.com/watch?v=8JvnNxYgro0",
-  },
-  {
-    name: "Ajay",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "https://www.youtube.com/watch?v=8JvnNxYgro0",
-  },
-  {
-    name: "Ajay",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "https://www.youtube.com/watch?v=8JvnNxYgro0",
-  },
-];
-
 const useStyles = makeStyles({
   root: {
     height: 320,

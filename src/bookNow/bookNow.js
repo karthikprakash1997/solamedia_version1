@@ -132,6 +132,7 @@ const FullGallery = () => {
               to_name: values.name,
               to_email: values.email,
               to_phone_number: values.phoneNumber,
+              to_date: values.date,
             };
             const service_id = "default_service";
             const template_id = "demo_test";
@@ -323,47 +324,53 @@ const FullGallery = () => {
           </div>
         </div>
       </section>
-      <div className={classes.root}>
-        <Grid container spacing={3} className={classes.root2}>
-          {data.map((value, index) => (
-            <Grid item xs={12} sm={3}>
-              <Card className={classes.card}>
-                <CardActionArea>
-                  <Carousel
-                    indicators={false}
-                    navButtonsAlwaysVisible={false}
-                    animation={"fade"}
-                    timeout={1000}
-                  >
-                    <CardMedia
-                      className={classes.media}
-                      component="img"
-                      alt="Contemplative Reptile"
-                      height="200"
-                      image={value.image}
-                      title="Contemplative Reptile"
-                    />
-                  </Carousel>
-                  <CardContent style={{ justifyContent: "center" }}>
-                    <Typography gutterBottom constiant="h5" component="h2">
-                      Lizard
-                    </Typography>
-                    <Typography component="div">
-                      <Button
-                        variant="contained"
-                        color="secondary"
-                        onClick={() => handleClickOpen(value.program)}
-                      >
-                        Book Now
-                      </Button>
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </div>
+      <section id="testimonial-part">
+        <div className="container">
+          <div className="row testimonial-active">
+            {data.map((value, index) => (
+              <div
+                className="col-lg-4"
+                key={index}
+                style={{ marginBottom: 20 }}
+              >
+                <Card className={classes.card}>
+                  <CardActionArea>
+                    <Carousel
+                      indicators={false}
+                      navButtonsAlwaysVisible={false}
+                      animation={"fade"}
+                      timeout={1000}
+                    >
+                      <CardMedia
+                        className={classes.media}
+                        component="img"
+                        alt="Contemplative Reptile"
+                        height="200"
+                        image={value.image}
+                        title="Contemplative Reptile"
+                      />
+                    </Carousel>
+                    <CardContent style={{ justifyContent: "center" }}>
+                      <Typography gutterBottom constiant="h5" component="h2">
+                        Lizard
+                      </Typography>
+                      <Typography component="div">
+                        <Button
+                          variant="contained"
+                          color="secondary"
+                          onClick={() => handleClickOpen(value.program)}
+                        >
+                          Book Now
+                        </Button>
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <Snackbar
         open={snackBarOpen}
         autoHideDuration={6000}
