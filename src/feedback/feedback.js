@@ -31,26 +31,6 @@ const useStyles = makeStyles({
   },
 });
 
-const data = [
-  {
-    name: "Ajay",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "images/testimonial/testimonial-img1.png",
-  },
-  {
-    name: "Ajay",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "images/testimonial/testimonial-img1.png",
-  },
-  {
-    name: "Ajay",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "images/testimonial/testimonial-img1.png",
-  },
-];
 function Feedback() {
   const styles = useStyles();
   var settings = {
@@ -101,8 +81,8 @@ function Feedback() {
         <div className="row testimonial-active">
           <div className="col-lg-12  col-md-12">
             <Slider {...settings}>
-              {data.map((_1, index) => (
-                <Card className={cx(styles.root)}>
+              {[1, 2, 3].map((_1, index) => (
+                <Card className={cx(styles.root)} key={index}>
                   <div className="single-testimonial">
                     <p className="testi-text">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit,
