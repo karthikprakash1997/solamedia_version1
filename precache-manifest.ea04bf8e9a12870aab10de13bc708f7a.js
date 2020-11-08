@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "811def3f8791e80278c91e381c35a254",
+    "revision": "b5f1c122470841fc7b7eb8078f549923",
     "url": "/solamedia_version1/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/solamedia_version1/static/css/14.3ec3e87a.chunk.css"
   },
   {
-    "revision": "03a4d7c8134b12115171",
+    "revision": "e40bba0c2265707b7999",
     "url": "/solamedia_version1/static/css/16.367efffb.chunk.css"
   },
   {
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/solamedia_version1/static/js/15.084230fb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "03a4d7c8134b12115171",
-    "url": "/solamedia_version1/static/js/16.753b4008.chunk.js"
+    "revision": "e40bba0c2265707b7999",
+    "url": "/solamedia_version1/static/js/16.9d22a81b.chunk.js"
   },
   {
     "revision": "83fa681aaabdee8e53fc",
@@ -88,8 +88,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/solamedia_version1/static/js/reactPlayerYouTube.8ad301d8.chunk.js"
   },
   {
-    "revision": "d93ad83aa8ce1bde06cf",
-    "url": "/solamedia_version1/static/js/runtime-main.5c3ecec1.js"
+    "revision": "2f1f9e525ec02648f7f3",
+    "url": "/solamedia_version1/static/js/runtime-main.b0994b7b.js"
   },
   {
     "revision": "2ee211c046c53912e1f395c32d46928b",
