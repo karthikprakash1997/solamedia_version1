@@ -129,7 +129,7 @@ function Scheduler() {
           <div className="col-lg-12  col-md-12">
             <Slider {...settings}>
               {data.map((value, index) => (
-                <Card className={cx(styles.root)}>
+                <Card className={cx(styles.root)} key={index}>
                   <CardMedia
                     className={cx(styles.media)}
                     image={

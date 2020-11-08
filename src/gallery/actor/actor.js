@@ -103,6 +103,7 @@ function Actor() {
                       pathname: `/gallery/Actor/${value.title}`,
                     });
                   }}
+                  key={index}
                 >
                   {" "}
                   <LazyLoad

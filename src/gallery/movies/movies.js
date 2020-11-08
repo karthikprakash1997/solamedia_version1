@@ -103,13 +103,14 @@ function Movies() {
                       pathname: `/gallery/Movies/${value.title}`,
                     });
                   }}
+                  key={index}
                 >
                   {" "}
                   <LazyLoad
                     placeholder={
                       <div className="section-title">
-                        <CircularProgress color="secondary" size={100} 
-                          style={{ marginTop: 74 }}/>
+                        <CircularProgress color="secondary" size={100}
+                          style={{ marginTop: 74 }} />
                       </div>
                     }
                     once={true}

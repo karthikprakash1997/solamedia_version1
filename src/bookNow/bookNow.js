@@ -29,28 +29,34 @@ import Solamedia from "../assets/images/logo/output-onlinepngtools-ConvertImage.
 
 const data = [
   {
-    program: "Ajay1",
+    program: "Brand Management",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg",
+    image: "https://i.ibb.co/6BkGPV4/Brand-management.webp",
   },
   {
-    program: "Ajay2",
+    program: "Celebrity Management",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "https://os.alipayobjects.com/rmsportal/uaQVvDrCwryVlbb.jpg",
+    image: "https://i.ibb.co/2Wqx0Tc/Celebrity-management-bookings.jpg",
   },
   {
-    program: "Ajay4",
+    program: "Live Concerts",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg",
+    image: "https://i.ibb.co/4P8LmgQ/Live-concerts.webp",
   },
   {
-    program: "Ajay",
+    program: "Photography Shoot",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
-    image: "https://i.ibb.co/JxhCcxx/nadine-burzler-Fs-Xq3xu72bs-unsplash.jpg",
+    image: "https://i.ibb.co/n8T2X1g/Photography-shoot.jpg",
+  },
+  {
+    program: "Talent Management",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
+    image: "https://i.ibb.co/6mHhFjs/Talent-management-jpg.webp",
   },
 ];
 
@@ -109,7 +115,6 @@ const FullGallery = () => {
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
       >
-        (
         <Formik
           initialValues={{
             name: "",
@@ -134,14 +139,15 @@ const FullGallery = () => {
               to_phone_number: values.phoneNumber,
               to_date: values.date,
             };
-            const service_id = "default_service";
-            const template_id = "demo_test";
+            const service_id = "service_z0m9nah";
+            const template_id = "template_vdwla8YV";
+            // email js account is karthiktestunofficial need to change it if needed
             emailjs
               .send(
                 service_id,
                 template_id,
                 template_params,
-                "user_oKDoXjmx3RXtDVT5Vz53l"
+                "user_ygDRAFvC7wEVoQkB9fiFS"
               )
               .then(function () {
                 setSnackBarOpen(true);
@@ -164,110 +170,109 @@ const FullGallery = () => {
             touched,
             values,
           }) => (
-            <form onSubmit={handleSubmit}>
-              <DialogTitle id="form-dialog-title">Booking Detials</DialogTitle>
-              <DialogContent>
-                <DialogContentText>
-                  To subscribe to this website, please enter your email address
-                  here. We will send updates occasionally.
+              <form onSubmit={handleSubmit}>
+                <DialogTitle id="form-dialog-title">Booking Detials</DialogTitle>
+                <DialogContent>
+                  <DialogContentText>
+                    Thanks for choosing Solamedia, please fill in the details, our executive will contact your shortly.
                 </DialogContentText>
-                <TextField
-                  autoFocus
-                  color="secondary"
-                  margin="dense"
-                  id="name"
-                  label="Name"
-                  type="text"
-                  fullWidth
-                  InputLabelProps={{
-                    shrink: true,
-                  }}
-                  onChange={handleChange}
-                  value={values.name}
-                  error={Boolean(touched.name && errors.name)}
-                  helperText={touched.name && errors.name}
-                />
-                <TextField
-                  autoFocus
-                  margin="dense"
-                  color="secondary"
-                  id="email"
-                  label="Email Address"
-                  type="email"
-                  fullWidth
-                  onChange={handleChange}
-                  value={values.email}
-                  InputLabelProps={{
-                    shrink: true,
-                  }}
-                  error={Boolean(touched.email && errors.email)}
-                  helperText={touched.email && errors.email}
-                />
-                <TextField
-                  autoFocus
-                  margin="dense"
-                  id="phoneNumber"
-                  color="secondary"
-                  label="Phone Number"
-                  type="text"
-                  onChange={handleChange}
-                  fullWidth
-                  value={values.phoneNumber}
-                  InputLabelProps={{
-                    shrink: true,
-                  }}
-                  error={Boolean(touched.phoneNumber && errors.phoneNumber)}
-                  helperText={touched.phoneNumber && errors.phoneNumber}
-                />
-                <MuiPickersUtilsProvider
-                  utils={DateFnsUtils}
-                  color={"secondary"}
-                >
-                  <Grid container>
-                    <DateTimePicker
-                      style={{ width: "100%" }}
-                      constiant="inline"
-                      label="Date"
-                      name="date"
-                      disablePast
-                      value={values.date}
-                      showTodayButton
-                      onChange={(event) => {
-                        setFieldValue("date", event);
-                      }}
-                      color={"secondary"}
-                    />
-                  </Grid>
-                </MuiPickersUtilsProvider>
-              </DialogContent>
-              <DialogActions>
-                {isLoading && (
-                  <>
-                    <CircularProgress color="secondary" size={15} />
-                    <span>Please Wait...</span>
-                  </>
-                )}
-                {!isLoading && (
-                  <>
-                    <Button
-                      onClick={handleClose}
-                      color="secondary"
-                      disabled={isLoading}
-                    >
-                      Cancel
+                  <TextField
+                    autoFocus
+                    color="secondary"
+                    margin="dense"
+                    id="name"
+                    label="Name"
+                    type="text"
+                    fullWidth
+                    InputLabelProps={{
+                      shrink: true,
+                    }}
+                    onChange={handleChange}
+                    value={values.name}
+                    error={Boolean(touched.name && errors.name)}
+                    helperText={touched.name && errors.name}
+                  />
+                  <TextField
+                    autoFocus
+                    margin="dense"
+                    color="secondary"
+                    id="email"
+                    label="Email Address"
+                    type="email"
+                    fullWidth
+                    onChange={handleChange}
+                    value={values.email}
+                    InputLabelProps={{
+                      shrink: true,
+                    }}
+                    error={Boolean(touched.email && errors.email)}
+                    helperText={touched.email && errors.email}
+                  />
+                  <TextField
+                    autoFocus
+                    margin="dense"
+                    id="phoneNumber"
+                    color="secondary"
+                    label="Phone Number"
+                    type="text"
+                    onChange={handleChange}
+                    fullWidth
+                    value={values.phoneNumber}
+                    InputLabelProps={{
+                      shrink: true,
+                    }}
+                    error={Boolean(touched.phoneNumber && errors.phoneNumber)}
+                    helperText={touched.phoneNumber && errors.phoneNumber}
+                  />
+                  <MuiPickersUtilsProvider
+                    utils={DateFnsUtils}
+                    color={"secondary"}
+                  >
+                    <Grid container>
+                      <DateTimePicker
+                        style={{ width: "100%" }}
+                        constiant="inline"
+                        label="Date"
+                        name="date"
+                        disablePast
+                        value={values.date}
+                        showTodayButton
+                        onChange={(event) => {
+                          setFieldValue("date", event);
+                        }}
+                        color={"secondary"}
+                      />
+                    </Grid>
+                  </MuiPickersUtilsProvider>
+                </DialogContent>
+                <DialogActions>
+                  {isLoading && (
+                    <>
+                      <CircularProgress color="secondary" size={15} />
+                      <span>Please Wait...</span>
+                    </>
+                  )}
+                  {!isLoading && (
+                    <>
+                      <Button
+                        onClick={handleClose}
+                        color="secondary"
+                        disabled={isLoading}
+                      >
+                        Cancel
                     </Button>
-                    <Button
-                      color="secondary"
-                      type="submit"
-                      disabled={isLoading}
-                    >
-                      Submit
+                      <Button
+                        color="secondary"
+                        type="submit"
+                        disabled={isLoading}
+                      >
+                        Submit
                     </Button>
-                  </>
-                )}
-              </DialogActions>
-            </form>
-          )}
+                    </>
+                  )}
+                </DialogActions>
+              </form>
+            )}
         </Formik>
       </Dialog>
     ),
@@ -352,7 +357,7 @@ const FullGallery = () => {
                     </Carousel>
                     <CardContent style={{ justifyContent: "center" }}>
                       <Typography gutterBottom constiant="h5" component="h2">
-                        Lizard
+                        {value.program}
                       </Typography>
                       <Typography component="div">
                         <Button

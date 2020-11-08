@@ -103,6 +103,7 @@ function Events() {
                       pathname: `/events/${value.title}`,
                     });
                   }}
+                  key={index}
                 >
                   {" "}
                   <LazyLoad
