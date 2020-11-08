@@ -2,7 +2,7 @@
   "name": "htt_r",
   "version": "0.1.0",
   "private": true,
-  "homepage": " https://karthikprakash1997.github.io/solamedia",
+  "homepage": " https://karthikprakash1997.github.io/solamedia_version1",
   "dependencies": {
     "@date-io/date-fns": "1.x",
     "@material-ui/core": "^4.11.0",
