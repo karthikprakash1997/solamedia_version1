@@ -6,6 +6,7 @@ import { Link, useHistory } from "react-router-dom";
 import events from "../data/events.json";
 import LazyLoad from "react-lazyload";
 import { CircularProgress } from "@material-ui/core";
+import SecondaryHeader from "../secondaryHeader/secondaryHeader";
 
 import {
   Card,
@@ -87,61 +88,61 @@ function Events() {
   };
 
   return (
-    <section id="testimonial-part" style={{ marginTop: -100 }}>
-      <div className="container">
-        <div className="section-title" style={{ marginTop: -20 }}>
-          <h4>Events </h4>
-        </div>
-        <div className="row testimonial-active">
-          <div className="col-lg-12  col-md-12">
-            <Slider {...settings}>
-              {events.map((value, index) => (
-                <Card
-                  className={cx(styles.root)}
-                  onClick={() => {
-                    history.push({
-                      pathname: `/events/${value.title}`,
-                    });
-                  }}
-                  key={index}
-                >
-                  {" "}
-                  <LazyLoad
-                    placeholder={
-                      <div className="section-title">
-                        <CircularProgress
-                          color="secondary"
-                          size={100}
-                          style={{ marginTop: 74 }}
-                        />
-                      </div>
-                    }
-                    once={true}
-                    debounce={500}
+    <>
+      {SecondaryHeader("Events")}
+      <section id="testimonial-part" >
+        <div className="container">
+          <div className="row testimonial-active">
+            <div className="col-lg-12  col-md-12">
+              <Slider {...settings}>
+                {events.map((value, index) => (
+                  <Card
+                    className={cx(styles.root)}
+                    onClick={() => {
+                      history.push({
+                        pathname: `/events/${value.title}`,
+                      });
+                    }}
+                    key={index}
                   >
-                    <CardMedia
-                      className={cx(styles.media)}
-                      image={value.images[0]}
-                      component="img"
-                    />
-                  </LazyLoad>
-                  <CardContent
-                    style={{ display: "flex", justifyContent: "center" }}
-                  >
-                    <Typography component="h5" variant="h5">
-                      {value.title}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              ))}
-            </Slider>
+                    {" "}
+                    <LazyLoad
+                      placeholder={
+                        <div className="section-title">
+                          <CircularProgress
+                            color="secondary"
+                            size={100}
+                            style={{ marginTop: 74 }}
+                          />
+                        </div>
+                      }
+                      once={true}
+                      debounce={500}
+                    >
+                      <CardMedia
+                        className={cx(styles.media)}
+                        image={value.images[0]}
+                        component="img"
+                      />
+                    </LazyLoad>
+                    <CardContent
+                      style={{ display: "flex", justifyContent: "center" }}
+                    >
+                      <Typography component="h5" variant="h5">
+                        {value.title}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                ))}
+              </Slider>
+            </div>
+          </div>
+          <div class="gallery-btn" style={{ marginTop: 30 }}>
+            <Link to="/events/all">See All</Link>
           </div>
         </div>
-        <div class="gallery-btn" style={{ marginTop: 30 }}>
-          <Link to="/events/all">See All</Link>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 

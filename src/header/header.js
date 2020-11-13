@@ -4,9 +4,13 @@ import { Link } from "react-scroll";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import { Link as RoterLink } from "react-router-dom";
 import Solamedia from "../assets/images/logo/LOGO.svg";
+import Solamedia1 from "../assets/images/logo/output-onlinepngtools-ConvertImage.png";
+
+import SimpleMenu from "../components/simpleMenu";
 
 function Header() {
   const [drawer, toggleDrawer] = useState(false);
+
 
   const anchor = () => (
     <div>
@@ -108,32 +112,6 @@ function Header() {
             Gallery
           </Link>
         </li>
-        {/* <li>
-          <Link
-            to="Gallery"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="nav-link"
-            activeClass="nav-link"
-            onClick={() => toggleDrawer(false)}
-          >
-            PR News
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="example-destination"
-            spy={true}
-            smooth={true}
-            duration={900}
-            className="nav-link"
-            activeClass="nav-link"
-            onClick={() => toggleDrawer(false)}
-          >
-            Blog
-          </Link>
-        </li> */}
         <li>
           <Link
             to="Feedback"
@@ -180,6 +158,7 @@ function Header() {
       </div>
     </div>
   );
+
   return (
     <header className="header-part sticky">
       <nav className="navbar navbar-expand-lg">
@@ -207,6 +186,13 @@ function Header() {
           </SwipeableDrawer>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
+              <li>
+                <img
+                  src={Solamedia1}
+                  alt="Solamedia"
+                  style={{ height: 50, with: 50, marginRight: 20 }}
+                />
+              </li>
               <li className="nav-item">
                 <Link
                   to="About"
@@ -221,78 +207,21 @@ function Header() {
               </li>
 
               <li className="nav-item">
-                <Link
-                  to="Events"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  className="nav-link"
-                  activeClass="nav-link"
-                >
-                  Events
-                </Link>
+                <RoterLink to="/events" className="nav-link"
+                  activeClass="nav-link">Events</RoterLink>
               </li>
 
               <li className="nav-item">
-                <Link
-                  to="Videos"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  className="nav-link"
-                  activeClass="nav-link"
-                >
-                  Videos
-                </Link>
+                <RoterLink to="/event_bites" className="nav-link"
+                  activeClass="nav-link">Videos</RoterLink>
+              </li>
+              <li>
+                <SimpleMenu />
               </li>
               <li className="nav-item">
-                <Link
-                  to="Celeberities"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  className="nav-link"
-                  activeClass="nav-link"
-                >
-                  Celeberities
-                </Link>
+                <RoterLink to="/gallery" className="nav-link"
+                  activeClass="nav-link">Gallery</RoterLink>
               </li>
-              <li className="nav-item">
-                <Link
-                  to="Gallery"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  className="nav-link"
-                  activeClass="nav-link"
-                >
-                  Gallery
-                </Link>
-              </li>
-              {/* <li className="nav-item">
-                <Link
-                  to="Gallery"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  className="nav-link"
-                  activeClass="nav-link"
-                >
-                  PR News
-                </Link>
-              </li>
-              <li className="nav-item active">
-                <Link
-                  to="example-destination"
-                  spy={true}
-                  smooth={true}
-                  duration={900}
-                  className="nav-link"
-                  activeClass="nav-link"
-                >
-                  Blog
-                </Link>
-              </li> */}
               <li className="nav-item">
                 <Link
                   to="Feedback"

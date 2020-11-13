@@ -4,7 +4,6 @@ import * as Yup from "yup";
 import emailjs from "emailjs-com";
 import { DateTimePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
 import DateFnsUtils from "@date-io/date-fns";
-import { Link } from "react-router-dom";
 import {
   Card,
   CardMedia,
@@ -24,8 +23,9 @@ import {
 } from "@material-ui/core";
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
-import Carousel from "react-material-ui-carousel";
-import Solamedia from "../assets/images/logo/output-onlinepngtools-ConvertImage.png";
+import Corousel from "../components/corousel";
+import concert from "../assets/images/backgrounds/slider/concert.jpg";
+import Carousel from 'react-material-ui-carousel'
 
 const data = [
   {
@@ -281,60 +281,34 @@ const FullGallery = () => {
 
   return (
     <>
-      <header className="header-part sticky">
-        <nav className="navbar navbar-expand-lg">
-          <Grid container direction="row" justify="center" alignItems="center">
-            <a className="logo" href="index-2.html">
-              <img
-                src={Solamedia}
-                alt="Solamedia"
-                style={{ height: 50, with: 50, margin: 20 }}
-              />
-            </a>
-            <h2
-              style={{
-                color: "#ffffff",
-                fontSize: 50,
-              }}
-            >
-              SOLAMEDIA
-            </h2>
-          </Grid>
-        </nav>
-      </header>
-
-      <section id="banner-part" style={{ height: 260 }}>
-        <div className="overlay" style={{ height: 260 }}>
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="banner-text">
-                  <h2> Book Now</h2>
-                  <nav aria-label="breadcrumb">
-                    <ol className="breadcrumb">
-                      <li className="breadcrumb-item dot">
-                        <Link to="/solamedia">Home</Link>
-                      </li>
-                      <li
-                        className="breadcrumb-item active"
-                        aria-current="page"
-                      >
-                        Book Now
-                      </li>
-                    </ol>
-                  </nav>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section id="testimonial-part">
-        <div className="container">
-          <div className="row testimonial-active">
+        <Corousel />
+        {/* <Carousel
+          indicators={false}
+          navButtonsAlwaysVisible={false}
+          animation={"fade"}
+          timeout={1000}
+          autoPlay
+        // style={{ width: "100%" }}
+        >
+          {[1, 2].map(() => (<img src={concert}
+            alt="pic"
+            style={{
+              height: 400,
+              objectFit: "cover",
+              alignContent: 'center',
+              alignSelf: 'center'
+            }} />))}
+        </Carousel> */}
+        <div className="container" style={{ marginTop: 50 }}>
+          <div className="row testimonial-active"
+          // style={{ marginRight: -70, marginLeft: -70 }}
+          >
+
+
             {data.map((value, index) => (
               <div
-                className="col-lg-4"
+                className="col-lg-3"
                 key={index}
                 style={{ marginBottom: 20 }}
               >
