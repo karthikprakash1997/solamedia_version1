@@ -1,13 +1,19 @@
 import React from "react";
 import LandingPage from "./landingPage/landignPage";
 import { Route, Switch } from "react-router-dom";
-import FullGallery from "./gallery/fullGallery";
+import FullActor from "./gallery/fullActor";
+import FullActress from "./gallery/fullActress";
+import FullMovies from "./gallery/fullMovies";
+import FullCelebrity from "./gallery/fullCelebrity";
+import FullModal from "./gallery/fullModal";
+
+
 import FullVideosEventBites from "./videos/fullVideosE";
 import FullEvents from "./events/fullEvents";
 import BookNow from "./bookNow/bookNow";
-import Events from "./events/events";
 import Header from "./header/header";
 import Footer from "./footer/footer";
+import CarouselComp from "./components/carousel";
 
 import "./assets/css/slick.css";
 import "./assets/css/style.css";
@@ -20,20 +26,20 @@ function App() {
   return (
     <>
       <Header />
+      <CarouselComp />
       <Switch>
         <Route exact path="/" component={LandingPage} />
-        <Route exact path="/gallery" component={FullGallery} />
+        <Route exact path="/gallery/actor" component={FullActor} />
+        <Route exact path="/gallery/actress" component={FullActress} />
+        <Route exact path="/gallery/movies" component={FullMovies} />
         <Route
           exact
           path="/event_bites"
           component={FullVideosEventBites}
         />
-        {/* <Route exact path="/gallery/:type/:name" component={FullGallery} /> */}
-        <Route exact path="/events" component={Events} />
-        <Route exact path="/events/:name" component={FullEvents} />
-        <Route exact path="/tab1" component={FullEvents} />
-        <Route exact path="/tab2" component={FullEvents} />
-        <Route exact path="/tab3" component={FullEvents} />
+        <Route exact path="/events" component={FullEvents} />
+        <Route exact path="/celebrity-photoshoot" component={FullCelebrity} />
+        <Route exact path="/modelling-photoshoot" component={FullModal} />
         <Route exact path="/book-now" component={BookNow} />
       </Switch>
       <Footer />

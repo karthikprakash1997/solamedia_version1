@@ -2,16 +2,18 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
-import { Link as RoterLink } from "react-router-dom";
+import { Link as RoterLink ,useHistory} from "react-router-dom";
 import Solamedia from "../assets/images/logo/LOGO.svg";
 import Solamedia1 from "../assets/images/logo/output-onlinepngtools-ConvertImage.png";
-
 import SimpleMenu from "../components/simpleMenu";
+import GalleryMenu from "../components/galleryMenu";
+
+
+var Scroll = require('react-scroll');
 
 function Header() {
   const [drawer, toggleDrawer] = useState(false);
-
-
+  
   const anchor = () => (
     <div>
       <ul>
@@ -20,87 +22,44 @@ function Header() {
           <hr />
         </li>
         <li>
-          <Link
-            to="About"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="nav-link"
-            activeClass="nav-link"
-            onClick={() => toggleDrawer(false)}
-          >
+        <RoterLink to="/" className="nav-link" activeClass="nav-link"  onClick={() => toggleDrawer(false)} style={{color:'#ff69b4'}}> 
             <i
-              class="fa fa-info-circle"
+              class="fa fa-home"
               aria-hidden="true"
               style={{ marginRight: 10 }}
-            ></i>
-            About
-          </Link>
+            ></i>Home</RoterLink>
         </li>
         <li>
-          <Link
-            to="Events"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="nav-link"
+        <RoterLink to="/events" className="nav-link"
             activeClass="nav-link"
             onClick={() => toggleDrawer(false)}
-          >
-            <i
+            style={{color:'#ff69b4'}}
+          > <i
               class="fa fa-calendar"
               aria-hidden="true"
               style={{ marginRight: 10 }}
-            ></i>
+            ></i> 
             Events
-          </Link>
+          </RoterLink>
         </li>
-
         <li>
-          <Link
-            to="Videos"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="nav-link"
+        <RoterLink to="/event_bites" className="nav-link"
             activeClass="nav-link"
             onClick={() => toggleDrawer(false)}
+            style={{color:'#ff69b4'}}
           >
             <i
               class="fa fa-file-video-o"
               aria-hidden="true"
               style={{ marginRight: 10 }}
             ></i>
-            Videos
-          </Link>
+            Event-Bites</RoterLink>
         </li>
         <li>
-          <Link
-            to="Celeberities"
-            spy={true}
-            smooth={true}
-            duration={500}
+          <a
             className="nav-link"
             activeClass="nav-link"
-            onClick={() => toggleDrawer(false)}
-          >
-            <i
-              class="fa fa-users"
-              aria-hidden="true"
-              style={{ marginRight: 10 }}
-            ></i>
-            Celeberities
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="Gallery"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="nav-link"
-            activeClass="nav-link"
-            onClick={() => toggleDrawer(false)}
+            style={{color:'#ff69b4'}}
           >
             <i
               class="fa fa-picture-o"
@@ -110,50 +69,100 @@ function Header() {
               {" "}
             </i>
             Gallery
-          </Link>
+          </a>
+          <div style={{ marginLeft: 10 }}>
+          <ul >
+            <li>
+            <RoterLink to="/gallery/actor" className="nav-link"
+            activeClass="nav-link"
+                  onClick={() => toggleDrawer(false)}
+                  style={{color:'#ff69b4'}}
+          > <i
+              class="fa fa-circle"
+              aria-hidden="true"
+              style={{ marginRight: 10 }}
+            ></i> 
+            Actor
+          </RoterLink>
+            </li>
+            <RoterLink to="/gallery/actress" className="nav-link"
+            activeClass="nav-link"
+                onClick={() => toggleDrawer(false)}
+                style={{color:'#ff69b4'}}
+          > <i
+              class="fa fa-circle"
+              aria-hidden="true"
+              style={{ marginRight: 10 }}
+            ></i> 
+            Actress
+          </RoterLink>
+            <li>
+            <RoterLink to="/gallery/movies" className="nav-link"
+            activeClass="nav-link"
+                  onClick={() => toggleDrawer(false)}
+                  style={{color:'#ff69b4'}}
+          > <i
+              class="fa fa-circle"
+              aria-hidden="true"
+              style={{ marginRight: 10 }}
+            ></i> 
+            Movies
+          </RoterLink>
+            </li>
+            </ul>
+            </div>
         </li>
+
         <li>
-          <Link
-            to="Feedback"
-            spy={true}
-            smooth={true}
-            duration={500}
+          <a
             className="nav-link"
             activeClass="nav-link"
-            onClick={() => toggleDrawer(false)}
+            style={{color:'#ff69b4'}}
           >
             <i
-              class="fa fa-comments"
+              class="fa fa-picture-o"
               aria-hidden="true"
               style={{ marginRight: 10 }}
             >
               {" "}
             </i>
-            Feedback
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="Contact"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="nav-link"
-            activeClass="nav-link"
-            onClick={() => toggleDrawer(false)}
-          >
-            <i
-              class="fa fa-map-marker"
+            Photoshoot
+          </a>
+          <div style={{ marginLeft: 10 }}>
+          <ul >
+            <li>
+            <RoterLink to="/modelling-photoshoot" className="nav-link"
+                  activeClass="nav-link"
+                  style={{ color: '#ff69b4' }}
+                  onClick={() => toggleDrawer(false)}
+          > <i
+              class="fa fa-circle"
               aria-hidden="true"
               style={{ marginRight: 10 }}
-            ></i>
-            Contact
-          </Link>
+            ></i> 
+            Models
+          </RoterLink>
+            </li>
+            <RoterLink to="/celebrity-photoshoot" className="nav-link"
+            activeClass="nav-link"
+                onClick={() => toggleDrawer(false)}
+                style={{color:'#ff69b4'}}
+          > <i
+              class="fa fa-circle"
+              aria-hidden="true"
+              style={{ marginRight: 10 }}
+            ></i> 
+            Celebrities
+          </RoterLink>
+            </ul>
+            </div>
         </li>
+
+
       </ul>
       <div style={{ margin: 15 }}>
         <div class="header-btn1">
-          <RoterLink to="/book-now">Book Now</RoterLink>
+          <RoterLink to="/book-now" onClick={() => toggleDrawer(false)} >Book Now</RoterLink>
         </div>
       </div>
     </div>
@@ -163,6 +172,7 @@ function Header() {
     <header className="header-part sticky">
       <nav className="navbar navbar-expand-lg">
         <div className="container">
+         
           <button
             className="navbar-toggler"
             type="button"
@@ -184,6 +194,7 @@ function Header() {
           >
             {drawer && anchor()}
           </SwipeableDrawer>
+          <div style={{  display: "inline-block",  margin: "0 auto", padding: 3}}>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
               <li>
@@ -194,16 +205,8 @@ function Header() {
                 />
               </li>
               <li className="nav-item">
-                <Link
-                  to="About"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  className="nav-link"
-                  activeClass="nav-link"
-                >
-                  About
-                </Link>
+              <RoterLink to="/" className="nav-link"
+                  activeClass="nav-link">Home</RoterLink>
               </li>
 
               <li className="nav-item">
@@ -213,42 +216,18 @@ function Header() {
 
               <li className="nav-item">
                 <RoterLink to="/event_bites" className="nav-link"
-                  activeClass="nav-link">Videos</RoterLink>
+                  activeClass="nav-link">Event-Bites</RoterLink>
               </li>
               <li>
                 <SimpleMenu />
               </li>
               <li className="nav-item">
-                <RoterLink to="/gallery" className="nav-link"
-                  activeClass="nav-link">Gallery</RoterLink>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="Feedback"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  className="nav-link"
-                  activeClass="nav-link"
-                >
-                  Feedback
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="Contact"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  className="nav-link"
-                  activeClass="nav-link"
-                >
-                  Contact
-                </Link>
+                <GalleryMenu />
               </li>
             </ul>
             <div class="header-btn">
               <RoterLink to="/book-now">Book Now</RoterLink>
+            </div>
             </div>
           </div>
         </div>

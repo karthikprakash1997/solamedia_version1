@@ -22,9 +22,11 @@ function FullEvents() {
   const classes = useStyles();
   return (
     <>
-      {SecondaryHeader("Event-Bites")}
       <section id="testimonial-part">
         <div className="container">
+        <div className="section-title">
+          <h4>Event Bites </h4>
+        </div>
           <div className="row testimonial-active">
             {eventBites.map((value, index) => (
               <div

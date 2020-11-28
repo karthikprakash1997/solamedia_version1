@@ -4,7 +4,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Fade from '@material-ui/core/Fade';
 import { Link as RoterLink } from "react-router-dom";
 
-export default function FadeMenu() {
+export default function GalleryMenu() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
 
@@ -13,13 +13,14 @@ export default function FadeMenu() {
     };
 
     const handleClose = () => {
+        console.log('hello');
         setAnchorEl(null);
     };
 
     return (
         <div>
-            <a onClick={handleClick} className="nav-link" style={{ cursor: "pointer",marginLeft:-10 }}>
-                Photoshoot
+            <a onClick={handleClick} className="nav-link" style={{ cursor: "pointer",marginLeft:20 }}>
+                Gallery
             </a>
             <Menu
                 id="fade-menu"
@@ -39,10 +40,12 @@ export default function FadeMenu() {
                     horizontal: 'center',
                 }}
             >
-                <MenuItem >                <RoterLink to="/celebrity-photoshoot" className="nav-link"
-                    activeClass="nav-link" onClick={handleClose}>Celebrity Photoshoot</RoterLink></MenuItem>
-                <MenuItem >                <RoterLink to="/modelling-photoshoot" className="nav-link"
-                    activeClass="nav-link" onClick={handleClose}>Modelling Photoshoot</RoterLink></MenuItem>
+                <MenuItem >                <RoterLink to="/gallery/actor" className="nav-link"
+                    activeClass="nav-link" onClick={handleClose}>Actor</RoterLink></MenuItem>
+                <MenuItem onClick={handleClose}>                <RoterLink to="/gallery/actress" className="nav-link"
+                    activeClass="nav-link" onClick={handleClose}>Actress</RoterLink></MenuItem>
+                <MenuItem onClick={handleClose}>                <RoterLink to="/gallery/movies" className="nav-link"
+                    activeClass="nav-link" onClick={handleClose}>Movies</RoterLink></MenuItem>
             </Menu>
         </div >
     );

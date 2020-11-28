@@ -23,8 +23,6 @@ import {
 } from "@material-ui/core";
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
-import Corousel from "../components/corousel";
-import concert from "../assets/images/backgrounds/slider/concert.jpg";
 import Carousel from 'react-material-ui-carousel'
 
 const data = [
@@ -282,7 +280,6 @@ const FullGallery = () => {
   return (
     <>
       <section id="testimonial-part">
-        <Corousel />
         {/* <Carousel
           indicators={false}
           navButtonsAlwaysVisible={false}

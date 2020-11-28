@@ -22,6 +22,7 @@ Table of Content
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 16px;
@@ -29,6 +30,7 @@ body {
   color: #444444;
   line-height: 24px;
 }
+
 h1,
 h2,
 h3,
@@ -38,23 +40,28 @@ h6 {
   margin: 0;
   padding: 0;
 }
+
 ul,
 ol {
   list-style: none;
   margin: 0;
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 a,
 a:hover {
   text-decoration: none;
 }
+
 p {
   margin: 0;
   padding: 0;
 }
+
 /*==================
     navbar css start
 ==================*/
@@ -66,11 +73,13 @@ p {
   width: 100%;
   z-index: 999;
 }
+
 .navbar {
   padding: 15px 0;
-  position: relative;
+  position: absolute;
   z-index: 999;
 }
+
 .navbar:before {
   position: absolute;
   bottom: 0;
@@ -81,11 +90,13 @@ p {
   content: "";
   opacity: 0.15;
 }
+
 .navbar.navbar-expand-lg .nav-item {
   margin-right: 30px;
 }
+
 .navbar.navbar-expand-lg li a {
-  color:black;
+  color: black;
   font-size: 24px;
   font-weight: 400;
   text-transform: capitalize;
@@ -97,10 +108,12 @@ p {
   -ms-transition: all linear 0.3s;
   -o-transition: all linear 0.3s;
 }
-.navbar.navbar-expand-lg li:hover > a {
+
+.navbar.navbar-expand-lg li:hover>a {
   color: #ff1493;
   cursor: pointer;
 }
+
 .navbar-expand-lg .navbar-nav .dropdown-menu {
   background: #ff1493;
   left: 50%;
@@ -110,6 +123,7 @@ p {
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
 }
+
 .navbar-expand-lg .navbar-nav .dropdown-menu a {
   display: block;
   padding: 10px 20px !important;
@@ -119,12 +133,15 @@ p {
   -ms-transition: all linear 0.3s;
   -o-transition: all linear 0.3s;
 }
+
 .navbar-expand-lg .navbar-nav .dropdown-menu a:hover {
   color: #ffe169;
 }
+
 .dropdown-item:hover {
   background-color: transparent;
 }
+
 .header-btn a {
   color: #0f2f44;
   font-size: 15px;
@@ -135,6 +152,7 @@ p {
   background: linear-gradient(315deg, #ee5166 0%, #f08efc 74%);
   border-radius: 4px;
 }
+
 .header-btn1 a {
   color: #0f2f44;
   font-size: 10px;
@@ -145,6 +163,7 @@ p {
   background: linear-gradient(315deg, #ee5166 0%, #f08efc 74%);
   border-radius: 4px;
 }
+
 /*==================
     navbar css end
 ==================*/
@@ -152,27 +171,30 @@ p {
     slider-part css start
 ==================*/
 .single-slider {
-  background: url(../images/backgrounds/slider/concert.jpg) no-repeat center;
-  background-size: cover;
+  background: url(../images/covers/bg-ALL.jpg) no-repeat center;
+  background-size: contain;
+  object-fit: none;
 }
+
 .overlay {
   padding: 100px 0 50px;
-  background: linear-gradient(
-    to right,
-    rgba(109, 13, 176, 0.6),
-    rgb(65, 132, 208, 0.6)
-  );
+  background: linear-gradient(to right,
+      rgba(109, 13, 176, 0.6),
+      rgb(65, 132, 208, 0.6));
 }
+
 .slider-text {
   text-align: center;
   margin-bottom: 170px;
 }
+
 .slider-text p {
   color: #fff;
   font-size: 30px;
   letter-spacing: 12px;
   margin-bottom: 10px;
 }
+
 .slider-text h2 {
   font-size: 80px;
   font-weight: 700;
@@ -181,20 +203,25 @@ p {
   margin: 0 auto;
   line-height: 84px;
 }
+
 .counter-item {
   position: relative;
   width: 75px;
   margin-left: 60px;
 }
+
 .counter-item.item-m {
   margin-left: 45px;
 }
+
 .counter-item.item-ml {
   margin-left: 55px;
 }
+
 .counter-item.item-w {
   width: 120px;
 }
+
 .myCountdown h2 {
   font-size: 80px;
   font-weight: 700;
@@ -204,12 +231,14 @@ p {
   -webkit-background-clip: text;
   margin-bottom: 0;
 }
+
 .myCountdown .counter-hours,
 .myCountdown .counter-seconds {
   background: linear-gradient(to bottom, #ffe169, #ffa913);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
+
 .counter-item span {
   font-size: 22px;
   font-weight: 500;
@@ -223,16 +252,19 @@ p {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
+
 .counter-item span.da {
   position: absolute;
   right: -13px !important;
   bottom: 22px !important;
 }
+
 .counter-item span.ho {
   position: absolute;
   right: -26px !important;
   bottom: 26px !important;
 }
+
 .video-part p {
   color: #fff;
   font-size: 22px;
@@ -240,6 +272,7 @@ p {
   margin-bottom: 0;
   margin-right: 10px;
 }
+
 .video-part a i {
   width: 80px;
   height: 80px;
@@ -250,6 +283,7 @@ p {
   font-size: 30px;
   color: #fff;
 }
+
 /*==================
     slider-part css end
 ==================*/
@@ -259,42 +293,52 @@ p {
 #festive-part {
   padding-top: 100px;
 }
+
 .festive-img {
   position: relative;
 }
+
 .festive-img .festive {
   position: absolute;
   top: 10%;
   left: 11%;
 }
+
 .festive-left {
   position: relative;
 }
+
 .festive-left .festive-shape .dot {
   position: absolute;
   top: -58%;
   z-index: -1;
   left: -35px;
 }
+
 .festive-left .festive-shape .shape {
   position: absolute;
   top: 5px;
   right: 25px;
 }
+
 .festive-left .slick-initialized .slick-slide {
   padding-bottom: 54px;
 }
+
 .slick-initialized .slick-slide {
   outline: none;
 }
+
 .festive-active ul.slick-dots {
   position: absolute;
   bottom: -30px;
   right: 42%;
 }
+
 .festive-active ul li {
   display: inline-block;
 }
+
 .festive-active ul li button {
   font-size: 0;
   width: 10px;
@@ -305,11 +349,13 @@ p {
   background: no-repeat;
   outline: none;
 }
+
 .festive-active ul li.slick-active button {
   background: linear-gradient(to right, #ffe169, #ffa913);
   border: 1px solid transparent;
   transform: scale(1.2);
 }
+
 .text-img h2 {
   font-size: 120px;
   font-weight: 700;
@@ -319,20 +365,25 @@ p {
   background-position: 50%;
   line-height: 1;
 }
+
 .text-img p {
   font-size: 28px;
   color: #0f2f44;
 }
+
 #festive-part .festive-right {
   display: flex;
 }
+
 .festive-right .text-img {
   margin-top: -23px;
   width: 27%;
 }
+
 .festive-text {
   width: 73%;
 }
+
 .festive-text h2 {
   font-size: 32px;
   font-weight: 700;
@@ -341,34 +392,42 @@ p {
   width: 293px;
   margin-bottom: 15px;
 }
+
 .festive-text p {
   font-size: 18px;
   line-height: 26px;
   margin-bottom: 25px;
 }
+
 .festive-text .location {
   display: flex;
   border-top: 1px solid #f1f1f1;
   padding-top: 35px;
 }
+
 .address {
   width: 50%;
 }
+
 .festive-text .address.add-ml {
   margin-left: 55px;
 }
+
 .festive-text .address img {
   float: left;
   margin-right: 15px;
 }
+
 .festive-text .address p {
   width: 255px;
   font-size: 20px;
   color: #222;
 }
+
 .festive-text .address p.num {
   width: 185px !important;
 }
+
 /*==================
     festive-part css end
 ==================*/
@@ -380,39 +439,48 @@ p {
   background-size: cover;
   padding: 60px 0 20px;
 }
+
 .section-title {
   text-align: center;
   margin-bottom: 50px;
 }
+
 #schedule-part .section-title p {
   color: #fff;
 }
+
 #schedule-part .section-title h2 {
   color: #fff;
 }
+
 .section-title p {
   font-size: 20px;
   color: #0f2f44;
 }
+
 .section-title h2 {
   font-size: 40px;
   font-weight: 700;
   color: #ff69b4;
   text-transform: uppercase;
 }
+
 #schedule-part .speakers-item {
   display: flex;
   /* margin-bottom: 80px; */
 }
+
 #schedule-part .speakers-item .speakers-img {
   width: 40%;
 }
+
 #schedule-part .speakers-item .speakers-text {
   width: 60%;
   padding-left: 20px;
   /* margin-top: 15px; */
   position: relative;
 }
+
 .speakers-item .speakers-text .date {
   width: 156px;
   background: #0f2f44;
@@ -420,20 +488,24 @@ p {
   border-radius: 5px;
   text-align: center;
 }
+
 .speakers-item .speakers-text .date p {
   font-size: 20px;
   background: linear-gradient(to bottom, #ffa913, #ffe169);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .speakers-item .speakers-text h3 {
   font-size: 32px;
   color: #fff;
 }
+
 .speakers-item .speakers-text p {
   font-size: 20px;
   color: #fff;
 }
+
 .speakers-item .speakers-text .speaker-icon {
   padding: 10px 30px;
   background: #ffffff;
@@ -442,12 +514,14 @@ p {
   bottom: 4px;
   left: 0px;
 }
+
 .speakers-item .speakers-text .speaker-icon span {
   color: #0f2f44;
   font-size: 20px;
   position: relative;
   margin-right: 64px;
 }
+
 .speakers-item .speakers-text .speaker-icon span:after {
   position: absolute;
   content: "";
@@ -457,15 +531,18 @@ p {
   height: 2px;
   background: #f1f1f1;
 }
+
 .speakers-text .speaker-icon a i {
   color: #999999;
   font-size: 16px;
   margin-left: 20px;
   transition: all linear 0.4s;
 }
+
 .speakers-text .speaker-icon a:hover i {
   color: #0f2f44;
 }
+
 /*==================
     schedule-part css end
 ==================*/
@@ -475,12 +552,15 @@ p {
 #upcoming-part {
   padding: 95px 0 80px;
 }
+
 #upcoming-part .section-title p {
   color: #0f2f44;
 }
+
 #upcoming-part .section-title h2 {
   color: #ff69b4;
 }
+
 #upcoming-part .event-item {
   display: flex;
   border: 1px solid #f1f1f1;
@@ -496,22 +576,27 @@ p {
   -ms-transition: all linear 0.3s;
   -o-transition: all linear 0.3s;
 }
+
 #upcoming-part .event-item:hover {
   background: #0f2f44;
   border: 1px solid transparent;
 }
+
 #upcoming-part .event-img {
   width: 13%;
   margin-top: 5px;
 }
+
 #upcoming-part .event-text {
   width: 60%;
   margin-left: 30px;
 }
+
 #upcoming-part .event-btn {
   width: 23%;
   text-align: right;
 }
+
 #upcoming-part .event-text h3 {
   font-size: 32px;
   color: #0f2f44;
@@ -523,16 +608,20 @@ p {
   -ms-transition: all linear 0.3s;
   -o-transition: all linear 0.3s;
 }
+
 #upcoming-part .event-item:hover h3 {
   color: #fff;
 }
+
 #upcoming-part .event-add {
   display: flex;
   width: 50%;
 }
+
 #upcoming-part .event-add.shape {
   position: relative;
 }
+
 #upcoming-part .event-add.shape:before {
   position: absolute;
   content: "";
@@ -542,28 +631,35 @@ p {
   height: 40px;
   background: #f1f1f1;
 }
+
 #upcoming-part .event-location {
   display: flex;
 }
+
 #upcoming-part .loc-img {
   width: 13%;
 }
+
 #upcoming-part .loc-text {
   width: 60%;
   margin-left: 5px;
 }
+
 #upcoming-part .loc-text p {
   width: 195px;
   color: #0f2f44;
   font-size: 20px;
   transition: all linear 0.3s;
 }
+
 #upcoming-part .event-item:hover p {
   color: #fff;
 }
+
 #upcoming-part .loc-text p.num {
   width: 125px;
 }
+
 #upcoming-part .event-btn a {
   padding: 15px 20px;
   display: inline-block;
@@ -575,15 +671,18 @@ p {
   margin-top: 40px;
   border-radius: 5px;
 }
+
 #boxscroll {
   height: 730px;
   width: 100%;
   overflow: auto;
   position: relative;
 }
+
 #ascrail2000 {
   opacity: 1 !important;
 }
+
 #ascrail2000:before {
   position: absolute;
   content: "";
@@ -593,6 +692,7 @@ p {
   height: 97%;
   background: #f1f1f1;
 }
+
 .nicescroll-cursors {
   width: 8px !important;
   height: 40px !important;
@@ -601,6 +701,7 @@ p {
   margin-left: -2px !important;
   border-radius: 30px !important;
 }
+
 /*==================
     upcoming-part css end
 ==================*/
@@ -610,23 +711,25 @@ p {
 #gallery-part .gallery-img.slick-slide {
   padding: 0 5px;
 }
+
 .img {
   position: relative;
 }
+
 #gallery-part .img img {
   width: 100%;
 }
+
 .gallery-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(110, 7, 174, 0.7),
-    /* rgb(75, 119, 205, 0.7) */ rgb(255, 105, 180)
-  );
+  background: linear-gradient(90deg,
+      rgba(110, 7, 174, 0.7),
+      /* rgb(75, 119, 205, 0.7) */
+      rgb(255, 105, 180));
   opacity: 0;
   transition: all linear 0.3s;
   -webkit-transition: all linear 0.3s;
@@ -634,9 +737,11 @@ p {
   -ms-transition: all linear 0.3s;
   -o-transition: all linear 0.3s;
 }
+
 .img:hover .gallery-overlay {
   opacity: 1;
 }
+
 .gallery-overlay a {
   top: 50%;
   left: 50%;
@@ -651,9 +756,11 @@ p {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
 }
+
 .gallery-btn {
   text-align: center;
 }
+
 .gallery-btn a {
   padding: 10px 15px;
   display: inline-block;
@@ -669,9 +776,11 @@ p {
   color: white;
   text-decoration: none;
 }
+
 section#gallery-part {
   position: relative;
 }
+
 .gallery-shape {
   position: absolute;
   top: 32px;
@@ -679,12 +788,14 @@ section#gallery-part {
   width: 435px;
   z-index: -1;
 }
+
 .gallery-dot {
   position: absolute;
   bottom: -130px;
   right: 110px;
   z-index: -1;
 }
+
 /*==================
     gallery-part css end
 ==================*/
@@ -695,26 +806,31 @@ section#gallery-part {
   padding: 95px 0 90px;
   position: relative;
 }
+
 #testimonial-part .section-title {
   margin-bottom: 40px;
 }
+
 .single-testimonial {
   text-align: center;
   background: #fefefe;
   margin: 10px 0;
   border-radius: 20;
 }
+
 p.testi-text {
   font-size: 16px;
   /* line-height: 35px;
   font-weight: 400; */
   color: #444;
 }
+
 .testi-img {
   margin: 30px 0 20px;
   margin-left: 75px;
   position: relative;
 }
+
 .icon {
   display: inline-block;
   background: #fff;
@@ -725,21 +841,26 @@ p.testi-text {
   right: -10px;
   box-shadow: 3px 0 12px 0 rgba(0, 0, 0, 0.1);
 }
+
 .icon i {
   color: #ff69b4;
   font-size: 20px;
   margin: 0 1px;
 }
+
 .single-testimonial h3 {
   font-size: 32px;
 }
+
 .designation {
   font-size: 24px;
   color: #ff69b4;
 }
+
 .name {
   color: #ff69b4;
 }
+
 .test-shape {
   position: absolute;
   top: -116px;
@@ -747,12 +868,14 @@ p.testi-text {
   width: 480px;
   z-index: -1;
 }
+
 .test-dot {
   position: absolute;
   top: 64%;
   left: 0;
   z-index: -1;
 }
+
 /*==================
     testimonial-part css end
 ==================*/
@@ -762,12 +885,15 @@ p.testi-text {
 #pricing-part .section-title {
   margin-bottom: 25px;
 }
+
 .pricing-item {
   position: relative;
 }
+
 #pricing-part .slick-initialized .slick-slide {
   margin: 28px;
 }
+
 .pricing-item:before {
   position: absolute;
   content: "";
@@ -782,6 +908,7 @@ p.testi-text {
   -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }
+
 .single-pricing {
   background: #fff;
   text-align: center;
@@ -793,11 +920,13 @@ p.testi-text {
   position: relative;
   overflow: hidden;
 }
+
 .single-pricing h3 {
   font-size: 32px;
   color: #0f2f44;
   margin-bottom: 5px;
 }
+
 .single-pricing h2 {
   font-size: 60px;
   font-weight: 700;
@@ -806,36 +935,44 @@ p.testi-text {
   -webkit-background-clip: text;
   margin-bottom: 50px;
 }
+
 .single-pricing ul li {
   font-size: 24px;
   color: #444444;
   margin-bottom: 15px;
 }
+
 .single-pricing .shape1 {
   position: absolute;
   top: 3px;
   left: 3px;
 }
+
 .pricing-item .shape2 {
   position: absolute;
   bottom: -13px;
   left: -13px;
 }
+
 .single-pricing .shape3 {
   position: absolute;
   top: -45px;
   right: -70px;
 }
+
 #pricing-part .up.slick-arrow {
   top: 44%;
 }
+
 #pricing-part .down.slick-arrow {
   top: 58%;
 }
+
 #pricing-part .form-part {
   margin-top: 23px;
   margin-left: 40px;
 }
+
 #pricing-part .form-part .heading {
   width: 54%;
   font-size: 32px;
@@ -844,6 +981,7 @@ p.testi-text {
   color: #ffa913;
   margin-bottom: 30px;
 }
+
 #pricing-part .form-part input {
   width: 100%;
   font-size: 20px;
@@ -853,6 +991,7 @@ p.testi-text {
   border: 1px solid #ddd;
   margin-bottom: 20px;
 }
+
 #pricing-part .form-part select {
   width: 100%;
   font-size: 20px;
@@ -862,20 +1001,25 @@ p.testi-text {
   border: 1px solid #ddd;
   margin-bottom: 30px;
 }
+
 #pricing-part .form-part input.fname,
 #pricing-part .form-part input.lname {
   width: 48%;
 }
+
 #pricing-part .form-part input.lname {
   margin-left: 24px;
 }
+
 #pricing-part .form-part .payment-img {
   text-align: right;
 }
+
 #pricing-part .form-part .payment h3 {
   font-size: 24px;
   color: #222222;
 }
+
 #pricing-part .form-part .check {
   font-size: 20px;
   color: #444444;
@@ -883,6 +1027,7 @@ p.testi-text {
   position: relative;
   margin-top: 55px;
 }
+
 #pricing-part .form-part .check:before {
   position: absolute;
   content: "";
@@ -893,6 +1038,7 @@ p.testi-text {
   background: #cccccc;
   border-radius: 2px;
 }
+
 #pricing-part .form-part button {
   width: 100%;
   padding: 15px;
@@ -905,12 +1051,14 @@ p.testi-text {
   margin-top: 10px;
   cursor: pointer;
 }
+
 #pricing-part .pricing-border {
   width: 100%;
   height: 1px;
   background: #f1f1f1;
   margin-top: 55px;
 }
+
 /*==================
     pricing-part css end
 ==================*/
@@ -920,14 +1068,17 @@ p.testi-text {
 #sponsors-part {
   padding: 50px 0 90px;
 }
+
 #sponsors-part .section-title {
   margin-bottom: 40px;
 }
+
 #sponsors-part .brand {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 #sponsors-part .brand img {
   border: 1px solid #eee;
   padding: 40px 20px;
@@ -939,12 +1090,14 @@ p.testi-text {
   -ms-transition: all linear 0.3s;
   -o-transition: all linear 0.3s;
 }
+
 #sponsors-part .brand img:hover {
   background: #f5f5f5;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
+
 /*==================
     sponsors-part css end
 ==================*/
@@ -956,22 +1109,28 @@ p.testi-text {
   background-size: cover;
   padding-top: 30px;
 }
+
 #footer-part .section-title {
   margin-bottom: 25px;
 }
+
 #footer-part .section-title p {
   color: #ffa913;
 }
+
 #footer-part .section-title h2 {
   font-size: 30px;
   color: #fff;
 }
+
 #footer-part .footer-widget {
   text-align: center;
 }
+
 .footer-widget form {
   position: relative;
 }
+
 #footer-part .footer-widget input {
   width: 100%;
   padding-left: 20px;
@@ -982,6 +1141,7 @@ p.testi-text {
   border-radius: 5px;
   height: 56px;
 }
+
 .footer-widget form button {
   position: absolute;
   top: 0;
@@ -997,9 +1157,11 @@ p.testi-text {
   text-transform: uppercase;
   font-weight: 700;
 }
+
 .footer-widget .footer-icon {
   margin: 60px 0 30px;
 }
+
 .footer-icon a i {
   font-size: 20px;
   color: #0f2f44;
@@ -1012,15 +1174,19 @@ p.testi-text {
   margin: 0 4px;
   transition: all linear 0.3s;
 }
+
 .footer-icon a i:hover {
   background: linear-gradient(90deg, #ffe169, #ffa913);
 }
+
 .footer-menu {
   margin-bottom: 30px;
 }
+
 .footer-menu ul li {
   display: inline-block;
 }
+
 .footer-menu ul li a {
   font-size: 20px;
   color: #ffffff;
@@ -1031,18 +1197,22 @@ p.testi-text {
   -ms-transition: all linear 0.3s;
   -o-transition: all linear 0.3s;
 }
+
 .footer-menu ul li:hover a {
   color: #ffe169;
 }
+
 .copyright {
   text-align: center;
   border-top: 1px solid #1f3b4d;
   padding: 25px;
 }
+
 .copyright p {
   color: #fff;
   font-size: 16px;
 }
+
 /*==================
     footer-part css end
 ==================*
@@ -1056,12 +1226,15 @@ p.testi-text {
   background: url(../images/backgrounds/slider/concert.jpg) no-repeat center;
   background-size: cover;
 }
+
 #banner-part .overlay {
   padding: 160px 0 60px;
 }
+
 #banner-part .banner-text {
   text-align: center;
 }
+
 #banner-part .banner-text h2 {
   color: #ffffff;
   font-size: 32px;
@@ -1069,22 +1242,27 @@ p.testi-text {
   margin-bottom: 5px;
   text-transform: uppercase;
 }
+
 #banner-part .banner-text .breadcrumb {
   padding: 0;
   background-color: transparent;
   justify-content: center;
 }
+
 #banner-part .banner-text .breadcrumb-item.active {
   color: #ff69b4;
   border-bottom: 1px solid #ff69b4;
 }
-#banner-part .banner-text .breadcrumb-item + .breadcrumb-item::before {
+
+#banner-part .banner-text .breadcrumb-item+.breadcrumb-item::before {
   display: none;
 }
+
 #banner-part .banner-text .breadcrumb-item.dot {
   position: relative;
   margin-right: 20px;
 }
+
 #banner-part .banner-text .breadcrumb-item.dot::after {
   position: absolute;
   content: "";
@@ -1095,10 +1273,12 @@ p.testi-text {
   background: #fff;
   border-radius: 50%;
 }
+
 #banner-part .banner-text .breadcrumb li a {
   font-size: 20px;
   color: #fff;
 }
+
 /*==================
     banner-part css end
 ==================*/
@@ -1109,24 +1289,29 @@ p.testi-text {
   padding: 95px 0 35px;
   position: relative;
 }
+
 #event-part .img.space {
   margin: 5px;
 }
+
 #event-part .img img {
   width: 100%;
 }
+
 #event-part .event-shape {
   position: absolute;
   bottom: -25%;
   left: -45px;
   width: 400px;
 }
+
 #event-part .event-shape2 {
   position: absolute;
   top: -15px;
   right: 0;
   width: 430px;
 }
+
 /*==================
     event-part css end
 ==================*/
@@ -1144,21 +1329,25 @@ p.testi-text {
   padding: 100px 0 65px;
   position: relative;
 }
+
 #pricing-area .pricing-shape {
   position: absolute;
   bottom: -315px;
   left: 0;
   width: 350px;
 }
+
 #pricing-area .pricing-shape2 {
   position: absolute;
   top: 0px;
   right: 0;
   width: 530px;
 }
+
 #pricing-area .pricing-item {
   margin-bottom: 30px;
 }
+
 #pricing-area .pricing-item:before {
   display: none;
 }
@@ -1168,6 +1357,7 @@ p.testi-text {
   top: -50px;
   right: -36px;
 }
+
 #pricing-area .single-pricing {
   transition: all linear 0.4s;
   -webkit-transition: all linear 0.4s;
@@ -1175,9 +1365,11 @@ p.testi-text {
   -ms-transition: all linear 0.4s;
   -o-transition: all linear 0.4s;
 }
+
 #pricing-area .single-pricing:hover {
   background: #0f2f44;
 }
+
 #pricing-area .single-pricing:hover h3 {
   transition: all linear 0.3s;
   -webkit-transition: all linear 0.3s;
@@ -1185,9 +1377,11 @@ p.testi-text {
   -ms-transition: all linear 0.3s;
   -o-transition: all linear 0.3s;
 }
+
 #pricing-area .single-pricing:hover h3 {
   color: #fff;
 }
+
 #pricing-area .single-pricing ul li {
   transition: all linear 0.3s;
   -webkit-transition: all linear 0.3s;
@@ -1195,9 +1389,11 @@ p.testi-text {
   -ms-transition: all linear 0.3s;
   -o-transition: all linear 0.3s;
 }
+
 #pricing-area .single-pricing:hover ul li {
   color: #fff;
 }
+
 #pricing-area .single-pricing .shape1 {
   transition: all linear 0.3s;
   -webkit-transition: all linear 0.3s;
@@ -1205,9 +1401,11 @@ p.testi-text {
   -ms-transition: all linear 0.3s;
   -o-transition: all linear 0.3s;
 }
+
 #pricing-area .single-pricing:hover .shape1 {
   opacity: 0;
 }
+
 .shape4 {
   position: absolute;
   top: 3px;
@@ -1215,12 +1413,15 @@ p.testi-text {
   opacity: 0;
   transition: all linear 0.3s;
 }
+
 #pricing-area .single-pricing:hover .shape4 {
   opacity: 1;
 }
+
 #pricing-part .booking-part .form-part {
   margin: 0;
 }
+
 #pricing-part .booking-part .form-part .heading {
   width: 30%;
   color: #0f2f44;
@@ -1230,13 +1431,16 @@ p.testi-text {
   margin-bottom: 30px;
   text-transform: uppercase;
 }
+
 #pricing-part .booking-part .form-part input.lname {
   margin-left: 30px;
 }
+
 #pricing-part .booking-part .form-part input.fname,
 #pricing-part .booking-part .form-part input.lname {
   width: 48.5%;
 }
+
 /*==================
     pricing-area css end
 ==================*/
@@ -1250,9 +1454,11 @@ p.testi-text {
   padding: 95px 0 45px;
   position: relative;
 }
+
 #brand-part .line {
   position: relative;
 }
+
 #brand-part .line:before {
   position: absolute;
   content: "";
@@ -1268,6 +1474,7 @@ p.testi-text {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
 }
+
 #brand-part .line:after {
   position: absolute;
   content: "";
@@ -1283,12 +1490,14 @@ p.testi-text {
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
 }
+
 #brand-part .brand-shape1 {
   position: absolute;
   bottom: -150px;
   left: 0;
   width: 386px;
 }
+
 #brand-part .brand-shape2 {
   position: absolute;
   top: -15px;
@@ -1296,28 +1505,35 @@ p.testi-text {
   width: 500px;
   overflow: hidden;
 }
+
 #brand-part .brand-item {
   text-align: center;
 }
+
 #brand-part .brand-item.mb {
   margin-bottom: 120px;
 }
+
 #brand-part .brand-item .title {
   margin-bottom: 35px;
 }
+
 #brand-part .brand-item .title.m-bottom {
   margin-bottom: 75px;
 }
+
 #brand-part .brand-item .title p {
   font-size: 20px;
   color: #2e4455;
 }
+
 #brand-part .brand-item .title h2 {
   color: #2e4455;
   font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
 }
+
 /*==================
     sponsors-page css end
 ==================*/
@@ -1331,21 +1547,27 @@ p.testi-text {
   right: 0;
   width: 100%;
 }
+
 #comingsoon-page .navbar {
   padding: 30px 0;
 }
+
 #comingsoon-page ul li {
   display: none;
 }
+
 #coming-part .slider-text {
   margin-bottom: 45px;
 }
+
 #coming-part .overlay {
   padding: 255px 0 50px;
 }
+
 .banner-icon {
   text-align: center;
 }
+
 .banner-icon a i {
   width: 60px;
   height: 60px;
@@ -1362,9 +1584,11 @@ p.testi-text {
   -ms-transition: all linear 0.3s;
   -o-transition: all linear 0.3s;
 }
+
 .banner-icon a i:hover {
   background: linear-gradient(90deg, #ffe169, #ffa913);
 }
+
 .subscribe form input {
   width: 670px;
   height: 80px;
@@ -1374,14 +1598,17 @@ p.testi-text {
   font-size: 20px;
   color: #fff;
 }
+
 .subscribe {
   text-align: center;
   margin: 60px 0 15px;
 }
+
 .subscribe form {
   display: inline-block;
   position: relative;
 }
+
 .subscribe form button {
   width: 160px;
   height: 60px;
@@ -1402,6 +1629,7 @@ p.testi-text {
   -ms-transform: translate(50%, -50%);
   -o-transform: translate(50%, -50%);
 }
+
 .sub {
   color: #fff;
   font-size: 20px;
@@ -1409,6 +1637,7 @@ p.testi-text {
   margin: 0 auto;
   margin-bottom: 100px;
 }
+
 /*==================
     comingsoon-page css end
 ==================*/
@@ -1418,9 +1647,11 @@ p.testi-text {
 #error-page .overlay {
   padding: 245px 0 50px;
 }
+
 #error-page .slider-content {
   text-align: center;
 }
+
 #error-page .slider-content .error {
   font-size: 42px;
   color: #fff;
@@ -1428,6 +1659,7 @@ p.testi-text {
   letter-spacing: 15px;
   margin-bottom: 20px;
 }
+
 #error-page .slider-content .error-text {
   color: #fff;
   font-size: 24px;
@@ -1436,17 +1668,21 @@ p.testi-text {
   margin: 0 auto;
   padding: 10px 0 35px;
 }
+
 #error-page .slider-content .error-text a {
   color: #ffe169;
   text-transform: uppercase;
   text-decoration: underline;
 }
+
 #error-page .myCountdown {
   display: none !important;
 }
+
 #error-page .sub {
   margin-bottom: 30px;
 }
+
 /*==================
     error-page css end
 ==================*/
