@@ -6,7 +6,6 @@ import { Link, useHistory } from "react-router-dom";
 import events from "../data/events.json";
 import LazyLoad from "react-lazyload";
 import { CircularProgress } from "@material-ui/core";
-import SecondaryHeader from "../secondaryHeader/secondaryHeader";
 
 import {
   Card,
@@ -15,6 +14,7 @@ import {
   makeStyles,
   CardContent,
 } from "@material-ui/core";
+import Carousel from "react-material-ui-carousel";
 
 const useStyles = makeStyles({
   root: {
@@ -89,13 +89,19 @@ function Events() {
 
   return (
     <>
-      {SecondaryHeader("Events")}
       <section id="testimonial-part" >
         <div className="container">
+        <div className="section-title">
+          <h2>EVENTS</h2>
+        </div>
           <div className="row testimonial-active">
-            <div className="col-lg-12  col-md-12">
-              <Slider {...settings}>
-                {events.map((value, index) => (
+            
+            {events.map((value, index) => (
+                                <div
+                                className="col-lg-3"
+                                key={index}
+                                style={{ marginBottom: 20,cursor:'pointer' }}
+                              >
                   <Card
                     className={cx(styles.root)}
                     onClick={() => {
@@ -118,12 +124,23 @@ function Events() {
                       }
                       once={true}
                       debounce={500}
-                    >
-                      <CardMedia
+                  >
+                            <Carousel
+            autoPlay
+            timer={500}
+            animation="fade"
+            indicators={false}
+            timeout={500}
+            navButtonsAlwaysInvisible={true}
+        >
+                      {value.images.map(image => (
+                        <CardMedia
                         className={cx(styles.media)}
-                        image={value.images[0]}
+                        image={image}
                         component="img"
                       />
+                      ))} 
+                      </Carousel>
                     </LazyLoad>
                     <CardContent
                       style={{ display: "flex", justifyContent: "center" }}
@@ -132,13 +149,10 @@ function Events() {
                         {value.title}
                       </Typography>
                     </CardContent>
-                  </Card>
-                ))}
-              </Slider>
+                </Card>
             </div>
-          </div>
-          <div class="gallery-btn" style={{ marginTop: 30 }}>
-            <Link to="/events/all">See All</Link>
+                
+                ))}
           </div>
         </div>
       </section>

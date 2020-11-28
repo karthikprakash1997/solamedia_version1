@@ -2,14 +2,11 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
-import { Link as RoterLink ,useHistory} from "react-router-dom";
+import { Link as RoterLink } from "react-router-dom";
 import Solamedia from "../assets/images/logo/LOGO.svg";
 import Solamedia1 from "../assets/images/logo/output-onlinepngtools-ConvertImage.png";
 import SimpleMenu from "../components/simpleMenu";
 import GalleryMenu from "../components/galleryMenu";
-
-
-var Scroll = require('react-scroll');
 
 function Header() {
   const [drawer, toggleDrawer] = useState(false);
@@ -27,7 +24,7 @@ function Header() {
               class="fa fa-home"
               aria-hidden="true"
               style={{ marginRight: 10 }}
-            ></i>Home</RoterLink>
+            ></i>HOME</RoterLink>
         </li>
         <li>
         <RoterLink to="/events" className="nav-link"
@@ -39,7 +36,7 @@ function Header() {
               aria-hidden="true"
               style={{ marginRight: 10 }}
             ></i> 
-            Events
+            EVENTS
           </RoterLink>
         </li>
         <li>
@@ -53,7 +50,7 @@ function Header() {
               aria-hidden="true"
               style={{ marginRight: 10 }}
             ></i>
-            Event-Bites</RoterLink>
+            EVENT-BITES</RoterLink>
         </li>
         <li>
           <a
@@ -68,65 +65,7 @@ function Header() {
             >
               {" "}
             </i>
-            Gallery
-          </a>
-          <div style={{ marginLeft: 10 }}>
-          <ul >
-            <li>
-            <RoterLink to="/gallery/actor" className="nav-link"
-            activeClass="nav-link"
-                  onClick={() => toggleDrawer(false)}
-                  style={{color:'#ff69b4'}}
-          > <i
-              class="fa fa-circle"
-              aria-hidden="true"
-              style={{ marginRight: 10 }}
-            ></i> 
-            Actor
-          </RoterLink>
-            </li>
-            <RoterLink to="/gallery/actress" className="nav-link"
-            activeClass="nav-link"
-                onClick={() => toggleDrawer(false)}
-                style={{color:'#ff69b4'}}
-          > <i
-              class="fa fa-circle"
-              aria-hidden="true"
-              style={{ marginRight: 10 }}
-            ></i> 
-            Actress
-          </RoterLink>
-            <li>
-            <RoterLink to="/gallery/movies" className="nav-link"
-            activeClass="nav-link"
-                  onClick={() => toggleDrawer(false)}
-                  style={{color:'#ff69b4'}}
-          > <i
-              class="fa fa-circle"
-              aria-hidden="true"
-              style={{ marginRight: 10 }}
-            ></i> 
-            Movies
-          </RoterLink>
-            </li>
-            </ul>
-            </div>
-        </li>
-
-        <li>
-          <a
-            className="nav-link"
-            activeClass="nav-link"
-            style={{color:'#ff69b4'}}
-          >
-            <i
-              class="fa fa-picture-o"
-              aria-hidden="true"
-              style={{ marginRight: 10 }}
-            >
-              {" "}
-            </i>
-            Photoshoot
+            PHOTOSHOOT
           </a>
           <div style={{ marginLeft: 10 }}>
           <ul >
@@ -140,7 +79,7 @@ function Header() {
               aria-hidden="true"
               style={{ marginRight: 10 }}
             ></i> 
-            Models
+            MODELS
           </RoterLink>
             </li>
             <RoterLink to="/celebrity-photoshoot" className="nav-link"
@@ -152,7 +91,7 @@ function Header() {
               aria-hidden="true"
               style={{ marginRight: 10 }}
             ></i> 
-            Celebrities
+            CELEBRITIES
           </RoterLink>
             </ul>
             </div>
@@ -206,27 +145,24 @@ function Header() {
               </li>
               <li className="nav-item">
               <RoterLink to="/" className="nav-link"
-                  activeClass="nav-link">Home</RoterLink>
+                  activeClass="nav-link">HOME</RoterLink>
               </li>
 
               <li className="nav-item">
                 <RoterLink to="/events" className="nav-link"
-                  activeClass="nav-link">Events</RoterLink>
+                  activeClass="nav-link">EVENTS</RoterLink>
               </li>
 
               <li className="nav-item">
                 <RoterLink to="/event_bites" className="nav-link"
-                  activeClass="nav-link">Event-Bites</RoterLink>
+                  activeClass="nav-link">EVENT-BITES</RoterLink>
               </li>
               <li>
                 <SimpleMenu />
               </li>
-              <li className="nav-item">
-                <GalleryMenu />
-              </li>
             </ul>
             <div class="header-btn">
-              <RoterLink to="/book-now">Book Now</RoterLink>
+              <RoterLink to="/book-now">BOOK NOW</RoterLink>
             </div>
             </div>
           </div>

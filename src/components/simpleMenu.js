@@ -18,8 +18,8 @@ export default function FadeMenu() {
 
     return (
         <div>
-            <a onClick={handleClick} className="nav-link" style={{ cursor: "pointer",marginLeft:-10 }}>
-                Photoshoot
+            <a onClick={handleClick} className="nav-link" style={{ cursor: "pointer",marginRight:20 }}>
+                PHOTOSHOOT
             </a>
             <Menu
                 id="fade-menu"
@@ -40,9 +40,9 @@ export default function FadeMenu() {
                 }}
             >
                 <MenuItem >                <RoterLink to="/celebrity-photoshoot" className="nav-link"
-                    activeClass="nav-link" onClick={handleClose}>Celebrity Photoshoot</RoterLink></MenuItem>
+                    activeClass="nav-link" onClick={handleClose}>CELEBRITY PHOTOSHOOT</RoterLink></MenuItem>
                 <MenuItem >                <RoterLink to="/modelling-photoshoot" className="nav-link"
-                    activeClass="nav-link" onClick={handleClose}>Modelling Photoshoot</RoterLink></MenuItem>
+                    activeClass="nav-link" onClick={handleClose}>MODELLING PHOTOSHOOT</RoterLink></MenuItem>
             </Menu>
         </div >
     );

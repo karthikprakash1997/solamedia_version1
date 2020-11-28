@@ -47,7 +47,7 @@ ReactDOM.render(
                   fontSize: 30,
                 }}
               >
-                Welcome To Solamedia
+                WELCOME TO SOLAMEDIA
               </p>
             </div>
           </>

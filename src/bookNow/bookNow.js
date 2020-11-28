@@ -27,31 +27,31 @@ import Carousel from 'react-material-ui-carousel'
 
 const data = [
   {
-    program: "Brand Management",
+    program: "BRAND MANAGEMENT",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
     image: "https://i.ibb.co/6BkGPV4/Brand-management.webp",
   },
   {
-    program: "Celebrity Management",
+    program: "CELEBRITY MANAGEMENT",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
     image: "https://i.ibb.co/2Wqx0Tc/Celebrity-management-bookings.jpg",
   },
   {
-    program: "Live Concerts",
+    program: "LIVE CONCERTS",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
     image: "https://i.ibb.co/4P8LmgQ/Live-concerts.webp",
   },
   {
-    program: "Photography Shoot",
+    program: "PHOTOGRAPHY SHOOT",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
     image: "https://i.ibb.co/n8T2X1g/Photography-shoot.jpg",
   },
   {
-    program: "Talent Management",
+    program: "TALENT MANAGEMENT",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit, seddosmod tempor incididunt ut labore etdolore magna aliqua.Utenim ad minim veniam, quis nostrud exercitation ullamco",
     image: "https://i.ibb.co/6mHhFjs/Talent-management-jpg.webp",
@@ -297,12 +297,12 @@ const FullGallery = () => {
               alignSelf: 'center'
             }} />))}
         </Carousel> */}
-        <div className="container" style={{ marginTop: 50 }}>
+        <div className="container">
+        <div className="section-title">
+          <h2>Book Now</h2>
+        </div>
           <div className="row testimonial-active"
-          // style={{ marginRight: -70, marginLeft: -70 }}
           >
-
-
             {data.map((value, index) => (
               <div
                 className="col-lg-3"

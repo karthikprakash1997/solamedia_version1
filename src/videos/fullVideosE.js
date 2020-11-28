@@ -25,7 +25,7 @@ function FullEvents() {
       <section id="testimonial-part">
         <div className="container">
         <div className="section-title">
-          <h4>Event Bites </h4>
+          <h2>EVENT BITES </h2>
         </div>
           <div className="row testimonial-active">
             {eventBites.map((value, index) => (
