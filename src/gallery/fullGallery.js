@@ -7,9 +7,6 @@ function FullGallery({name}) {
   return (
     <>
       {name.map((value, index) => {
-        const photos1 = value.images.map((image) => ({
-          src: image,
-        }));
         return (
           <div>
             <div

@@ -3,7 +3,7 @@ import React from "react";
 import Slider from "react-slick";
 import cx from "clsx";
 import { Link, useHistory } from "react-router-dom";
-import actor from "../../data/actors.json";
+import model from "../../data/celebrity.json";
 import LazyLoad from "react-lazyload";
 import { CircularProgress } from "@material-ui/core";
 
@@ -14,6 +14,7 @@ import {
   makeStyles,
   CardContent,
 } from "@material-ui/core";
+import Carousel from "react-material-ui-carousel";
 
 const useStyles = makeStyles({
   root: {
@@ -44,7 +45,7 @@ const useStyles = makeStyles({
   },
 });
 
-function Actor() {
+function Actress() {
   const history = useHistory();
   const styles = useStyles();
   var settings = {
@@ -87,62 +88,79 @@ function Actor() {
   };
 
   return (
-    <section id="testimonial-part" style={{ marginTop: -100 }}>
-      <div className="container">
-        <div className="section-title" style={{ marginTop: -20 }}>
-          <h4>Actor </h4>
+    <>
+      <section id="testimonial-part" >
+        <div className="container">
+        <div className="section-title">
+          <h2>CELEBRITY PHOTOSHOOT</h2>
         </div>
-        <div className="row testimonial-active">
-          <div className="col-lg-12  col-md-12">
-            <Slider {...settings}>
-              {actor.map((value, index) => (
-                <Card
-                  className={cx(styles.root)}
-                  onClick={() => {
-                    history.push({
-                      pathname: `/gallery/Actor/${value.title}`,
-                    });
-                  }}
-                  key={index}
-                >
-                  {" "}
-                  <LazyLoad
-                    placeholder={
-                      <div className="section-title">
-                        <CircularProgress
-                          color="secondary"
-                          size={100}
-                          style={{ marginTop: 74 }}
-                        />
-                      </div>
-                    }
-                    once={true}
-                    debounce={500}
+          <div className="row testimonial-active">
+            {model.map((value, index) => (
+                                <div
+                                className="col-lg-3"
+                                key={index}
+                                style={{ marginBottom: 20,cursor:'pointer' }}
+                              >
+                  <Card
+                    className={cx(styles.root)}
+                    onClick={() => {
+                      history.push({
+                        pathname: `/celebrity-photoshoot/${value.title}`,
+                      });
+                    }}
+                    key={index}
                   >
-                    <CardMedia
-                      className={cx(styles.media)}
-                      image={value.images[0]}
-                      component="img"
-                    />
-                  </LazyLoad>
-                  <CardContent
-                    style={{ display: "flex", justifyContent: "center" }}
+                    {" "}
+                    <LazyLoad
+                      placeholder={
+                        <div className="section-title">
+                          <CircularProgress
+                            color="secondary"
+                            size={100}
+                            style={{ marginTop: 74 }}
+                          />
+                        </div>
+                      }
+                      once={true}
+                      debounce={500}
                   >
-                    <Typography component="h5" variant="h5">
+                            <Carousel
+            autoPlay
+            timer={500}
+            animation="fade"
+            indicators={false}
+            timeout={500}
+            navButtonsAlwaysInvisible={true}
+        >
+                      {value.images.map(image => (
+                        <CardMedia
+                        className={cx(styles.media)}
+                        image={image}
+                        component="img"
+                      />
+                      ))} 
+                      </Carousel>
+                    </LazyLoad>
+                    <CardContent
+                      style={{ display: "flex", justifyContent: "center", objectFit:"content" }}
+                    >
+                    {value.title === 'ACTRESS AMIRTHA IYER' ?
+                      <Typography  style={{fontSize:17,fontWeight:'bold'}}>
                       {value.title}
-                    </Typography>
-                  </CardContent>
+                    </Typography>:
+                      <Typography component="h6" variant="h6">
+                      {value.title}
+                    </Typography>}
+                    </CardContent>
                 </Card>
-              ))}
-            </Slider>
+            </div>
+                
+                ))}
           </div>
         </div>
-        <div class="gallery-btn" style={{ marginTop: 30 }}>
-          <Link to="/gallery/Actor/all">See All</Link>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 
-export default Actor;
+export default Actress;

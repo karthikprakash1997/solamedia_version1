@@ -3,6 +3,8 @@ import LandingPage from "./landingPage/landignPage";
 import { Route, Switch } from "react-router-dom";
 import FullCelebrity from "./gallery/fullCelebrity";
 import FullModal from "./gallery/fullModal";
+import Celeb from "./gallery/actor/actor";
+import Model from "./gallery/actress/actress";
 
 
 import FullVideosEventBites from "./videos/fullVideosE";
@@ -33,8 +35,10 @@ function App() {
           component={FullVideosEventBites}
         />
         <Route exact path="/events" component={Events} />
-        <Route exact path="/celebrity-photoshoot" component={FullCelebrity} />
-        <Route exact path="/modelling-photoshoot" component={FullModal} />
+        <Route exact path="/celebrity-photoshoot/" component={Celeb} />
+        <Route exact path="/celebrity-photoshoot/:name" component={FullCelebrity} />
+        <Route exact path="/modelling-photoshoot/:name" component={FullModal} />
+        <Route exact path="/modelling-photoshoot" component={Model} />
         <Route exact path="/book-now" component={BookNow} />
         <Route exact path="/events/:name" component={FullEvents} />
       </Switch>
