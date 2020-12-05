@@ -10,7 +10,7 @@ import GalleryMenu from "../components/galleryMenu";
 
 function Header() {
   const [drawer, toggleDrawer] = useState(false);
-  
+
   const anchor = () => (
     <div>
       <ul>
@@ -19,7 +19,7 @@ function Header() {
           <hr />
         </li>
         <li>
-        <RoterLink to="/" className="nav-link" activeClass="nav-link"  onClick={() => toggleDrawer(false)} style={{color:'#ff69b4'}}> 
+          <RoterLink to="/" className="nav-link" activeClass="nav-link" onClick={() => toggleDrawer(false)} style={{ color: '#ff69b4' }}>
             <i
               class="fa fa-home"
               aria-hidden="true"
@@ -27,23 +27,23 @@ function Header() {
             ></i>HOME</RoterLink>
         </li>
         <li>
-        <RoterLink to="/events" className="nav-link"
+          <RoterLink to="/events" className="nav-link"
             activeClass="nav-link"
             onClick={() => toggleDrawer(false)}
-            style={{color:'#ff69b4'}}
+            style={{ color: '#ff69b4' }}
           > <i
-              class="fa fa-calendar"
-              aria-hidden="true"
-              style={{ marginRight: 10 }}
-            ></i> 
+            class="fa fa-calendar"
+            aria-hidden="true"
+            style={{ marginRight: 10 }}
+          ></i>
             EVENTS
           </RoterLink>
         </li>
         <li>
-        <RoterLink to="/event_bites" className="nav-link"
+          <RoterLink to="/event_bites" className="nav-link"
             activeClass="nav-link"
             onClick={() => toggleDrawer(false)}
-            style={{color:'#ff69b4'}}
+            style={{ color: '#ff69b4' }}
           >
             <i
               class="fa fa-file-video-o"
@@ -56,7 +56,7 @@ function Header() {
           <a
             className="nav-link"
             activeClass="nav-link"
-            style={{color:'#ff69b4'}}
+            style={{ color: '#ff69b4' }}
           >
             <i
               class="fa fa-picture-o"
@@ -68,33 +68,33 @@ function Header() {
             PHOTOSHOOT
           </a>
           <div style={{ marginLeft: 10 }}>
-          <ul >
-            <li>
-            <RoterLink to="/modelling-photoshoot" className="nav-link"
+            <ul >
+              <li>
+                <RoterLink to="/modelling-photoshoot" className="nav-link"
                   activeClass="nav-link"
                   style={{ color: '#ff69b4' }}
                   onClick={() => toggleDrawer(false)}
-          > <i
-              class="fa fa-circle"
-              aria-hidden="true"
-              style={{ marginRight: 10 }}
-            ></i> 
+                > <i
+                  class="fa fa-circle"
+                  aria-hidden="true"
+                  style={{ marginRight: 10 }}
+                ></i>
             MODELS
           </RoterLink>
-            </li>
-            <RoterLink to="/celebrity-photoshoot" className="nav-link"
-            activeClass="nav-link"
+              </li>
+              <RoterLink to="/celebrity-photoshoot" className="nav-link"
+                activeClass="nav-link"
                 onClick={() => toggleDrawer(false)}
-                style={{color:'#ff69b4'}}
-          > <i
-              class="fa fa-circle"
-              aria-hidden="true"
-              style={{ marginRight: 10 }}
-            ></i> 
+                style={{ color: '#ff69b4' }}
+              > <i
+                class="fa fa-circle"
+                aria-hidden="true"
+                style={{ marginRight: 10 }}
+              ></i>
             CELEBRITIES
           </RoterLink>
             </ul>
-            </div>
+          </div>
         </li>
 
 
@@ -110,8 +110,8 @@ function Header() {
   return (
     <header className="header-part sticky">
       <nav className="navbar navbar-expand-lg">
-        <div className="container">
-         
+        <div className="container" style={{ display: 'flex' }}>
+
           <button
             className="navbar-toggler"
             type="button"
@@ -133,37 +133,37 @@ function Header() {
           >
             {drawer && anchor()}
           </SwipeableDrawer>
-          <div style={{  display: "inline-block",  margin: "0 auto", padding: 3}}>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ml-auto">
-              <li>
-                <img
-                  src={Solamedia1}
-                  alt="Solamedia"
-                  style={{ height: 50, with: 50, marginRight: 20 }}
-                />
-              </li>
-              <li className="nav-item">
-              <RoterLink to="/" className="nav-link"
-                  activeClass="nav-link">HOME</RoterLink>
-              </li>
+          <div style={{ display: "inline-block", margin: "0 auto", padding: 3 }}>
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul className="navbar-nav ml-auto">
+                <li >
+                  <img
+                    src={Solamedia1}
+                    alt="Solamedia"
+                    style={{ height: 50, with: 50, marginRight: 40 }}
+                  />
+                </li>
+                <li className="nav-item">
+                  <RoterLink to="/" className="nav-link"
+                    activeClass="nav-link">HOME</RoterLink>
+                </li>
 
-              <li className="nav-item">
-                <RoterLink to="/events" className="nav-link"
-                  activeClass="nav-link">EVENTS</RoterLink>
-              </li>
+                <li className="nav-item">
+                  <RoterLink to="/events" className="nav-link"
+                    activeClass="nav-link">EVENTS</RoterLink>
+                </li>
 
-              <li className="nav-item">
-                <RoterLink to="/event_bites" className="nav-link"
-                  activeClass="nav-link">EVENT-BITES</RoterLink>
-              </li>
-              <li>
-                <SimpleMenu />
-              </li>
-            </ul>
-            <div class="header-btn">
-              <RoterLink to="/book-now">BOOK NOW</RoterLink>
-            </div>
+                <li className="nav-item">
+                  <RoterLink to="/event_bites" className="nav-link"
+                    activeClass="nav-link">EVENT-BITES</RoterLink>
+                </li>
+                <li>
+                  <SimpleMenu />
+                </li>
+              </ul>
+              <div class="header-btn" style={{ marginLeft: 30 }}>
+                <RoterLink to="/book-now">BOOK NOW</RoterLink>
+              </div>
             </div>
           </div>
         </div>

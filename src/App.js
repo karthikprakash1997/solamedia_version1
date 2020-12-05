@@ -16,6 +16,7 @@ import Footer from "./footer/footer";
 import CarouselComp from "./components/carousel";
 
 import "./assets/css/slick.css";
+import "./assets/css/ember.css";
 import "./assets/css/style.css";
 import "./assets/css/responsive.css";
 import "./assets/css/venobox.css";
@@ -27,22 +28,29 @@ function App() {
     <>
       <Header />
       <CarouselComp />
-      <Switch>
-        <Route exact path="/" component={LandingPage} />
-        <Route
-          exact
-          path="/event_bites"
-          component={FullVideosEventBites}
-        />
-        <Route exact path="/events" component={Events} />
-        <Route exact path="/celebrity-photoshoot/" component={Celeb} />
-        <Route exact path="/celebrity-photoshoot/:name" component={FullCelebrity} />
-        <Route exact path="/modelling-photoshoot/:name" component={FullModal} />
-        <Route exact path="/modelling-photoshoot" component={Model} />
-        <Route exact path="/book-now" component={BookNow} />
-        <Route exact path="/events/:name" component={FullEvents} />
-      </Switch>
-      <Footer />
+      <div class="main-wrapper">
+
+        <div class="backgrounds">
+          <div class="left-bg"></div>
+          <div class="right-bg"></div>
+        </div>
+        <Switch>
+          <Route exact path="/" component={LandingPage} />
+          <Route
+            exact
+            path="/event_bites"
+            component={FullVideosEventBites}
+          />
+          <Route exact path="/events" component={Events} />
+          <Route exact path="/celebrity-photoshoot/" component={Celeb} />
+          <Route exact path="/celebrity-photoshoot/:name" component={FullCelebrity} />
+          <Route exact path="/modelling-photoshoot/:name" component={FullModal} />
+          <Route exact path="/modelling-photoshoot" component={Model} />
+          <Route exact path="/book-now" component={BookNow} />
+          <Route exact path="/events/:name" component={FullEvents} />
+        </Switch>
+        <Footer />
+      </div>
     </>
   );
 }

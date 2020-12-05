@@ -302,6 +302,7 @@
     width: 33.33%;
     margin: 0;
   }
+
   /*==================
         sponsors-part css end
     ==================*/
@@ -559,10 +560,10 @@
   /*==================
         testimonial-part css start
     ==================*/
-  .testi-img {
-    margin-top: 80px;
-  }
 
+  .hide{
+    display:none;
+  }
   .icon {
     top: -54px;
     right: 50%;
@@ -893,6 +894,8 @@
     ==================*/
   .testi-img {
     margin-top: 80px;
+    margin: 0px 0 0px;
+    margin-left: 0px;
   }
   .icon {
     top: -54px;

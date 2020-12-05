@@ -28,7 +28,7 @@ const useStyles = makeStyles({
   media: {
     borderRadius: 6,
     height: 220,
-    objectFit: "inherit",
+    objectFit: "contain",
   },
   slides: {
     "& .slick-prev": {
@@ -91,68 +91,57 @@ function Events() {
     <>
       <section id="testimonial-part" >
         <div className="container">
-        <div className="section-title">
-          <h2>EVENTS</h2>
-        </div>
+          <div className="section-title">
+            <h2>EVENTS</h2>
+          </div>
           <div className="row testimonial-active">
-            
+
             {events.map((value, index) => (
-                                <div
-                                className="col-lg-3"
-                                key={index}
-                                style={{ marginBottom: 20,cursor:'pointer' }}
-                              >
-                  <Card
-                    className={cx(styles.root)}
-                    onClick={() => {
-                      history.push({
-                        pathname: `/events/${value.title}`,
-                      });
-                    }}
-                    key={index}
+              <div
+                className="col-lg-3"
+                key={index}
+                style={{ marginBottom: 20, cursor: 'pointer' }}
+              >
+                <Card
+                  className={cx(styles.root)}
+                  onClick={() => {
+                    history.push({
+                      pathname: `/events/${value.title}`,
+                    });
+                  }}
+                  key={index}
+                >
+                  {" "}
+                  <LazyLoad
+                    placeholder={
+                      <div className="section-title">
+                        <CircularProgress
+                          color="secondary"
+                          size={100}
+                          style={{ marginTop: 74 }}
+                        />
+                      </div>
+                    }
+                    once={true}
+                    debounce={500}
                   >
-                    {" "}
-                    <LazyLoad
-                      placeholder={
-                        <div className="section-title">
-                          <CircularProgress
-                            color="secondary"
-                            size={100}
-                            style={{ marginTop: 74 }}
-                          />
-                        </div>
-                      }
-                      once={true}
-                      debounce={500}
+                    <CardMedia
+                      className={cx(styles.media)}
+                      image={value.images[0]}
+                      component="img"
+                    />
+                  </LazyLoad>
+                  <CardContent
+                    style={{ display: "flex", justifyContent: "center" }}
                   >
-                            <Carousel
-            autoPlay
-            timer={500}
-            animation="fade"
-            indicators={false}
-            timeout={500}
-            navButtonsAlwaysInvisible={true}
-        >
-                      {value.images.map(image => (
-                        <CardMedia
-                        className={cx(styles.media)}
-                        image={image}
-                        component="img"
-                      />
-                      ))} 
-                      </Carousel>
-                    </LazyLoad>
-                    <CardContent
-                      style={{ display: "flex", justifyContent: "center" }}
-                    >
-                      <Typography component="h5" variant="h5">
-                        {value.title}
-                      </Typography>
-                    </CardContent>
+                    <Typography component="h5" variant="h5">
+                      {value.title}
+                    </Typography>
+                  </CardContent>
                 </Card>
-            </div>
-                
-                ))}
+              </div>
+
+            ))}
           </div>
         </div>
       </section>

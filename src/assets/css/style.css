@@ -92,7 +92,7 @@ p {
 }
 
 .navbar.navbar-expand-lg .nav-item {
-  margin-right: 30px;
+  margin-right: 60px;
 }
 
 .navbar.navbar-expand-lg li a {
@@ -1105,7 +1105,6 @@ p.testi-text {
     footer-part css start
 ==================*/
 #footer-part {
-  background: url(../images/backgrounds/footer/footer-bg.png) no-repeat left;
   background-size: cover;
   padding-top: 30px;
 }
@@ -1204,7 +1203,7 @@ p.testi-text {
 
 .copyright {
   text-align: center;
-  border-top: 1px solid #1f3b4d;
+  /* border-top: 1px solid #1f3b4d; */
   padding: 25px;
 }
 
@@ -1704,4 +1703,8 @@ p.testi-text {
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
   position: absolute;
+}
+
+.background-image-feedback {
+  background-image: linear-gradient(to left, #f76289 0, #f77062 100%);
 }
