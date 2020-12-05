@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="../../external.html?link=http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Components / Icons / Play Video</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="55.4131944%" x2="0%" y2="55.4131925%" id="linearGradient-1">
+            <stop stop-color="#F76289" offset="0%"></stop>
+            <stop stop-color="#F77062" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01.Mobile.Home" transform="translate(-18.000000, -2948.000000)">
+            <g id="Section-/-Videos-and-Audios" transform="translate(10.000000, 2731.000000)">
+                <g id="Components-/-Mobile-/-Video-/-Item" transform="translate(9.000000, 216.000000)">
+                    <g id="Components-/-Icons-/-Play-Video" transform="translate(1.000000, 3.000000)">
+                        <g>
+                            <circle id="Oval" stroke="url(#linearGradient-1)" stroke-width="2.88888889" cx="13" cy="13" r="13"></circle>
+                            <path d="M10.0836046,7.3413069 C9.30105139,6.87666593 8.66666667,7.23776627 8.66666667,8.15522062 L8.66666667,18.5670016 C8.66666667,19.4811547 9.30440345,19.843566 10.0836046,19.3809153 L18.8052843,14.202418 C19.5878375,13.737777 19.5844854,12.9824549 18.8052843,12.5198042 L10.0836046,7.3413069 Z" id="Page-1" fill="url(#linearGradient-1)"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
