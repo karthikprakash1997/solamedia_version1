@@ -1,5 +1,4 @@
 import React from "react";
-import SecondaryHeader from "../secondaryHeader/secondaryHeader";
 import eventBites from "../data/eventBites.json";
 import { Card, CardActionArea, makeStyles } from "@material-ui/core";
 import ReactPlayer from "react-player/lazy";
@@ -24,9 +23,9 @@ function FullEvents() {
     <>
       <section id="testimonial-part">
         <div className="container">
-        <div className="section-title">
-          <h2>EVENT BITES </h2>
-        </div>
+          <div className="section-title">
+            <h2>EVENT BITES </h2>
+          </div>
           <div className="row testimonial-active">
             {eventBites.map((value, index) => (
               <div

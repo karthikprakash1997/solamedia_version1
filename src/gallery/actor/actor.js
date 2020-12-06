@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import Slider from "react-slick";
 import cx from "clsx";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import model from "../../data/celebrity.json";
 import LazyLoad from "react-lazyload";
 import { CircularProgress } from "@material-ui/core";
@@ -14,7 +13,6 @@ import {
   makeStyles,
   CardContent,
 } from "@material-ui/core";
-import Carousel from "react-material-ui-carousel";
 
 const useStyles = makeStyles({
   root: {
@@ -48,44 +46,6 @@ const useStyles = makeStyles({
 function Actress() {
   const history = useHistory();
   const styles = useStyles();
-  var settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    pauseOnHover: true,
-    initialSlide: 0,
-    arrows: true,
-    className: styles.slides,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
 
   return (
     <>

@@ -1,12 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
-import { Link } from "react-scroll";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import { Link as RoterLink } from "react-router-dom";
 import Solamedia from "../assets/images/logo/LOGO.svg";
 import Solamedia1 from "../assets/images/logo/output-onlinepngtools-ConvertImage.png";
 import SimpleMenu from "../components/simpleMenu";
-import GalleryMenu from "../components/galleryMenu";
+import { Button } from "@material-ui/core"
 
 function Header() {
   const [drawer, toggleDrawer] = useState(false);
@@ -111,7 +110,6 @@ function Header() {
     <header className="header-part sticky">
       <nav className="navbar navbar-expand-lg">
         <div className="container" style={{ display: 'flex' }}>
-
           <button
             className="navbar-toggler"
             type="button"
@@ -136,34 +134,47 @@ function Header() {
           <div style={{ display: "inline-block", margin: "0 auto", padding: 3 }}>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav ml-auto">
-                <li >
+                <li>
                   <img
                     src={Solamedia1}
                     alt="Solamedia"
-                    style={{ height: 50, with: 50, marginRight: 40 }}
+                    style={{ height: 80, with: 80, marginRight: 40 }}
                   />
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" >
                   <RoterLink to="/" className="nav-link"
-                    activeClass="nav-link">HOME</RoterLink>
+                    activeClass="nav-link" style={{
+                      fontSize: '40px',
+                      fontWeight: 700,
+                      color: '#ff69b4'
+                    }}>HOME</RoterLink>
                 </li>
 
                 <li className="nav-item">
                   <RoterLink to="/events" className="nav-link"
-                    activeClass="nav-link">EVENTS</RoterLink>
+                    activeClass="nav-link" style={{
+                      fontSize: '40px',
+                      fontWeight: 700,
+                      color: '#ff69b4'
+                    }}>EVENTS</RoterLink>
                 </li>
 
                 <li className="nav-item">
                   <RoterLink to="/event_bites" className="nav-link"
-                    activeClass="nav-link">EVENT-BITES</RoterLink>
+                    activeClass="nav-link" style={{
+                      fontSize: '40px',
+                      fontWeight: 700,
+                      color: '#ff69b4',
+                      whiteSpace: 'nowrap'
+                    }}>EVENT-BITES</RoterLink>
                 </li>
                 <li>
                   <SimpleMenu />
                 </li>
+                <li  >
+                  <Button variant="contained" color="secondary" href="/book-now" style={{ whiteSpace: 'nowrap', color: 'white', backgroundColor: '#ff69b4', marginTop: 10 }} >BOOK NOW</Button>
+                </li>
               </ul>
-              <div class="header-btn" style={{ marginLeft: 30 }}>
-                <RoterLink to="/book-now">BOOK NOW</RoterLink>
-              </div>
             </div>
           </div>
         </div>

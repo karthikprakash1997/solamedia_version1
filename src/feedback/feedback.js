@@ -93,7 +93,7 @@ function Feedback() {
                             aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                             ullamco.
                     </p>
-                          <div className="testi-img pad">
+                          <div className="testi-img" style={{ paddingLeft: 50, paddingRight: 50 }}>
                             <img src={speaker1} alt="testimonial-img1" />
                             <div className="icon">
                               <i className="fa fa-star" aria-hidden="true"></i>

@@ -48,7 +48,7 @@ ol {
 }
 
 img {
-  max-width: 100%;
+  /* max-width: 100%; */
   height: auto;
 }
 
@@ -92,7 +92,7 @@ p {
 }
 
 .navbar.navbar-expand-lg .nav-item {
-  margin-right: 60px;
+  margin-right: 25px;
 }
 
 .navbar.navbar-expand-lg li a {
@@ -138,14 +138,19 @@ p {
   color: #ffe169;
 }
 
+.navbar-expand-lg .navbar-nav .img {
+  max-width: none;
+}
+
+
 .dropdown-item:hover {
   background-color: transparent;
 }
 
 .header-btn a {
   color: #0f2f44;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 10px;
+  font-weight: 500;
   text-transform: uppercase;
   padding: 15px 30px;
   display: inline-block;
@@ -826,8 +831,6 @@ p.testi-text {
 }
 
 .testi-img {
-  margin: 30px 0 20px;
-  margin-left: 75px;
   position: relative;
 }
 
@@ -1708,3 +1711,4 @@ p.testi-text {
 .background-image-feedback {
   background-image: linear-gradient(to left, #f76289 0, #f77062 100%);
 }
+

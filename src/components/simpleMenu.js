@@ -18,7 +18,11 @@ export default function FadeMenu() {
 
     return (
         <div>
-            <a onClick={handleClick} className="nav-link" style={{ cursor: "pointer",marginRight:20 }}>
+            <a onClick={handleClick} className="nav-link" style={{
+                cursor: "pointer", marginRight: 20, fontSize: '40px',
+                fontWeight: 700,
+                color: '#ff69b4'
+            }} >
                 PHOTOSHOOT
             </a>
             <Menu

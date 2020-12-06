@@ -2,7 +2,7 @@ import React from "react";
 import LazyLoad from "react-lazyload";
 import { CircularProgress } from "@material-ui/core";
 
-function FullGallery({name}) {
+function FullGallery({ name }) {
 
   return (
     <>
@@ -28,19 +28,20 @@ function FullGallery({name}) {
               {
                 value.images.map((image) => (
                   <img src={image}
-                  style={{
+                    style={{
                       maxHeight: 500,
-                    objectFit: "contain",
-                      padding:5
-                    }}>
-                    </img>
-                    ))
+                      objectFit: "contain",
+                      padding: 5
+                    }}
+                    alt="gallery">
+                  </img>
+                ))
               }
             </LazyLoad>
           </div>
         );
       })}
-      
+
     </>
   );
 }
