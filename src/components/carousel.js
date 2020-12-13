@@ -1,16 +1,18 @@
 import React from 'react';
 import Carousel from "react-material-ui-carousel"
 import '../assets/css/Example.scss';
-import mainCover from '../assets/images/covers/bg-ALL.jpg';
+import mainCover from '../assets/images/covers/main2.jpg';
 import cover1 from '../assets/images/covers/1.jpg';
-import cover2 from '../assets/images/covers/bg2.jpg';
-import cover3 from '../assets/images/covers/amritha.jpg';
+import cover2 from '../assets/images/covers/2.jpg';
+import cover3 from '../assets/images/covers/3.jpg';
+import cover4 from '../assets/images/covers/4.jpg';
 
 const items = [
     mainCover,
     cover1,
     cover2,
-    cover3
+    cover3,
+    cover4
 ]
 
 
